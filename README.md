@@ -1,6 +1,6 @@
-# Bumped Marketing Site
+# Portfolio Site
 
-The Bumped marketing site is a JAMStack standalone site built with [Gatsby](https://www.gatsbyjs.org/), [Netlify](https://www.netlify.com/) and [Netlify CMS](https://www.netlifycms.org/). JAM stands for **J**avascript **A**PI & **M**arkup.
+My portfolio site is a JAMStack standalone site built with [Gatsby](https://www.gatsbyjs.org/), [Netlify](https://www.netlify.com/) and [Netlify CMS](https://www.netlifycms.org/). JAM stands for **J**avascript **A**PI & **M**arkup.
 
 ## Gatsby
 
