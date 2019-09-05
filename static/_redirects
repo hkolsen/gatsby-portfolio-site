@@ -1,0 +1,16 @@
+# Redirects
+/blog/press/ /press 
+/blog/jobs/  /careers 
+/blog/legal/ /legal/disclosures 
+/blog/insta/ /insta
+/annual-tax-edocs/  /legal/annual-tax-edocs/ 
+/legal  /legal/disclosures/
+/blog/annual-tax-edocs/ /legal/annual-tax-edocs/
+/blog/fee-schedule/  /legal/fee-schedule/ 
+/blog/privacy-policy/  /legal/privacy-policy/
+/blog/terms-of-use/  /legal/terms-of-use/ 
+/blog/business-continuity-plan/  /legal/business-continuity-plan/
+/blog/customer-agreement/  /legal/customer-agreement/ 
+/blog/tag/ownership  /category/ownership 
+/blog/tag/company-news /category/company-news 
+/blog/tag/brand-loyalty  /category/brand-loyalty
