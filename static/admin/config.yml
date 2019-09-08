@@ -59,3 +59,15 @@ collections:
               }
               - { label: Talk Slides, name: slides, widget: string, required: false }
               - { label: Talk Video, name: video, widget: string, required: false }
+          - label: Blogs
+            name: blogList
+            widget: list
+            fields:
+              - { label: Order, name: id, widget: number, required: false }
+              - { label: Featured, name: featured, widget: boolean, required: false }
+              - { label: Blog Title, name: title, widget: string, required: false }
+              - { label: Blog Description, name: description, widget: markdown, required: false }
+              - { label: Blog URL, name: url, widget: string, required: false }
+              - { label: Blog CTA Text, name: ctaText, widget: string, required: false }
+              - { label: Blog Img, name: blogImg, widget: string, required: false }
+              - { label: Blog Tags, name: tags, widget: string, required: false }

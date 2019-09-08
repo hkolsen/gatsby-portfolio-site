@@ -22,6 +22,16 @@ const useHomeData = () => {
               video
               category
             }
+            blogList {
+              id
+              featured
+              title
+              description
+              url
+              ctaText
+              blogImg
+              tags
+            }
           }
         }
       }
