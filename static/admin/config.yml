@@ -38,3 +38,19 @@ collections:
               widget: string,
               required: false,
             }
+          - label: Speaking Engagements
+            name: talkList
+            widget: list
+            fields:
+              - { label: Order, name: id, widget: number, required: false }
+              - { label: Talk Title, name: title, widget: string, required: false }
+              - { label: Talk Description, name: description, widget: markdown, required: false }
+              - {
+                label: Talk Category,
+                name: category,
+                widget: select,
+                options: [Conference, Panel, Webinar],
+                required: false,
+              }   
+              - { label: Talk Slides, name: slides, widget: string, required: false }
+              - { label: Talk Video, name: video, widget: string, required: false }
