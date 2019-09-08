@@ -5,7 +5,7 @@ subheader: Here is my subheader
 talkList:
   - id: 1
     featured: true
-    confName: Litmus Live 2019
+    confName: Litmus Live
     confURL: https://litmus.com/conference/boston
     date: 2019 OCT 08 & 2019 NOV 08
     location: Boston, MA & San Francisco, CA
@@ -28,12 +28,12 @@ talkList:
     confURL: https://2018.webcampzg.org/
     date: 2018 OCT 05
     location: Zagreb, HR
-    title: Headless architecture and the future of websites
+    title: Headless Architecture and the Future of Websites
     slides: https://noti.st/heidiolsen/57VlI6/headless-architecture-and-the-future-of-websites
     video: https://www.youtube.com/watch?v=wDajRPxCPDc
     category: Conference
   - id: 4
-    confName: Litmus Webinar
+    confName: Litmus
     confURL: https://litmus.com/blog/whats-new-litmus-builder-webinar-recording
     date: 2018 MAY 23
     location: Virtual
@@ -112,4 +112,62 @@ talkList:
     title: 5 Pro Tips for Making Your Email More Accessible
     slides: https://www.slideshare.net/eROIAgency/roledrinks-ams-meetup-5-pro-tips-for-making-your-email-more-accessible
     category: Meetup
+blogList:
+  - id: 1
+    featured: true
+    title: Using CSS animations to guide a better eCommerce experience
+    description: >-
+      Guest blog for Shopify Partners focusing on integrating CSS animations that help enhance the user experience.
+    url: https://www.shopify.com/partners/blog/css-animation
+    ctaText: Read on Shopify
+    blogImg: css-animations
+    tags: Guest Blog, eCommerce, CSS Animations, UX
+  - id: 2
+    title: Techniques for SVG animation and development
+    description: >-
+      Learn SVG animation techniques including transforming an element on an x- and y-axis, blinking, hover states, clipping paths and scrolling backgrounds.
+    url: http://eroi.com/techniques-for-svg-animation-and-development/
+    ctaText: Read on eROI
+    blogImg: svg-animations
+    tags: CSS Animation, SVG, How-To
+  - id: 3
+    title: Create an interactive quiz with PHP
+    description: >-
+      Learn how to build an interactive quiz using PHP, MySQL, JS, AJAX, and a little bit of fun.
+    url: http://eroi.com/create-your-very-own-interactive-quiz/
+    ctaText: Read on eROI
+    blogImg: interactive-quiz
+    tags: PHP, MySQL, How-To
+  - id: 4
+    title: Budgeted Fun - How a design system can facilitate innovation
+    description: >-
+      Guest blog for quality assurance software Email on Acid about design systems for email campaigns.
+    url: https://www.emailonacid.com/blog/article/email-development/budgeted-fun-how-a-design-system-can-facilitate-innovation/
+    ctaText: Read on Email on Acid
+    blogImg: design-system
+    tags: Guest Blog, Email, Design System
+  - id: 5
+    title: Automation to Innovation - Bringing the human touch to your email program
+    description: >-
+      A hybrid approach that balances templates with one-off campaigns leads to sustainable, scalable email programs that work for internal brand and agency teams.
+    url: http://eroi.com/automation-to-innovation-bringing-the-human-touch-to-your-email-program/
+    ctaText: Read on eROI
+    blogImg: automation-innovation
+    tags: Automation, Email, Process
+  - id: 6
+    title: Data-driven innovation in email
+    description: >-
+      To support creative innovation in the inbox we rely on data to make smart choices that help us reach our goals to deliver a message to all subscribers.
+    url: http://eroi.com/data-driven-innovation-in-email/
+    ctaText: Read on eROI
+    blogImg: data-driven
+    tags: Email, Interactive Techniques, Data
+  - id: 7
+    title: CSS animated slideshow in email
+    description: >-
+      Learn how to build a pure CSS animated slideshow in an email.
+    url: http://eroi.com/pure-css-animated-slideshow-in-email/
+    ctaText: Read on eROI
+    blogImg: animated-slideshow
+    tags: CSS Animation, Email, How-To
 ---

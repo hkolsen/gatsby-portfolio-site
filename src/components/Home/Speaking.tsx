@@ -105,8 +105,8 @@ const ConfTitle = styled.h3`
   color: ${({ theme }) => theme.colors.BASE};
   font-family: ${({ theme }) => theme.fonts.SERIF};
   font-size: 1.5em;
-  line-height: 1.5;
-  margin: 0;
+  line-height: 1.25;
+  margin: 0.25em 0;
 `;
 
 const TalkTitle = styled.p`
@@ -122,8 +122,6 @@ const TalkDate = styled.p`
 const MaterialsLink = styled(CTALink)`
   margin: 0 0.5em 1em 0;
 `;
-
-
 
 export const Speaking: React.FC = () => {
   const { talkList } = useHomeData();
