@@ -44,7 +44,6 @@ const TemplateWrapperContainer = styled.div`
 `;
 
 const FixedContainer = styled.header`
-  background: ${({ theme }) => theme.colors.BASE};
   grid-area: header;
   padding: 0;
   position: fixed;

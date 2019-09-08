@@ -16,7 +16,7 @@ talkList:
       In this session, we will walk through various datasets to identify stories that can provide value to our subscribers as well as explore the science of how people perceive data to remove irrelevant information to assist in better understanding. We will leverage principles of visual perception to design appropriate data visualizations for our emails, as well review code snippets that will help build these experiences using HTML, CSS, and even animation as a progressive enhancement.
     category: Conference
   - id: 2
-    confName: Litmus Live 2018
+    confName: Litmus Live
     confURL: https://litmus.com/conference/boston
     date: 2018 NOV 09
     location: San Francisco, CA

@@ -8,10 +8,6 @@ export interface CustomLinkProps {
   dark?: boolean;
 }
 
-interface StyledProps {
-  dark?: boolean;
-}
-
 export const CustomLink: React.FC<CustomLinkProps> = ({
   linkType,
   linkURL,
@@ -26,16 +22,14 @@ export const CustomLink: React.FC<CustomLinkProps> = ({
   }
 };
 
-export const StyledLink = styled(CustomLink)<StyledProps>`
-  color: ${({ dark, theme }) =>
-    dark ? theme.colors.WHITE : theme.colors.BASE};
+export const StyledLink = styled(CustomLink)`
+  border-bottom: 2px solid ${({ theme }) => theme.colors.BASE};
+  color: ${({ theme }) => theme.colors.BASE};
   text-decoration: none;
   transition: ${({ theme }) => theme.easing.GLOBAL};
-  span {
-    border-bottom: 2px solid ${({ theme }) => theme.colors.LOYAL_BLUE};
-  }
   &:hover {
-    color: ${({ theme }) => theme.colors.LOYAL_BLUE};
+    background: ${({ theme }) => theme.colors.BASE};
+    color: ${({ theme }) => theme.colors.WHITE};
   }
 `;
 
@@ -44,27 +38,36 @@ export const TextLink: React.FC<CustomLinkProps> = (props: any) => (
 );
 
 export const StyledCTALink = styled(CustomLink)`
-  background: ${({ theme }) => theme.colors.LOYAL_BLUE};
+  background: ${({ theme }) => theme.colors.CTA};
+  border: 2px solid ${({ theme }) => theme.colors.CTA};
   color: ${({ theme }) => theme.colors.WHITE};
-  border-radius: 9rem;
-  font-size: 1.25em;
-  padding: 0 3rem;
-  cursor: pointer;
   display: inline-block;
-  font-weight: ${({ theme }) => theme.weights.REGULAR};
-  height: 2em;
-  line-height: 2em;
-  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.25em 1em 0.25em 0.75em;
   text-decoration: none;
-  outline: 0;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: ${({ theme }) => theme.easing.GLOBAL};
+  &:after {
+    border-style: solid;
+    border-width: 0.125em 0.125em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.4em;
+    position: relative;
+    vertical-align: middle;
+    width: 0.4em;
+    left: 0.25em;
+    transform: rotate(45deg);
+  }
   :focus-within {
     background-color: ${({ theme }) => theme.colors.WHITE};
-    color: ${({ theme }) => theme.colors.BASE};
+    border: 2px dashed ${({ theme }) => theme.colors.CTA};
+    color: ${({ theme }) => theme.colors.CTA};
   }
   :hover {
     background-color: ${({ theme }) => theme.colors.WHITE};
-    color: ${({ theme }) => theme.colors.BASE};
+    border: 2px dashed ${({ theme }) => theme.colors.CTA};
+    color: ${({ theme }) => theme.colors.CTA};
   }
 `;
 
