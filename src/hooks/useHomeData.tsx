@@ -11,6 +11,11 @@ const useHomeData = () => {
             header
             talkList {
               id
+              featured
+              confName
+              confURL
+              date
+              location
               title
               description
               slides

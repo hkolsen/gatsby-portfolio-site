@@ -1,7 +1,12 @@
 import { rgba } from 'polished';
 
 export const colors = {
-  BASE: rgba(33, 33, 33, 1), // #212121
+  BASE: rgba(20, 46, 48, 1), //#142E30
+  WHITE: rgba(255, 255, 255, 1), // #FFFFFF hsla(0, 0, 100, 1)
+  BORDER: rgba(206, 213, 223, 1), // #ced5df
+  TAG: rgba(128, 97, 231, 1), // #8061E7
+  CTA: rgba(34, 16, 97, 1), // #221061
+  
   DARK_BG: rgba(45, 45, 45, 1), // #2d2d2d
   DARK_TRANSPARENT_BG: rgba(33, 33, 33, 0.85),
   MEDIUM_BG: rgba(204, 204, 204, 1), // #cccccc
@@ -15,7 +20,6 @@ export const colors = {
   ICON_STROKE: rgba(68, 75, 76, 1), //  #444b4c
 
   BRIGHT_WHITE: rgba(245, 245, 245, 1), // #F5F5F5
-  WHITE: rgba(255, 255, 255, 1), // #FFFFFF hsla(0, 0, 100, 1)
   WHITE_HOVER: rgba(255, 255, 255, 0.8), // #FFFFFF hsla(0, 0, 100, 1)
 
   LOYAL_BLUE: rgba(65, 176, 246, 1), // #41B0F6 hsla(204, 96, 62, 1)

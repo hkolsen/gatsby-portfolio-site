@@ -43,14 +43,19 @@ collections:
             widget: list
             fields:
               - { label: Order, name: id, widget: number, required: false }
+              - { label: Featured, name: featured, widget: boolean, required: false }
+              - { label: Conference Name, name: confName, widget: string, required: false }
+              - { label: Conference URL, name: confURL, widget: string, required: false }
+              - { label: Conference Data, name: date, widget: string, required: false }
+              - { label: Conference Location, name: location, widget: string, required: false }
               - { label: Talk Title, name: title, widget: string, required: false }
               - { label: Talk Description, name: description, widget: markdown, required: false }
               - {
                 label: Talk Category,
                 name: category,
                 widget: select,
-                options: [Conference, Panel, Webinar],
+                options: [Conference, Panel, Webinar, Meetup],
                 required: false,
-              }   
+              }
               - { label: Talk Slides, name: slides, widget: string, required: false }
               - { label: Talk Video, name: video, widget: string, required: false }
