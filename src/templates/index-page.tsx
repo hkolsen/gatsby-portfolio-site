@@ -1,37 +1,32 @@
-import { graphql } from 'gatsby';
 import React from 'react';
 import TemplateWrapper from '../components/TemplateWrapper';
+import { Hero } from '~/components/Hero';
 
-interface IndexPageProps {
-  data: {
-    markdownRemark: {
-      frontmatter: {
-        header: string;
-        subheader: string;
-      };
-    };
-  };
-}
+// interface IndexPageProps {
+//   data: {
+//     markdownRemark: {
+//       frontmatter: {
+//         header: string;
+//         subheader: string;
+//       };
+//     };
+//   };
+// }
 
-export const pageQuery = graphql`
-  query indexPageQuery {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      frontmatter {
-        header
-        subheader
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query indexPageQuery {
+//     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+//       frontmatter {
+//         header
+//         subheader
+//       }
+//     }
+//   }
+// `;
 
-const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
-  return (
+const IndexPage: React.FC = () => 
     <TemplateWrapper>
-      <h1>{frontmatter.header}</h1>
-      <h2>{frontmatter.subheader}</h2>
+      <Hero />
     </TemplateWrapper>
-  );
-};
 
 export default IndexPage;

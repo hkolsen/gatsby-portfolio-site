@@ -12,7 +12,6 @@ function interopDefault(x: any) {
   return x;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const isEqual = interopDefault(require('lodash/isEqual'));
 
 // tslint:disable-next-line:no-var-requires

@@ -21,42 +21,6 @@ const PageNotFoundHeader = styled(Header)`
   text-align: center;
 `;
 
-const PageNotFoundDiagram = styled.div`
-  padding: 1em;
-  font-size: 1.3em;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  color: ${({ theme }) => theme.colors.LOYAL_BLUE};
-`;
-
-const DiagramSide = styled.div`
-  background-color: ${({ theme }) => theme.colors.WHITE_HOVER};
-  height: 8em;
-  width: 8em;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2em 2em;
-`;
-
-const DiagramLeft = styled(DiagramSide)`
-  justify-content: flex-start;
-  margin-right: -2em;
-`;
-
-const DiagramCenter = styled.div`
-  position: absolute;
-  top: 6.5em;
-  left: 9.5em;
-`;
-
-const DiagramRight = styled(DiagramSide)`
-  justify-content: flex-end;
-  margin-left: -2em;
-`;
-
 const PageNotFoundSecondaryHeader = styled(Subheader)`
   font-weight: ${({ theme }) => theme.weights.MEDIUM};
   padding: 0.5em;
@@ -109,32 +73,9 @@ const NotFoundPage: React.FC = () => (
           id="PageNotFound.Header"
         />
       </PageNotFoundHeader>
-      <PageNotFoundDiagram>
-        <DiagramLeft>
-          <FormattedMessage
-            defaultMessage="It's us."
-            description="Text in the left circle of a Venn Diagram"
-            id="PageNotFound.DiagramLeft"
-          />
-        </DiagramLeft>
-        <DiagramCenter>
-          <FormattedMessage
-            defaultMessage="It's us."
-            description="Text in the intersection of a Venn Diagram"
-            id="PageNotFound.DiagramIntersection"
-          />
-        </DiagramCenter>
-        <DiagramRight>
-          <FormattedMessage
-            defaultMessage="It's you."
-            description="Text in the right circle of a Venn Diagram"
-            id="PageNotFound.DiagramRight"
-          />
-        </DiagramRight>
-      </PageNotFoundDiagram>
       <PageNotFoundSecondaryHeader>
         <FormattedMessage
-          defaultMessage="It's probably us. Sorry about that."
+          defaultMessage="It's probably my bad. Sorry about that."
           description="Secondary Header to let the user know its not their fault."
           id="PageNotFound.SecondaryHeader"
         />

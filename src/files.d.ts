@@ -11,3 +11,4 @@ declare module '*.png' {
   export = url;
 }
 declare module 'gatsby-background-image';
+declare module 'react-intl';
