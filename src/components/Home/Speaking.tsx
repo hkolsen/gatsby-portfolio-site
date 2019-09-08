@@ -35,8 +35,6 @@ const SpeakingList = styled.ul`
 
 const SpeakerBoxx = styled.li`
   background: ${({ theme }) => theme.colors.WHITE};
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   font-size: 1em;
@@ -45,10 +43,34 @@ const SpeakerBoxx = styled.li`
   position: relative;
   transition: ${({ theme }) => theme.easing.GLOBAL};
   :focus-within {
-    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.12), 0 5px 5px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 5px ${({ theme }) => theme.colors.HIGHLIGHT} inset;
   }
   :hover {
-    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.12), 0 5px 5px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 5px ${({ theme }) => theme.colors.HIGHLIGHT} inset;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    height: 0;
+    width: 50%;
+    border-bottom: 1.5em solid ${({ theme }) => theme.colors.BORDER};
+    box-sizing: border-box;
+    right: 0;
+    border-left: 2em solid transparent;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    height: 0;
+    width: 50%;
+    border-bottom: 1.5em solid ${({ theme }) => theme.colors.BORDER};
+    box-sizing: border-box;
+    left: 0;
+    border-right: 2em solid transparent;
   }
 `;
 
@@ -98,7 +120,7 @@ const TalkDate = styled.p`
 `;
 
 const MaterialsLink = styled(CTALink)`
-  margin: 0 0.5em 0.5em 0;
+  margin: 0 0.5em 1em 0;
 `;
 
 
