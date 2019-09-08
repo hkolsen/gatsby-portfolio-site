@@ -9,6 +9,14 @@ const useHomeData = () => {
             subheader
             templateKey
             header
+            talkList {
+              id
+              title
+              description
+              slides
+              video
+              category
+            }
           }
         }
       }

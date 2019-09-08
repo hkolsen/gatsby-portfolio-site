@@ -1,5 +1,5 @@
 import React from 'react';
-import useHomeData from '~/utils/useHomeData';
+import useHomeData from '~/hooks/useHomeData';
 
 export const Hero: React.FC = () => {
     const { header, subheader } = useHomeData();

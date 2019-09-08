@@ -1,32 +1,12 @@
 import React from 'react';
-import TemplateWrapper from '../components/TemplateWrapper';
-import { Hero } from '~/components/Hero';
-
-// interface IndexPageProps {
-//   data: {
-//     markdownRemark: {
-//       frontmatter: {
-//         header: string;
-//         subheader: string;
-//       };
-//     };
-//   };
-// }
-
-// export const pageQuery = graphql`
-//   query indexPageQuery {
-//     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-//       frontmatter {
-//         header
-//         subheader
-//       }
-//     }
-//   }
-// `;
+import TemplateWrapper from '~/components/TemplateWrapper';
+import { Hero } from '~/components/Home/Hero';
+import { Speaking } from '~/components/Home/Speaking';
 
 const IndexPage: React.FC = () => 
     <TemplateWrapper>
       <Hero />
+      <Speaking />
     </TemplateWrapper>
 
 export default IndexPage;
