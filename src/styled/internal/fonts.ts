@@ -1,3 +1,4 @@
 export const fonts = {
-  SANS_SERIF: "'Work Sans', sans-serif",
+  SANS_SERIF: "'Open Sans', sans-serif",
+  SERIF: "'Arvo', serif"
 } as const;

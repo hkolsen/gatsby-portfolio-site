@@ -9,40 +9,25 @@ import { CustomLink } from './CustomLink';
 interface TemplateWrapper {
   children: React.ReactNode;
 }
-
 const GlobalStyles = createGlobalStyle`
   @font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: local('Work Sans ExtraLight'), local('WorkSans-ExtraLight'), url(https://fonts.gstatic.com/s/worksans/v5/QGYpz_wNahGAdqQ43Rh3s4H8mNhNy_r-Kw.woff2) format('woff2');
+    font-family: 'Avro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v13/tDbD2oWUg0MKqScQ7Z7o_vo.woff2) format('woff2');
   }
-@font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Work Sans Light'), local('WorkSans-Light'), url(https://fonts.gstatic.com/s/worksans/v5/QGYpz_wNahGAdqQ43Rh314L8mNhNy_r-Kw.woff2) format('woff2');
-  }
-@font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Work Sans'), local('WorkSans-Regular'), url(https://fonts.gstatic.com/s/worksans/v5/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2) format('woff2');
-  }
-@font-face {
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local('Work Sans Medium'), local('WorkSans-Medium'), url(https://fonts.gstatic.com/s/worksans/v5/QGYpz_wNahGAdqQ43Rh3j4P8mNhNy_r-Kw.woff2) format('woff2');
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
   }
   body {
     box-sizing: border-box;
     color: inherit;  
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Open Sans Regular', sans-serif;
     font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
     height: 100vh;
     line-height: 1.75;
@@ -54,7 +39,7 @@ const GlobalStyles = createGlobalStyle`
 const TemplateWrapperContainer = styled.div`
   background: ${({ theme }) => theme.colors.WHITE};
   color: ${({ theme }) => theme.colors.BASE};
-  font-family: 'Work Sans', sans-serif;
+  font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
   width: 100%;
 `;
 
