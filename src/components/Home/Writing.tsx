@@ -66,9 +66,12 @@ const BlogTitle = styled.h3`
     font-size: 1.5em;
     line-height: 1.25;
     margin: 0.25em 0;
+    min-height: 3em;
 `;
 
-const BlogTags = styled.span``;
+const BlogTags = styled.span`
+    font-size: 0.8em;
+`;
 
 // const BlogDesc = styled(MarkdownWrapper)`
 //     font-size: 0.75em;
@@ -84,7 +87,9 @@ export const Writing: React.FC = () => {
         <WritingList>
         {(blogList || []).map((blog: WritingData) => (
             <WritingItem key={blog.id}>
-                <BlogImgContainer><BlogIcon color={colors.LIGHT_BG} blogTitle={blog.title} blogImg={blog.blogImg} /></BlogImgContainer>
+                <BlogImgContainer>
+                    <BlogIcon color={colors.TAG} blogTitle={blog.title} blogImg={blog.blogImg} />
+                </BlogImgContainer>
                 <BlogContent>
                 <BlogTags>{blog.tags}</BlogTags>
                 <BlogTitle>{blog.title}</BlogTitle>
