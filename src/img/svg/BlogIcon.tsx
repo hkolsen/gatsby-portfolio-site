@@ -1,6 +1,7 @@
 import React from 'react';
 import { CSSAnimationsIcon } from './blog/CSSAnimationsIcon';
 import { AutomationInnovationIcon } from './blog/AutomationInnovationIcon';
+import { SVGAnimationIcon } from './blog/SVGAnimationIcon';
 
 export interface BlogIconProps {
   blogTitle: string;
@@ -16,8 +17,8 @@ export const BlogIcon: React.FunctionComponent<BlogIconProps> = ({
   switch (blogImg) {
     case 'css-animations':
       return <CSSAnimationsIcon color={color} blogTitle={blogTitle} />;
-    // case 'svg-animations':
-    //   return <GroceryIcon color={color} blogTitle={blogTitle} />;
+    case 'svg-animations':
+      return <SVGAnimationIcon color={color} blogTitle={blogTitle} />;
     // case 'interactive-quiz':
     //   return <HospitalityIcon color={color} blogTitle={blogTitle} />;
     // case 'design-system':
