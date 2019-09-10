@@ -41,12 +41,11 @@ const Content = styled.div`
     width: 100%;
   }
   a {
-    border-bottom: 2px solid ${({ theme }) => theme.colors.LOYAL_BLUE};
     color: ${({ theme }) => theme.colors.BASE};
-    text-decoration: none;
+    text-decoration: underline;
     transition: ${({ theme }) => theme.easing.GLOBAL};
     &:hover {
-      color: ${({ theme }) => theme.colors.LOYAL_BLUE};
+      text-decoration: none;
     }
   }
   ${({ theme }) => theme.media.medium`

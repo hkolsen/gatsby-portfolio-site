@@ -7,7 +7,6 @@ import { FormattedMessage } from 'react-intl';
 
 const PageNotFoundContent = styled.div`
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.LOYAL_BLUE};
   color: ${({ theme }) => theme.colors.WHITE};
   display: flex;
   flex-direction: column;
@@ -39,17 +38,15 @@ const PageNotFoundGoHome = styled(CTALink)``;
 
 const PageNotFoundGoBack = styled.a`
   align-content: center;
-  border-bottom: 2px solid ${({ theme }) => theme.colors.WHITE};
-  color: ${({ theme }) => theme.colors.WHITE};
+  color: ${({ theme }) => theme.colors.BASE};
   cursor: pointer;
   display: flex;
   font-size: 1em;
   margin: 1em auto 0;
-  text-decoration: none;
+  text-decoration: underline;
   transition: ${({ theme }) => theme.easing.GLOBAL};
   &:hover {
-    background: ${({ theme }) => theme.colors.WHITE};
-    color: ${({ theme }) => theme.colors.LOYAL_BLUE};
+    text-decoration: none;
   }
 `;
 
