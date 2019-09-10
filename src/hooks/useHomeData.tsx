@@ -9,20 +9,6 @@ const useHomeData = () => {
             subheader
             templateKey
             header
-            heroImgTop {
-              childImageSharp {
-                fluid(maxWidth: 1400) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            heroImgBtm {
-              childImageSharp {
-                fluid(maxWidth: 1400) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
             talkList {
               id
               featured

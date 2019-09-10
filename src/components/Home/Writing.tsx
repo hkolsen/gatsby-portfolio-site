@@ -3,7 +3,7 @@ import { styled, useTheme } from '~/styled';
 // import { MarkdownWrapper } from '../MarkdownWrapper';
 import { CTALink } from '../CustomLink';
 import useHomeData from '~/hooks/useHomeData';
-import { BlogIcon } from '~/img/svg/BlogIcon';
+// import { BlogIcon } from '~/img/svg/BlogIcon';
 
 interface WritingData {
   id: string;
@@ -19,6 +19,7 @@ interface WritingData {
 const WritingSection = styled.section`
   background: ${({ theme }) => theme.colors.HIGHLIGHT};
   padding: 3em 1em;
+  margin: 0;
 `;
 
 const WritingList = styled.ul`
@@ -36,7 +37,7 @@ const WritingList = styled.ul`
 
 const WritingItem = styled.li`
     background: ${({ theme }) => theme.colors.WHITE};
-    border-left: 0.5em solid ${({ theme }) => theme.colors.CTA};
+    border-left: 0.5em solid ${({ theme }) => theme.colors.DARK_BG};
     display: flex;
     flex-direction: row;
     ${({ theme }) => theme.media.small`
@@ -44,14 +45,14 @@ const WritingItem = styled.li`
   `};
 `;
 
-const BlogImgContainer = styled.div`
-    background: ${({ theme }) => theme.colors.CTA};
-    max-width: 10em;
-    ${({ theme }) => theme.media.small`
-    max-width: 100%;
-    width: 100%;
-  `};
-`;
+// const BlogImgContainer = styled.div`
+//     background: ${({ theme }) => theme.colors.DARK_BG};
+//     max-width: 10em;
+//     ${({ theme }) => theme.media.small`
+//     max-width: 100%;
+//     width: 100%;
+//   `};
+// `;
 
 const BlogContent = styled.div`
     display: flex;

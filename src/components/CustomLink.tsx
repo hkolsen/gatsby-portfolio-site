@@ -35,8 +35,8 @@ export const TextLink: React.FC<CustomLinkProps> = (props: any) => (
 );
 
 export const StyledCTALink = styled(CustomLink)`
-  background: ${({ theme }) => theme.colors.CTA};
-  border: 2px solid ${({ theme }) => theme.colors.CTA};
+  background: ${({ theme }) => theme.colors.DARK_BG};
+  border: 2px solid ${({ theme }) => theme.colors.DARK_BG};
   color: ${({ theme }) => theme.colors.WHITE};
   display: inline-block;
   font-size: 1em;
@@ -58,13 +58,13 @@ export const StyledCTALink = styled(CustomLink)`
   }
   :focus-within {
     background-color: ${({ theme }) => theme.colors.WHITE};
-    border: 2px dashed ${({ theme }) => theme.colors.CTA};
-    color: ${({ theme }) => theme.colors.CTA};
+    border: 2px dashed ${({ theme }) => theme.colors.DARK_BG};
+    color: ${({ theme }) => theme.colors.DARK_BG};
   }
   :hover {
     background-color: ${({ theme }) => theme.colors.WHITE};
-    border: 2px dashed ${({ theme }) => theme.colors.CTA};
-    color: ${({ theme }) => theme.colors.CTA};
+    border: 2px dashed ${({ theme }) => theme.colors.DARK_BG};
+    color: ${({ theme }) => theme.colors.DARK_BG};
   }
 `;
 
