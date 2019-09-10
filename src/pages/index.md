@@ -1,7 +1,8 @@
 ---
 templateKey: index-page
-header: Here is my header
-subheader: Here is my subheader
+header: Welcome friend,
+subheader: >-
+  <p>I am a <span>solutions-oriented</span> engineer who is passionate about structuring, iterating, <br>and nuturing systems of <span>community</span> & <span>code</span>.</p>
 talkList:
   - id: 1
     featured: true

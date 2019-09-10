@@ -134,7 +134,7 @@ const TemplateWrapper: React.FC = ({ children }) => (
       </SkipLink>
       <HeaderContainer>
         <LogoLink aria-label="Navigate to home" linkType="internal" linkURL="/">
-          <LogoContainer>Header</LogoContainer>
+          <LogoContainer>Heidi Olsen</LogoContainer>
         </LogoLink>
       </HeaderContainer>
     </FixedContainer>

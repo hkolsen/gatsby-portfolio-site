@@ -19,8 +19,8 @@ interface SpeakingData {
 }
 
 const SpeakingSection = styled.section`
-  background: ${({ theme }) => theme.colors.BORDER};
-  padding: 0 1em;
+  background: ${({ theme }) => theme.colors.LIGHT_BG};
+  padding: 3em 1em;
 `;
 
 const SpeakingList = styled.ul`
@@ -55,7 +55,7 @@ const SpeakerBoxx = styled.li`
     bottom: 0;
     height: 0;
     width: 50%;
-    border-bottom: 1.5em solid ${({ theme }) => theme.colors.BORDER};
+    border-bottom: 1.5em solid ${({ theme }) => theme.colors.LIGHT_BG};
     box-sizing: border-box;
     right: 0;
     border-left: 2em solid transparent;
@@ -67,7 +67,7 @@ const SpeakerBoxx = styled.li`
     bottom: 0;
     height: 0;
     width: 50%;
-    border-bottom: 1.5em solid ${({ theme }) => theme.colors.BORDER};
+    border-bottom: 1.5em solid ${({ theme }) => theme.colors.LIGHT_BG};
     box-sizing: border-box;
     left: 0;
     border-right: 2em solid transparent;
