@@ -18,7 +18,7 @@ interface WritingData {
 
 const WritingSection = styled.section`
   background: ${({ theme }) => theme.colors.HIGHLIGHT};
-  padding: 0 1em;
+  padding: 3em 1em;
 `;
 
 const WritingList = styled.ul`
@@ -36,6 +36,7 @@ const WritingList = styled.ul`
 
 const WritingItem = styled.li`
     background: ${({ theme }) => theme.colors.WHITE};
+    border-left: 0.5em solid ${({ theme }) => theme.colors.CTA};
     display: flex;
     flex-direction: row;
     ${({ theme }) => theme.media.small`
@@ -87,9 +88,9 @@ export const Writing: React.FC = () => {
         <WritingList>
         {(blogList || []).map((blog: WritingData) => (
             <WritingItem key={blog.id}>
-                <BlogImgContainer>
+                {/* <BlogImgContainer>
                     <BlogIcon color={colors.TAG} blogTitle={blog.title} blogImg={blog.blogImg} />
-                </BlogImgContainer>
+                </BlogImgContainer> */}
                 <BlogContent>
                 <BlogTags>{blog.tags}</BlogTags>
                 <BlogTitle>{blog.title}</BlogTitle>

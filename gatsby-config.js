@@ -52,6 +52,14 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-styled-components',
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+          rule: {
+            include: /img/
+          }
+      }
+    },
+    {
       resolve: 'gatsby-plugin-module-resolver',
       options: {
         root: './src',
@@ -60,7 +68,6 @@ module.exports = {
         },
       },
     },
-
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 };

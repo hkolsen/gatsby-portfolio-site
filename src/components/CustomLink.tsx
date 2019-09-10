@@ -23,13 +23,10 @@ export const CustomLink: React.FC<CustomLinkProps> = ({
 };
 
 export const StyledLink = styled(CustomLink)`
-  border-bottom: 2px solid ${({ theme }) => theme.colors.BASE};
   color: ${({ theme }) => theme.colors.BASE};
-  text-decoration: none;
   transition: ${({ theme }) => theme.easing.GLOBAL};
   &:hover {
-    background: ${({ theme }) => theme.colors.BASE};
-    color: ${({ theme }) => theme.colors.WHITE};
+    text-decoration: none;
   }
 `;
 
