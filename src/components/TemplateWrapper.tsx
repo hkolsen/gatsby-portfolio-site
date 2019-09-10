@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { createGlobalStyle, styled } from '~/styled';
 import { PortfolioSiteThemeProvider } from '~/styled/theme';
 import '../utils/augmentEnvironment';
-import { CustomLink } from './CustomLink';
+import { Menu } from './Menu';
 
 interface TemplateWrapper {
   children: React.ReactNode;
@@ -74,34 +74,6 @@ const SkipLink = styled.a`
   }
 `;
 
-const HeaderContainer = styled.div`
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0;
-  width: 100%;
-`;
-
-const LogoLink = styled(CustomLink)`
-  svg {
-    height: auto;
-    transition: fill 200ms ease-in-out;
-    width: 3.5em;
-  }
-  :hover {
-    svg {
-      fill: ${({ theme }) => theme.colors.WHITE_HOVER};
-    }
-  }
-`;
-
-const LogoContainer = styled.h1`
-  color: ${({ theme }) => theme.colors.WHITE};
-  margin: 0;
-  padding: 0 0.5em;
-`;
-
 const MainContainer = styled.main`
   grid-area: main;
 `;
@@ -132,11 +104,7 @@ const TemplateWrapper: React.FC = ({ children }) => (
           id="TemplateWrapper.SkipLink"
         />
       </SkipLink>
-      <HeaderContainer>
-        <LogoLink aria-label="Navigate to home" linkType="internal" linkURL="/">
-          <LogoContainer>Heidi Olsen</LogoContainer>
-        </LogoLink>
-      </HeaderContainer>
+      <Menu />
     </FixedContainer>
     <MainContainer id="content">{children}</MainContainer>
   </TemplateWrapperContainer>
