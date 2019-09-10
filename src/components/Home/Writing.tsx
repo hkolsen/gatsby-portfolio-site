@@ -1,20 +1,9 @@
 import React from 'react';
-import { styled, useTheme } from '~/styled';
+import { styled } from '~/styled';
 // import { MarkdownWrapper } from '../MarkdownWrapper';
 import { CTALink } from '../CustomLink';
-import useHomeData from '~/hooks/useHomeData';
+import { useHomeData } from '~/data/useHomeData';
 // import { BlogIcon } from '~/img/svg/BlogIcon';
-
-interface WritingData {
-  id: string;
-  featured: boolean;
-  title: string;
-  description: string;
-  url: string;
-  ctaText: string;
-  blogImg: string;
-  tags: string;
-}
 
 const WritingSection = styled.section`
   background: ${({ theme }) => theme.colors.HIGHLIGHT};
@@ -82,12 +71,12 @@ const BlogTags = styled.span`
 const BlogCTA = styled.div``;
 
 export const Writing: React.FC = () => {
-  const { blogList } = useHomeData();
-  const { colors } = useTheme();
+  const { frontmatter } = useHomeData();
+  // const { colors } = useTheme();
   return (
     <WritingSection>
         <WritingList>
-        {(blogList || []).map((blog: WritingData) => (
+        {(frontmatter.blogList || []).map((blog) => (
             <WritingItem key={blog.id}>
                 {/* <BlogImgContainer>
                     <BlogIcon color={colors.TAG} blogTitle={blog.title} blogImg={blog.blogImg} />
