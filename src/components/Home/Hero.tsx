@@ -16,6 +16,15 @@ const HeroSection = styled.section`
     background-repeat: no-repeat, no-repeat; 
     padding: 10em;
     position: relative;
+    ${({ theme }) => theme.media.large`
+        padding: 10em 2em;
+    `};
+    ${({ theme }) => theme.media.medium`
+        background-size: 
+        100vw auto, 
+        100vw auto;
+        padding: 10em 2em;
+    `};
 `;
 
 const Header = styled.h1`
@@ -25,6 +34,10 @@ const Header = styled.h1`
     line-height: 1.5;
     margin: 0;
     padding: 0;
+    ${({ theme }) => theme.media.medium`
+        font-size: 2.5em;
+        line-height: 1;
+    `};
 `;
 
 const Intro = styled(MarkdownWrapper)`
@@ -40,6 +53,14 @@ const Intro = styled(MarkdownWrapper)`
             padding: 0 0.25em;
         }
     }
+    ${({ theme }) => theme.media.medium`
+        min-height: 10em;
+        padding: 0.5em 0; 
+        width: 100%
+        br {
+            display: none;
+        }
+    `};
 `;
 
 export const Hero: React.FC = () => {
