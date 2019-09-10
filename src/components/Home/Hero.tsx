@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '~/styled';
-import useHomeData from '~/hooks/useHomeData';
+import { useHomeData } from '~/data/useHomeData';
 import { MarkdownWrapper } from '../MarkdownWrapper';
 
 const HeroSection = styled.section`
@@ -64,11 +64,11 @@ const Intro = styled(MarkdownWrapper)`
 `;
 
 export const Hero: React.FC = () => {
-    const { header, subheader } = useHomeData();
+    const { frontmatter } = useHomeData();
     return (
     <HeroSection>
-        <Header>{header}</Header>
-        <Intro content={subheader} />
+        <Header>{frontmatter.header}</Header>
+        <Intro content={frontmatter.subheader} />
     </HeroSection>
   );
 };

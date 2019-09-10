@@ -2,21 +2,7 @@ import React from 'react';
 import { styled } from '~/styled';
 // import { MarkdownWrapper } from '../MarkdownWrapper';
 import { TextLink, CTALink } from '../CustomLink';
-import useHomeData from '~/hooks/useHomeData';
-
-interface SpeakingData {
-  id: string;
-  featured: boolean;
-  confName: string;
-  confURL: string;
-  date: string;
-  location: string;
-  category: string;
-  title: string;
-  description: string;
-  slides: string;
-  video: string;
-}
+import { useHomeData } from '~/data/useHomeData';
 
 const SpeakingSection = styled.section`
   background: ${({ theme }) => theme.colors.LIGHT_BG};
@@ -81,7 +67,7 @@ const SpeakerBoxxTop = styled.div`
 `;
 
 const SpeakerBoxxMid = styled.div`
-  flex: 1
+  flex: 1;
 `;
 
 const SpeakerBoxxBottom = styled.div``;
@@ -124,11 +110,11 @@ const MaterialsLink = styled(CTALink)`
 `;
 
 export const Speaking: React.FC = () => {
-  const { talkList } = useHomeData();
+  const { frontmatter } = useHomeData();
   return (
     <SpeakingSection>
         <SpeakingList>
-        {(talkList || []).map((talk: SpeakingData) => (
+        {(frontmatter.talkList || []).map((talk) => (
             <SpeakerBoxx key={talk.id}>
               <SpeakerBoxxTop>
                 <TalkCat>{talk.category}</TalkCat>
