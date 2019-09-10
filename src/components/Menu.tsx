@@ -110,7 +110,7 @@ const MenuLink = styled(CustomLink)`
 export const Menu: React.FC = () => 
   <MenuContainer role="navigation">
     <MenuToggle>
-      <MenuCheckbox type="checkbox" />
+      <MenuCheckbox type="checkbox" aria-checked="false" />
         <MenuTrigger />
         <MenuTrigger />
         <MenuTrigger />

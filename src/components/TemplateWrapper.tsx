@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Helmet from 'react-helmet';
-import { createGlobalStyle, styled } from '~/styled';
+import { createGlobalStyle, styled, useTheme } from '~/styled';
 import { PortfolioSiteThemeProvider } from '~/styled/theme';
 import '../utils/augmentEnvironment';
 import { Menu } from './Menu';
+import { TextLink } from './CustomLink';
 
 interface TemplateWrapper {
   children: React.ReactNode;
@@ -43,15 +44,6 @@ const TemplateWrapperContainer = styled.div`
   width: 100%;
 `;
 
-const FixedContainer = styled.header`
-  grid-area: header;
-  padding: 0;
-  position: fixed;
-  transition: ${({ theme }) => theme.easing.GLOBAL};
-  width: 100%;
-  z-index: 10;
-`;
-
 const SkipLink = styled.a`
   background: ${({ theme }) => theme.colors.WHITE};
   border-radius: 0.5em;
@@ -74,19 +66,48 @@ const SkipLink = styled.a`
   }
 `;
 
-const MainContainer = styled.main`
-  grid-area: main;
+const HeaderContainer = styled.header`
+  align-items: center;
+  display: flex;
 `;
 
-const TemplateWrapper: React.FC = ({ children }) => (
+const HeaderName = styled(TextLink)`
+  color: ${({ theme }) => theme.colors.DARK_BG};
+  font-family: ${({ theme }) => theme.fonts.SERIF};
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: ${({ theme }) => theme.easing.GLOBAL};
+  &:hover {
+    ${({ theme }) => theme.colors.HIGHLIGHT};
+  }
+`;
+
+const FixedContainer = styled.div`
+  padding: 0;
+  position: fixed;
+  transition: ${({ theme }) => theme.easing.GLOBAL};
+  width: 100%;
+  z-index: 10;
+`;
+
+const MainContainer = styled.main``;
+
+const TemplateWrapper: React.FC = ({ children }) => {
+  const theme = useTheme();
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      require(' ')('a[href*="#"]');
+    }
+  }, []);
+ return (
   <PortfolioSiteThemeProvider>
   <TemplateWrapperContainer>
     <Helmet>
       <html lang="en" />
       <meta charSet="utf-8" />
-      <title>Welcome to my site</title>
-      <meta name="description" content="Heidi Olsen is a Senior Frontend Engineer located in Portland, Ore." />
-      <meta name="theme-color" content="#212121" />
+      <title>Heidi Olsen | Senior Frontend Engineer</title>
+      <meta name="description" content="Heidi is a passionate, solutions-oriented engineer located in Portland, Ore." />
+      <meta name="theme-color" content={theme.colors.DARK_BG} />
       <link rel="canonical" href="https://heidiolsen.com" />
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link
@@ -96,19 +117,28 @@ const TemplateWrapper: React.FC = ({ children }) => (
       />
     </Helmet>
     <GlobalStyles />
-    <FixedContainer>
-      <SkipLink href="#content">
+    <SkipLink href="#content">
         <FormattedMessage
           defaultMessage="Skip to content"
           description="Link that allows screen readers to skip to main content"
           id="TemplateWrapper.SkipLink"
         />
       </SkipLink>
+      <HeaderContainer>
+      <HeaderName linkURL="/" linkType="internal">
+        <FormattedMessage
+          defaultMessage="Heidi Olsen"
+          description="Header"
+          id="TemplateWrapper.Header"
+        />
+      </HeaderName>
+      </HeaderContainer>
+    <FixedContainer>
       <Menu />
     </FixedContainer>
     <MainContainer id="content">{children}</MainContainer>
   </TemplateWrapperContainer>
   </PortfolioSiteThemeProvider>
-);
+)};
 
 export default TemplateWrapper;

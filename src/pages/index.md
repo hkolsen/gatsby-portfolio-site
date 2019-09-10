@@ -135,8 +135,8 @@ blogList:
     title: Create an interactive quiz with PHP
     description: >-
       Learn how to build an interactive quiz using PHP, MySQL, JS, AJAX, and a little bit of fun.
-    url: http://eroi.com/create-your-very-own-interactive-quiz/
-    ctaText: Read on eROI
+    url: https://medium.com/@swisswebmiss/create-your-very-own-interactive-quiz-ae020a18f766
+    ctaText: Read on Medium
     blogImg: interactive-quiz
     tags: PHP, MySQL, How-To
   - id: 4
@@ -167,8 +167,15 @@ blogList:
     title: CSS animated slideshow in email
     description: >-
       Learn how to build a pure CSS animated slideshow in an email.
-    url: http://eroi.com/pure-css-animated-slideshow-in-email/
-    ctaText: Read on eROI
+    url: https://medium.com/@swisswebmiss/css-animated-slideshow-in-email-eddcc08d8966
+    ctaText: Read on Medium
     blogImg: animated-slideshow
     tags: CSS Animation, Email, How-To
+  - id: 8
+    title:
+    description: >-
+      As a developer we tend to want to create from scratch. Part of this reinvention is because of ego and potential praise. The other is just being ignorant about what is already out there. In many respects, there appears to be more prestige for developing something new rather than reusing a sustainable, well-supported system.
+    url: https://medium.com/@swisswebmiss/why-you-shouldn-t-always-reinvent-the-wheel-d0ab8d582f0a
+    ctaText: Read on Medium
+    tags: Research, Process  
 ---
