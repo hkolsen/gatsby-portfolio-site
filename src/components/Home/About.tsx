@@ -102,7 +102,7 @@ const CurrentlyExploring = styled(MarkdownWrapper)`
 export const About: React.FC = () => {
     const { frontmatter } = useHomeData();
     return (
-    <AboutSection>
+    <AboutSection id="#about">
         <Intro>
            <Header>{frontmatter.aboutHeader}</Header>
             <AboutMe content={frontmatter.aboutContent} />

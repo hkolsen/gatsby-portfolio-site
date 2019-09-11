@@ -120,7 +120,7 @@ export const Menu: React.FC = () =>
         <MenuTrigger />
         <MenuList>
           <MenuItem>
-            <MenuLink linkType="external" linkURL="/#about">
+            <MenuLink linkType="internal" linkURL="/#about">
             <FormattedMessage
               defaultMessage="About"
               description="Navigation link that brings you to the About section"
@@ -129,7 +129,7 @@ export const Menu: React.FC = () =>
             </MenuLink>
           </MenuItem>
           <MenuItem>
-          <MenuLink linkType="external" linkURL="/#speaking">
+          <MenuLink linkType="internal" linkURL="/#speaking">
             <FormattedMessage
               defaultMessage="Speaking"
               description="Navigation link that brings you the Speaking section"
@@ -138,7 +138,7 @@ export const Menu: React.FC = () =>
           </MenuLink>
           </MenuItem>
           <MenuItem>
-          <MenuLink linkType="external" linkURL="/#writing">
+          <MenuLink linkType="internal" linkURL="/#writing">
             <FormattedMessage
               defaultMessage="Writing"
               description="Navigation link that brings you the Writing section"
