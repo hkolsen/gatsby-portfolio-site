@@ -20,6 +20,8 @@ const MenuToggle = styled.div`
   user-select: none;
 `;
 
+const MenuCheckboxLabel = styled.label``;
+
 const MenuCheckbox = styled.input`
   display: block;
   width: 40px;
@@ -49,7 +51,7 @@ const MenuCheckbox = styled.input`
 `; 
 
 const MenuTrigger = styled.span`
-    background: ${({ theme }) => theme.colors.DARK_BG};
+    background: ${({ theme }) => theme.colors.ACTIVE};
     border-radius: 3px;
     display: block;
     width: 33px;
@@ -70,7 +72,7 @@ const MenuTrigger = styled.span`
 `;
 
 const MenuList = styled.ul`
-  background: ${({ theme }) => theme.colors.DARK_BG};
+  background: ${({ theme }) => theme.colors.ACTIVE};
   border-radius: 0 0 0 5em;
   list-style: none;
   position: absolute;
@@ -111,13 +113,14 @@ const MenuLink = styled(CustomLink)`
 export const Menu: React.FC = () => 
   <MenuContainer role="navigation">
     <MenuToggle>
-      <MenuCheckbox type="checkbox" />
+      <MenuCheckbox id="menu" name="menu" type="checkbox" />
+      <MenuCheckboxLabel htmlFor="menu" />
         <MenuTrigger />
         <MenuTrigger />
         <MenuTrigger />
         <MenuList>
           <MenuItem>
-            <MenuLink linkType="external" linkURL="/#about">
+            <MenuLink linkType="internal" linkURL="/#about">
             <FormattedMessage
               defaultMessage="About"
               description="Navigation link that brings you to the About section"
@@ -126,7 +129,7 @@ export const Menu: React.FC = () =>
             </MenuLink>
           </MenuItem>
           <MenuItem>
-          <MenuLink linkType="external" linkURL="/#speaking">
+          <MenuLink linkType="internal" linkURL="/#speaking">
             <FormattedMessage
               defaultMessage="Speaking"
               description="Navigation link that brings you the Speaking section"
@@ -135,7 +138,7 @@ export const Menu: React.FC = () =>
           </MenuLink>
           </MenuItem>
           <MenuItem>
-          <MenuLink linkType="external" linkURL="/#writing">
+          <MenuLink linkType="internal" linkURL="/#writing">
             <FormattedMessage
               defaultMessage="Writing"
               description="Navigation link that brings you the Writing section"

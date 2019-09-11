@@ -29,7 +29,7 @@ const HeroSection = styled.section`
 `;
 
 const Header = styled.h1`
-    color: #2d055a;
+    color: ${({ theme }) => theme.colors.ACTIVE};
     font-family: ${({ theme }) => theme.fonts.SERIF};
     font-size: 3.5em;
     line-height: 1.5;

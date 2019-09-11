@@ -6,6 +6,9 @@ interface HomeQueryResponse {
       templateKey: string;
       header: string;
       subheader: string;
+      aboutHeader: string;
+      aboutContent: string;
+      currentlyExploring: string;
       talkList: Array<{
         id: string;
         featured: boolean;
@@ -43,6 +46,9 @@ export const useHomeData = () => {
             templateKey
             header
             subheader
+            aboutHeader
+            aboutContent
+            currentlyExploring
             talkList {
               id
               featured

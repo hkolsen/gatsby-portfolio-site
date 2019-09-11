@@ -38,6 +38,19 @@ collections:
               widget: markdown,
               required: false,
             }
+          - { label: About Heading, name: aboutHeader, widget: string, required: false }
+          - {
+              label: About Section,
+              name: aboutContent,
+              widget: markdown,
+              required: false,
+            } 
+          - {
+              label: Currently Exploring,
+              name: currentlyExploring,
+              widget: markdown,
+              required: false,
+            }    
           - label: Speaking Engagements
             name: talkList
             widget: list
