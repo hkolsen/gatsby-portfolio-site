@@ -7,6 +7,8 @@ import '../utils/augmentEnvironment';
 import { Menu } from './Menu';
 import { TextLink } from './CustomLink';
 import { HeaderLogo } from '../img/svg/HeaderLogo';
+import Favicon from '../img/favicon.ico';
+import AppleTouch from '../img/apple-touch-icon.png';
 
 interface TemplateWrapper {
   children: React.ReactNode;
@@ -117,6 +119,8 @@ const TemplateWrapper: React.FC = ({ children }) =>
       <meta name="description" content="Heidi is a passionate, solutions-oriented engineer located in Portland, Ore." />
       <meta name="theme-color" content="#221061" />
       <link rel="canonical" href="https://heidiolsen.com" />
+      <link rel="shortcut icon" href={Favicon} />
+      <link rel="apple-touch-icon" sizes="57x57" href={AppleTouch} />
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link
         rel="preconnect"

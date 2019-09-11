@@ -1,13 +1,39 @@
 import React from 'react';
 import { styled } from '~/styled';
-// import { MarkdownWrapper } from '../MarkdownWrapper';
+import { MarkdownWrapper } from '../MarkdownWrapper';
 import { TextLink, CTALink } from '../CustomLink';
 import { useHomeData } from '~/data/useHomeData';
+import { FormattedMessage } from 'react-intl';
 
 const SpeakingSection = styled.section`
   background: ${({ theme }) => theme.colors.LIGHT_BG};
   padding: 3em 1em;
 `;
+
+const FeaturedTalk = styled.article`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0 1em;
+  padding: 0px;
+  ${({ theme }) => theme.media.medium`
+    flex-direction: column;
+  `};
+`;
+
+const SpeakingHeader = styled.h1`
+  color: ${({ theme }) => theme.colors.DARK_BG};
+  font-family: ${({ theme }) => theme.fonts.SERIF};
+  font-size: 3em;
+  margin: 0 0 1em;
+  min-width: 10em;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-color: ${({ theme }) => theme.colors.TAG};
+`;
+
+const SpeakingHeaderAccent = styled.span``;
 
 const SpeakingList = styled.ul`
   display: grid;
@@ -17,6 +43,12 @@ const SpeakingList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+`;
+
+const TalkDescription = styled(MarkdownWrapper)`
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0 0 1em;
 `;
 
 const SpeakerBoxx = styled.li`
@@ -113,8 +145,50 @@ export const Speaking: React.FC = () => {
   const { frontmatter } = useHomeData();
   return (
     <SpeakingSection id="speaking">
+        <FeaturedTalk>
+          <SpeakingHeader>
+          <FormattedMessage
+            defaultMessage="Speaking {and} Sharing"
+            description="Navigation link that brings you to the About section"
+            id="Writing.Header"
+            values={{
+              and: <SpeakingHeaderAccent>&</SpeakingHeaderAccent>
+            }}
+            />
+          </SpeakingHeader>
+        {(frontmatter.talkList || []).map((talk) => (
+            talk.featured && 
+            <SpeakerBoxx key={talk.id}>
+              <SpeakerBoxxTop>
+              <TalkCat>{talk.category}</TalkCat>
+                <ConfLocation>{talk.location}</ConfLocation>
+              </SpeakerBoxxTop>
+              <SpeakerBoxxMid>
+              <TalkDate>{talk.date}</TalkDate>
+              {talk.confURL ? 
+                <ConfTitle><ConfLink
+              linkURL={talk.confURL}
+              linkType="external"
+              >{talk.confName}</ConfLink></ConfTitle> : <ConfTitle>{talk.confName}</ConfTitle>}
+              <TalkTitle>{talk.title}</TalkTitle>
+              </SpeakerBoxxMid>
+              <TalkDescription content={talk.description} />
+              <SpeakerBoxxBottom>
+              {talk.slides && <MaterialsLink
+              linkURL={talk.slides}
+              linkType="external"
+              >View Slides</MaterialsLink>}
+              {talk.video && <MaterialsLink
+              linkURL={talk.video}
+              linkType="external"
+              >Watch Video</MaterialsLink>}
+              </SpeakerBoxxBottom>
+          </SpeakerBoxx>
+        ))}
+        </FeaturedTalk> 
         <SpeakingList>
         {(frontmatter.talkList || []).map((talk) => (
+            !talk.featured && 
             <SpeakerBoxx key={talk.id}>
               <SpeakerBoxxTop>
                 <TalkCat>{talk.category}</TalkCat>
@@ -129,7 +203,7 @@ export const Speaking: React.FC = () => {
               >{talk.confName}</ConfLink></ConfTitle> : <ConfTitle>{talk.confName}</ConfTitle>}
               <TalkTitle>{talk.title}</TalkTitle>
               </SpeakerBoxxMid>
-              {/* <MarkdownWrapper content={talk.description} /> */}
+              <MarkdownWrapper content={talk.description} />
               <SpeakerBoxxBottom>
               {talk.slides && <MaterialsLink
               linkURL={talk.slides}

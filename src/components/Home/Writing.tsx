@@ -2,11 +2,22 @@ import React from 'react';
 import { styled } from '~/styled';
 import { CTALink } from '../CustomLink';
 import { useHomeData } from '~/data/useHomeData';
+import { FormattedMessage } from 'react-intl';
 
 const WritingSection = styled.section`
   background: ${({ theme }) => theme.colors.HIGHLIGHT};
-  padding: 3em 1em;
+  padding: 2em 1em;
   margin: 0;
+`;
+
+const WritingHeader = styled.h1`
+  color: ${({ theme }) => theme.colors.WHITE};
+  font-family: ${({ theme }) => theme.fonts.SERIF};
+  font-size: 3em;
+  margin: 0 0 0.5em;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-color: ${({ theme }) => theme.colors.DARK_BG};
 `;
 
 const WritingList = styled.ul`
@@ -59,12 +70,12 @@ const BlogTagList = styled.span`
   font-size: 0.8em;
 `;
 
-const GuestBlogTag = styled.span`
-  background: ${({ theme }) => theme.colors.TAG};
-  color: ${({ theme }) => theme.colors.WHITE};
-  font-size: 0.8em;
-  padding: 0.25em 0.5em;
-`;
+// const GuestBlogTag = styled.span`
+//   background: ${({ theme }) => theme.colors.TAG};
+//   color: ${({ theme }) => theme.colors.WHITE};
+//   font-size: 0.8em;
+//   padding: 0.25em 0.5em;
+// `;
 
 const BlogCTA = styled.div``;
 
@@ -72,13 +83,20 @@ export const Writing: React.FC = () => {
   const { frontmatter } = useHomeData();
   return (
     <WritingSection id="writing">
+        <WritingHeader>
+          <FormattedMessage
+            defaultMessage="Selected Writing"
+            description="Navigation link that brings you to the About section"
+            id="Writing.Header"
+            />
+        </WritingHeader>
         <WritingList>
         {(frontmatter.blogList || []).map((blog) => (
             <WritingItem key={blog.id}>
                 <BlogContent>
                 <BlogTagContainer>
                   <BlogTagList>{blog.tags}</BlogTagList>
-                  {blog.guestBlog && <GuestBlogTag>Partner Blog</GuestBlogTag>}
+                  {/* {blog.guestBlog && <GuestBlogTag>Partner Blog</GuestBlogTag>} */}
                 </BlogTagContainer>
                 <BlogTitle>{blog.title}</BlogTitle>
                 <BlogCTA>

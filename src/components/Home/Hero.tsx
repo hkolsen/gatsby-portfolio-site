@@ -16,6 +16,7 @@ const HeroSection = styled.section`
     background-repeat: no-repeat, no-repeat; 
     padding: 10em;
     position: relative;
+    border-bottom: 0.5em solid ${({ theme }) => theme.colors.HIGHLIGHT};
     ${({ theme }) => theme.media.large`
         padding: 10em 2em;
     `};

@@ -15,7 +15,7 @@ talkList:
       Technology has enabled email marketers to collect a mass amount of data about our subscribers, but having all of this data doesn’t make it easier to communicate - it makes it harder to know what’s relevant. Being able to visualize that data to tell a story, however, can not only provide an informative experience, it can also help drive the actions we want our subscribers to take.
 
       In this session, we will walk through various datasets to identify stories that can provide value to our subscribers as well as explore the science of how people perceive data to remove irrelevant information to assist in better understanding. We will leverage principles of visual perception to design appropriate data visualizations for our emails, as well review code snippets that will help build these experiences using HTML, CSS, and even animation as a progressive enhancement.
-    category: Conference
+    category: Upcoming Talk
   - id: 2
     confName: Litmus Live
     confURL: https://litmus.com/conference/boston

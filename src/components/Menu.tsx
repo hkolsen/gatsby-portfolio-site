@@ -85,7 +85,7 @@ const MenuList = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  ${({ theme }) => theme.media.medium`
+  ${({ theme }) => theme.media.small`
     flex-direction: column;
     margin: -10.5em 0 0 -100vw;
     padding: 7.75em 0 1em 7em;
