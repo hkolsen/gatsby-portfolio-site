@@ -1,23 +1,72 @@
-# Portfolio Site
+# A simple starter site for Gatsby
 
-IRL, a site of this scope would not require more than HTML and CSS, but hypothetically this is the foundation to a larger site with content editors ([Netlify CMS](#netlify-cms)), multiple engineers ([TypeScript](#typescript)) and would need to be statically rendered to reduce performance and security implications with using a standalone React app ([Gatsby](#gatsby)). The site is continously deployed through [Netlify](#netlify)).
+This is Gatsby site that leverages Netlify CMS for content editing. It is a great starting point to deploy a small personal site, or a foundation to scale for a project even larger.
 
-## Netlify CMS
+## Is this the right project for you?
+
+Before diving in, take a moment to see if the following scenarios apply. If not, it may be best to explore other options that will better fit your needs.
+
+### I am building a site that non-engineers will need to edit content.
+
+This site integrates seamlessly with [Netlify CMS](https://www.netlifycms.org/).
 
 Netlify CMS is an open source content management system for Git workflows. With Github permissions, it will read/write/edit markdown files saved under pages. Anytime an admin user makes changes to a page or section, Netlify CMS will create a new commit with the changes and merge into the master branch in the Github repository. This will then trigger the continuous deployment performed by Netlify.
 
-To add/edit/delete fields in Netlify, navigate to the config.yml file under static/admin in the project code.
+To add/edit/delete fields in Netlify, navigate to the `config.yml` file under `static/admin` in the project code.
 
-Read more about Netlify CMS Configuration
+([Read more about Netlify CMS Configuration](https://www.netlifycms.org/docs/intro/)
 
-## TypeScript
+### I will be sharing the codebase with other developers
 
-Typescipt provides safe typing across your project.
+This project uses [TypeScript](http://www.typescriptlang.org/), a statically typed superset of JavaScript.
 
-## Gatsby
+Managing large Javascript codebases can be challenging. This is why more teams are adopting TypeScript, to feel more confident when shipping code. A static type checker does not modify how your code behaves at runtime — instead, it analyzes your code and attempts to infer types wherever possible, warning the developer before code ships.
 
-Gatsby is a Static Site Generator for React that allows you to query data from anywhere via GraphQL.
+([Get started with TypeScript](http://www.typescriptlang.org/samples/index.html))
 
-## Netlify
+### I am most comfortable using a JavaScript framework, but am concerned about performance and accessibility
 
-As mentioned previously, Netlify will start a deployment anytime a new change has been commited to the master branch.
+This site is built with [Gatsby](https://www.gatsbyjs.org/), a static-site generator.
+
+Gatsby is a free and open source framework based on React that helps developers build performant websites and apps, while proving out-of-the-box accessible components. Gatsby also allows developers to query data from anywhere via GraphQL.
+
+([Learn more about how Gatsby works](https://www.gatsbyjs.org/docs/))
+
+## If none of the above apply, consider the following:
+
+- **HTML + CSS:** It is difficult to beat the performance of a static HTML and CSS site. Now its even easier to create dynamic layouts easily and accessibly. Check out [Every Layout](https://every-layout.dev) for inspiration.
+- **[Eleventy](https://www.11ty.io/):** A simple static-site generator. Plenty of starters and integrates with multiple template languages.
+
+## To get started with this project:
+
+Clone the project to your local development environment:
+
+```
+git clone git@github.com:hkolsen/gatsby-portfolio-site.git
+```
+
+Run Yarn in the console to install all dependencies:
+
+```
+yarn
+```
+
+Once complete, run the following to preview locally:
+
+```
+yarn start
+```
+
+To build the project and serve on your local server:
+
+```
+yarn build && yarn serve
+```
+
+## Roadmap:
+
+- Light and Dark Mode
+- Animations and `prefers-reduced-motion` query
+- Move from single-page to multiple-pages
+- Screenshot testing
+- Build design system
