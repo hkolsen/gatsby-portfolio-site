@@ -28,6 +28,7 @@ interface HomeQueryResponse {
         ctaText: string;
         blogImg: any;
         tags: string;
+        guestBlog: boolean;
       }>;
     };
   };
@@ -64,6 +65,7 @@ export const useHomeData = () => {
               ctaText
               blogImg
               tags
+              guestBlog
             }
           }
         }

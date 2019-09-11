@@ -21,7 +21,7 @@ const HeroSection = styled.section`
     `};
     ${({ theme }) => theme.media.medium`
         background-size: 
-        100vw auto, 
+        80vw auto, 
         100vw auto;
         padding: 10em 2em;
     `};

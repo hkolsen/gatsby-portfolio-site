@@ -1,9 +1,7 @@
 import React from 'react';
 import { styled } from '~/styled';
-// import { MarkdownWrapper } from '../MarkdownWrapper';
 import { CTALink } from '../CustomLink';
 import { useHomeData } from '~/data/useHomeData';
-// import { BlogIcon } from '~/img/svg/BlogIcon';
 
 const WritingSection = styled.section`
   background: ${({ theme }) => theme.colors.HIGHLIGHT};
@@ -34,21 +32,12 @@ const WritingItem = styled.li`
   `};
 `;
 
-// const BlogImgContainer = styled.div`
-//     background: ${({ theme }) => theme.colors.DARK_BG};
-//     max-width: 10em;
-//     ${({ theme }) => theme.media.small`
-//     max-width: 100%;
-//     width: 100%;
-//   `};
-// `;
-
 const BlogContent = styled.div`
     display: flex;
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1em 0 1em 1em;
 `;
 
 const BlogTitle = styled.h3`
@@ -56,35 +45,42 @@ const BlogTitle = styled.h3`
     font-family: ${({ theme }) => theme.fonts.SERIF};
     font-size: 1.5em;
     line-height: 1.25;
-    margin: 0.25em 0;
+    margin: 0.25em 0 1em;
     min-height: 3em;
 `;
 
-const BlogTags = styled.span`
-    font-size: 0.8em;
+const BlogTagContainer = styled.div`
+  align-items: center;  
+  display: flex;
+  justify-content: space-between;
 `;
 
-// const BlogDesc = styled(MarkdownWrapper)`
-//     font-size: 0.75em;
-// `;
+const BlogTagList = styled.span`
+  font-size: 0.8em;
+`;
+
+const GuestBlogTag = styled.span`
+  background: ${({ theme }) => theme.colors.TAG};
+  color: ${({ theme }) => theme.colors.WHITE};
+  font-size: 0.8em;
+  padding: 0.25em 0.5em;
+`;
 
 const BlogCTA = styled.div``;
 
 export const Writing: React.FC = () => {
   const { frontmatter } = useHomeData();
-  // const { colors } = useTheme();
   return (
-    <WritingSection>
+    <WritingSection id="writing">
         <WritingList>
         {(frontmatter.blogList || []).map((blog) => (
             <WritingItem key={blog.id}>
-                {/* <BlogImgContainer>
-                    <BlogIcon color={colors.TAG} blogTitle={blog.title} blogImg={blog.blogImg} />
-                </BlogImgContainer> */}
                 <BlogContent>
-                <BlogTags>{blog.tags}</BlogTags>
+                <BlogTagContainer>
+                  <BlogTagList>{blog.tags}</BlogTagList>
+                  {blog.guestBlog && <GuestBlogTag>Partner Blog</GuestBlogTag>}
+                </BlogTagContainer>
                 <BlogTitle>{blog.title}</BlogTitle>
-                {/* <BlogDesc content={blog.description} /> */}
                 <BlogCTA>
                     <CTALink
                 linkURL={blog.url}

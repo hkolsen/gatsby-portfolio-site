@@ -112,7 +112,7 @@ const MaterialsLink = styled(CTALink)`
 export const Speaking: React.FC = () => {
   const { frontmatter } = useHomeData();
   return (
-    <SpeakingSection>
+    <SpeakingSection id="speaking">
         <SpeakingList>
         {(frontmatter.talkList || []).map((talk) => (
             <SpeakerBoxx key={talk.id}>
