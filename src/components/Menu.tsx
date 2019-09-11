@@ -74,8 +74,8 @@ const MenuList = styled.ul`
   border-radius: 0 0 0 5em;
   list-style: none;
   position: absolute;
-  width: 25em;
-  margin: -10.5em 0 0 -35em;
+  width: 20em;
+  margin: -10.5em 0 0 -30em;
   padding: 7.75em 10em 2em 5em;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
@@ -85,10 +85,11 @@ const MenuList = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  ${({ theme }) => theme.media.medium`
+  ${({ theme }) => theme.media.small`
     flex-direction: column;
     margin: -10.5em 0 0 -100vw;
     padding: 7.75em 0 1em 7em;
+    width: 35em;
   `};
 `;
 
@@ -115,15 +116,6 @@ export const Menu: React.FC = () =>
         <MenuTrigger />
         <MenuTrigger />
         <MenuList>
-          <MenuItem>
-            <MenuLink linkType="external" linkURL="/">
-            <FormattedMessage
-              defaultMessage="Home"
-              description="Navigation link that brings you to the top of the page"
-              id="Menu.Home"
-              />
-            </MenuLink>
-          </MenuItem>
           <MenuItem>
             <MenuLink linkType="external" linkURL="/#about">
             <FormattedMessage

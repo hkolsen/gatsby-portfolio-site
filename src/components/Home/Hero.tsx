@@ -16,12 +16,13 @@ const HeroSection = styled.section`
     background-repeat: no-repeat, no-repeat; 
     padding: 10em;
     position: relative;
+    border-bottom: 0.5em solid ${({ theme }) => theme.colors.HIGHLIGHT};
     ${({ theme }) => theme.media.large`
         padding: 10em 2em;
     `};
     ${({ theme }) => theme.media.medium`
         background-size: 
-        100vw auto, 
+        80vw auto, 
         100vw auto;
         padding: 10em 2em;
     `};

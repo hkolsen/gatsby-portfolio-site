@@ -65,6 +65,7 @@ collections:
             fields:
               - { label: Order, name: id, widget: number, required: false }
               - { label: Featured, name: featured, widget: boolean, required: false }
+              - { label: Guest Blog, name: guestBlog, widget: boolean, required: false }
               - { label: Blog Title, name: title, widget: string, required: false }
               - { label: Blog Description, name: description, widget: markdown, required: false }
               - { label: Blog URL, name: url, widget: string, required: false }

@@ -15,7 +15,7 @@ talkList:
       Technology has enabled email marketers to collect a mass amount of data about our subscribers, but having all of this data doesn’t make it easier to communicate - it makes it harder to know what’s relevant. Being able to visualize that data to tell a story, however, can not only provide an informative experience, it can also help drive the actions we want our subscribers to take.
 
       In this session, we will walk through various datasets to identify stories that can provide value to our subscribers as well as explore the science of how people perceive data to remove irrelevant information to assist in better understanding. We will leverage principles of visual perception to design appropriate data visualizations for our emails, as well review code snippets that will help build these experiences using HTML, CSS, and even animation as a progressive enhancement.
-    category: Conference
+    category: Upcoming Talk
   - id: 2
     confName: Litmus Live
     confURL: https://litmus.com/conference/boston
@@ -122,7 +122,8 @@ blogList:
     url: https://www.shopify.com/partners/blog/css-animation
     ctaText: Read on Shopify
     blogImg: css-animations
-    tags: Guest Blog, eCommerce, CSS Animations, UX
+    tags: CSS Animations, Research, UX
+    guestBlog: true
   - id: 2
     title: Techniques for SVG animation and development
     description: >-
@@ -130,15 +131,15 @@ blogList:
     url: http://eroi.com/techniques-for-svg-animation-and-development/
     ctaText: Read on eROI
     blogImg: svg-animations
-    tags: CSS Animation, SVG, How-To
+    tags: CSS Animation, How-To, SVG
   - id: 3
     title: Create an interactive quiz with PHP
     description: >-
       Learn how to build an interactive quiz using PHP, MySQL, JS, AJAX, and a little bit of fun.
-    url: http://eroi.com/create-your-very-own-interactive-quiz/
-    ctaText: Read on eROI
+    url: https://medium.com/@swisswebmiss/create-your-very-own-interactive-quiz-ae020a18f766
+    ctaText: Read on Medium
     blogImg: interactive-quiz
-    tags: PHP, MySQL, How-To
+    tags: How-To, MySQL, PHP
   - id: 4
     title: Budgeted Fun - How a design system can facilitate innovation
     description: >-
@@ -146,7 +147,8 @@ blogList:
     url: https://www.emailonacid.com/blog/article/email-development/budgeted-fun-how-a-design-system-can-facilitate-innovation/
     ctaText: Read on Email on Acid
     blogImg: design-system
-    tags: Guest Blog, Email, Design System
+    tags: Design System, Email
+    guestBlog: true
   - id: 5
     title: Automation to Innovation - Bringing the human touch to your email program
     description: >-
@@ -162,13 +164,20 @@ blogList:
     url: http://eroi.com/data-driven-innovation-in-email/
     ctaText: Read on eROI
     blogImg: data-driven
-    tags: Email, Interactive Techniques, Data
+    tags: Data, Email, Interactive Techniques
   - id: 7
     title: CSS animated slideshow in email
     description: >-
       Learn how to build a pure CSS animated slideshow in an email.
-    url: http://eroi.com/pure-css-animated-slideshow-in-email/
-    ctaText: Read on eROI
+    url: https://medium.com/@swisswebmiss/css-animated-slideshow-in-email-eddcc08d8966
+    ctaText: Read on Medium
     blogImg: animated-slideshow
     tags: CSS Animation, Email, How-To
+  - id: 8
+    title: How to smartly adapt a new framework
+    description: >-
+      As a developer we tend to want to create from scratch. Part of this reinvention is because of ego and potential praise. The other is just being ignorant about what is already out there. In many respects, there appears to be more prestige for developing something new rather than reusing a sustainable, well-supported system.
+    url: https://medium.com/@swisswebmiss/why-you-shouldn-t-always-reinvent-the-wheel-d0ab8d582f0a
+    ctaText: Read on Medium
+    tags: Process, Research, Wordpress
 ---

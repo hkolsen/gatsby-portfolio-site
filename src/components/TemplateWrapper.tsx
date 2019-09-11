@@ -5,18 +5,22 @@ import { createGlobalStyle, styled } from '~/styled';
 import { PortfolioSiteThemeProvider } from '~/styled/theme';
 import '../utils/augmentEnvironment';
 import { Menu } from './Menu';
+import { TextLink } from './CustomLink';
+import { HeaderLogo } from '../img/svg/HeaderLogo';
+import Favicon from '../img/favicon.ico';
+import AppleTouch from '../img/apple-touch-icon.png';
 
 interface TemplateWrapper {
   children: React.ReactNode;
 }
 const GlobalStyles = createGlobalStyle`
   @font-face {
-    font-family: 'Avro';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v13/tDbD2oWUg0MKqScQ7Z7o_vo.woff2) format('woff2');
-  }
+    font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v15/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWoe5j5hNKe1_w.woff2) format('woff2');
+ }
   @font-face {
     font-family: 'Open Sans';
     font-style: normal;
@@ -43,15 +47,6 @@ const TemplateWrapperContainer = styled.div`
   width: 100%;
 `;
 
-const FixedContainer = styled.header`
-  grid-area: header;
-  padding: 0;
-  position: fixed;
-  transition: ${({ theme }) => theme.easing.GLOBAL};
-  width: 100%;
-  z-index: 10;
-`;
-
 const SkipLink = styled.a`
   background: ${({ theme }) => theme.colors.WHITE};
   border-radius: 0.5em;
@@ -74,20 +69,58 @@ const SkipLink = styled.a`
   }
 `;
 
-const MainContainer = styled.main`
-  grid-area: main;
+const HeaderContainer = styled.header`
+  align-items: center;
+  display: flex;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  ${({ theme }) => theme.media.medium`
+    margin: 3.5em 0 0;
+  `};
 `;
 
-const TemplateWrapper: React.FC = ({ children }) => (
+const HeaderName = styled(TextLink)`
+  text-align: center; 
+  text-decoration: none;
+  margin: 1em auto;
+  width: 15em;
+  span {
+    color: ${({ theme }) => theme.colors.DARK_BG};
+    font-family: ${({ theme }) => theme.fonts.SERIF};
+    font-size: 2em;
+    font-weight: bold;
+    transition: ${({ theme }) => theme.easing.GLOBAL};
+  }
+  &:hover {
+    span {
+      color: ${({ theme }) => theme.colors.HIGHLIGHT};
+    }
+  }
+`;
+
+const FixedContainer = styled.div`
+  padding: 0;
+  position: fixed;
+  transition: ${({ theme }) => theme.easing.GLOBAL};
+  width: 100%;
+  z-index: 10;
+`;
+
+const MainContainer = styled.main``;
+
+const TemplateWrapper: React.FC = ({ children }) => 
   <PortfolioSiteThemeProvider>
   <TemplateWrapperContainer>
     <Helmet>
       <html lang="en" />
       <meta charSet="utf-8" />
-      <title>Welcome to my site</title>
-      <meta name="description" content="Heidi Olsen is a Senior Frontend Engineer located in Portland, Ore." />
-      <meta name="theme-color" content="#212121" />
+      <title>Heidi Olsen | Senior Frontend Engineer</title>
+      <meta name="description" content="Heidi is a passionate, solutions-oriented engineer located in Portland, Ore." />
+      <meta name="theme-color" content="#221061" />
       <link rel="canonical" href="https://heidiolsen.com" />
+      <link rel="shortcut icon" href={Favicon} />
+      <link rel="apple-touch-icon" sizes="57x57" href={AppleTouch} />
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link
         rel="preconnect"
@@ -96,19 +129,24 @@ const TemplateWrapper: React.FC = ({ children }) => (
       />
     </Helmet>
     <GlobalStyles />
-    <FixedContainer>
-      <SkipLink href="#content">
+    <SkipLink href="#content">
         <FormattedMessage
           defaultMessage="Skip to content"
           description="Link that allows screen readers to skip to main content"
           id="TemplateWrapper.SkipLink"
         />
       </SkipLink>
+      <HeaderContainer>
+      <HeaderName linkURL="/" linkType="internal">
+        <HeaderLogo />
+      </HeaderName>
+      </HeaderContainer>
+    <FixedContainer>
       <Menu />
     </FixedContainer>
     <MainContainer id="content">{children}</MainContainer>
   </TemplateWrapperContainer>
   </PortfolioSiteThemeProvider>
-);
+
 
 export default TemplateWrapper;
