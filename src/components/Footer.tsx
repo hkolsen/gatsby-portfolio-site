@@ -82,12 +82,12 @@ export const Footer: React.FC = () => {
                 </SocialLink>
             </SocialIconContainer>
             <SocialIconContainer>
-                <SocialLink linkType="external" linkURL="https://twitter.com/SwissWebMiss">
+                <SocialLink linkType="external" linkURL="https://codepen.io/SwissWebMiss">
                     <SocialIcons color={colors.WHITE} socialName="CodePen" />
                 </SocialLink>
             </SocialIconContainer>
             <SocialIconContainer>
-                <SocialLink linkType="external" linkURL="https://codepen.io/SwissWebMiss">
+                <SocialLink linkType="external" linkURL="https://www.linkedin.com/in/heidiolsen/">
                     <SocialIcons color={colors.WHITE} socialName="LinkedIn" /></SocialLink>
             </SocialIconContainer>
             <SocialIconContainer>
