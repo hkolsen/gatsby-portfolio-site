@@ -3,12 +3,21 @@ templateKey: index-page
 header: Welcome friend,
 subheader: >-
   <p>I am a <span>solutions-oriented</span> engineer who is passionate about structuring, iterating, <br>and nuturing systems of <span>community</span> & <span>code</span>.</p>
+aboutHeader: A little about my journey
+aboutContent: >-
+  <p>I am currently a Senior Front End Engineer at <a href="https://bumped.com/" target="_blank" rel="noopener noreferrer">Bumped</a>, helping build a design system to bridge the gap between native and DOM. Previously I was a Lead Software Engineer at eROI (now <a href="https://thesis.agency/Thesis" target="_blank" rel="noopener noreferrer">Thesis</a>). I started my career working with various startups and small businesses as a web developer and co-owner of a creative studio called 3 Hound Design.<p>
+currentlyExploring: >-
+  <h2>Currently exploring:</h2>
+  <ul>
+    <li>Building design systems with Gatsby and Storybook</li>
+    <li>Opportunities to contribute to open source and help establish a safe and inclusive tech community</li>
+  </ul>
 talkList:
   - id: 1
     featured: true
     confName: Litmus Live
     confURL: https://litmus.com/conference/boston
-    date: 2019 OCT 08 & 2019 NOV 08
+    date: 2019 OCT & 2019 NOV
     location: Boston, MA & San Francisco, CA
     title: Effective Storytelling with Data Visualization
     description: >-
@@ -19,7 +28,7 @@ talkList:
   - id: 2
     confName: Litmus Live
     confURL: https://litmus.com/conference/boston
-    date: 2018 NOV 09
+    date: 2018 NOV
     location: San Francisco, CA
     title: Demystifying APIs for Better Email Programs
     slides: https://noti.st/heidiolsen/ApVE84/demystifying-apis-for-better-email-programs
@@ -27,7 +36,7 @@ talkList:
   - id: 3
     confName: Webcamp Zagreb
     confURL: https://2018.webcampzg.org/
-    date: 2018 OCT 05
+    date: 2018 OCT
     location: Zagreb, HR
     title: Headless Architecture and the Future of Websites
     slides: https://noti.st/heidiolsen/57VlI6/headless-architecture-and-the-future-of-websites
@@ -36,7 +45,7 @@ talkList:
   - id: 4
     confName: Litmus
     confURL: https://litmus.com/blog/whats-new-litmus-builder-webinar-recording
-    date: 2018 MAY 23
+    date: 2018 MAY
     location: Virtual
     title: What's New in Litmus Builder
     video: https://litmus.com/blog/whats-new-litmus-builder-webinar-recording
@@ -44,7 +53,7 @@ talkList:
   - id: 5
     confName: Email Innovation Summit
     confURL: https://emailinnovationssummit.com/lasvegas/2018/
-    date: 2018 MAY 16
+    date: 2018 MAY
     location: Las Vegas, NV
     title: Making the Case for Interactive Email
     slides: https://noti.st/heidiolsen/YVmQFf/making-the-case-for-interactive-email-what-s-possible-beautiful-and-relevant
@@ -52,14 +61,14 @@ talkList:
   - id: 6
     confName: Marketing United
     confURL: https://marketingunited.com/
-    date: 2018 APR 10
+    date: 2018 APR
     location: Nashville, TN
     title: The Future of Email
     category: Panel
   - id: 7
     confName: Midwest Digital Marketing Conference
     confURL: https://bestmarketingconference.com/
-    date: 2018 MAR 27
+    date: 2018 MAR
     location: St. Louis, MO
     title: Making the Case for Interactive Email
     slides: https://noti.st/heidiolsen/YVmQFf/making-the-case-for-interactive-email-what-s-possible-beautiful-and-relevant
@@ -67,7 +76,7 @@ talkList:
   - id: 8
     confName: IBM Think
     confURL: https://www.ibm.com/blogs/events/event/think-2018/
-    date: 2018 MAR 20
+    date: 2018 MAR
     location: Las Vegas, NV
     title: Making the Case for Interactive Email
     slides: https://noti.st/heidiolsen/YVmQFf/making-the-case-for-interactive-email-what-s-possible-beautiful-and-relevant
@@ -75,7 +84,7 @@ talkList:
   - id: 9
     confName: Front End PDX
     confURL: https://www.meetup.com/Front-End-PDX/events/244695123/
-    date: 2018 FEB 27
+    date: 2018 FEB
     location: Portland, OR
     title: The Shady Web - Using CSS for Good, not Evil
     slides: https://slides.com/heidi_olsen/front-end-pdx#/
@@ -83,7 +92,7 @@ talkList:
   - id: 10
     confName: CSSConf Budapest
     confURL: http://2017.cssconfbp.rocks/
-    date: 2017 OCT 25
+    date: 2017 OCT
     location: Budapest, HU
     title: The Shady Web - Using CSS for Good, not Evil
     slides: https://slides.com/heidi_olsen/cssconfbp_shady-web#/
@@ -92,7 +101,7 @@ talkList:
   - id: 11
     confName: Email on Acid
     confURL: https://www.emailonacid.com/blog/article/eoa-news/webinar-recap-making-the-case-for-interactive-email-whats-possible-beautifu/
-    date: 2017 OCT 03
+    date: 2017 OCT
     location: Virtual
     title: Making the Case for Interactive Email
     video: https://vimeo.com/237405349
@@ -100,7 +109,7 @@ talkList:
   - id: 12
     confName: RefreshPDX
     confURL: http://rfrshpdx.org/css-is-your-brands-body-language/
-    date: 2017 JUN 21
+    date: 2017 JUN
     location: Virtual
     title: How CSS is Your Brand's Body Language
     slides: https://slides.com/heidi_olsen/the-shady-web#/
@@ -108,7 +117,7 @@ talkList:
   - id: 13
     confName: role=drinks
     confURL: https://www.roledrinks.com/in/amsterdam/2017-06-17.html
-    date: 2017 JUN 21
+    date: 2017 JUN
     location: Amsterdam, NL
     title: 5 Pro Tips for Making Your Email More Accessible
     slides: https://www.slideshare.net/eROIAgency/roledrinks-ams-meetup-5-pro-tips-for-making-your-email-more-accessible
@@ -141,7 +150,7 @@ blogList:
     blogImg: interactive-quiz
     tags: How-To, MySQL, PHP
   - id: 4
-    title: Budgeted Fun - How a design system can facilitate innovation
+    title: "Budgeted Fun: How a design system can facilitate innovation"
     description: >-
       Guest blog for quality assurance software Email on Acid about design systems for email campaigns.
     url: https://www.emailonacid.com/blog/article/email-development/budgeted-fun-how-a-design-system-can-facilitate-innovation/

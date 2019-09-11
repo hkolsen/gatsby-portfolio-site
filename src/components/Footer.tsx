@@ -1,14 +1,23 @@
 import React from 'react';
 import { styled, useTheme } from '~/styled';
-// import { MarkdownWrapper } from '../MarkdownWrapper';
-import { SocialIcons } from '../../img/svg/SocialIcons';
-import { CustomLink, TextLink } from '../CustomLink';
+import { SocialIcons } from '../img/svg/SocialIcons';
+import { CustomLink, TextLink } from './CustomLink';
+import { FormattedMessage } from 'react-intl';
 
 const FooterSection = styled.section`
-    background: ${({ theme }) => theme.colors.DARK_BG};
+    background: ${({ theme }) => theme.colors.ACTIVE};
     color: ${({ theme }) => theme.colors.WHITE};
     padding: 3em 1em;
 `;
+
+const FooterHeader = styled.h2`
+    color: ${({ theme }) => theme.colors.WHITE};
+    font-size: 1.25em;
+    margin: 0 0 0.25em;
+    padding: 0;
+    text-align: center;
+`;
+
 
 const SocialIconList = styled.ul`
     align-items: center;
@@ -32,7 +41,7 @@ const SocialLink = styled(CustomLink)`
     }
     &:hover {
         svg {
-            fill: ${({ theme }) => theme.colors.TAG};
+            fill: ${({ theme }) => theme.colors.ACCENT};
         }
     }
 `;
@@ -54,6 +63,13 @@ export const Footer: React.FC = () => {
     const { colors } = useTheme();
     return (
     <FooterSection>
+        <FooterHeader>
+            <FormattedMessage
+              defaultMessage="Find me online"
+              description="Header for the social links"
+              id="Footer.SocialLinks"
+              />
+        </FooterHeader>
         <SocialIconList>
             <SocialIconContainer>
                 <SocialLink linkType="external" linkURL="https://twitter.com/SwissWebMiss">

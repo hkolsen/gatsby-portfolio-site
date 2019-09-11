@@ -6,7 +6,7 @@ import { FormattedMessage } from 'react-intl';
 
 const WritingSection = styled.section`
   background: ${({ theme }) => theme.colors.HIGHLIGHT};
-  padding: 2em 1em;
+  padding: 2em 1em 2.5em;
   margin: 0;
 `;
 
@@ -17,7 +17,10 @@ const WritingHeader = styled.h1`
   margin: 0 0 0.5em;
   padding: 0;
   text-decoration: underline;
-  text-decoration-color: ${({ theme }) => theme.colors.DARK_BG};
+  text-decoration-color: ${({ theme }) => theme.colors.ACTIVE};
+  ${({ theme }) => theme.media.medium`
+    font-size: 2.5em;
+  `};
 `;
 
 const WritingList = styled.ul`
@@ -35,7 +38,7 @@ const WritingList = styled.ul`
 
 const WritingItem = styled.li`
     background: ${({ theme }) => theme.colors.WHITE};
-    border-left: 0.5em solid ${({ theme }) => theme.colors.DARK_BG};
+    border-left: 0.5em solid ${({ theme }) => theme.colors.ACTIVE};
     display: flex;
     flex-direction: row;
     ${({ theme }) => theme.media.small`
@@ -70,13 +73,6 @@ const BlogTagList = styled.span`
   font-size: 0.8em;
 `;
 
-// const GuestBlogTag = styled.span`
-//   background: ${({ theme }) => theme.colors.TAG};
-//   color: ${({ theme }) => theme.colors.WHITE};
-//   font-size: 0.8em;
-//   padding: 0.25em 0.5em;
-// `;
-
 const BlogCTA = styled.div``;
 
 export const Writing: React.FC = () => {
@@ -96,7 +92,6 @@ export const Writing: React.FC = () => {
                 <BlogContent>
                 <BlogTagContainer>
                   <BlogTagList>{blog.tags}</BlogTagList>
-                  {/* {blog.guestBlog && <GuestBlogTag>Partner Blog</GuestBlogTag>} */}
                 </BlogTagContainer>
                 <BlogTitle>{blog.title}</BlogTitle>
                 <BlogCTA>

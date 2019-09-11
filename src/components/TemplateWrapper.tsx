@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     color: inherit;  
     font-family: 'Open Sans Regular', sans-serif;
-    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
     height: 100vh;
     line-height: 1.75;
     margin:0;
@@ -86,7 +86,7 @@ const HeaderName = styled(TextLink)`
   margin: 1em auto;
   width: 15em;
   span {
-    color: ${({ theme }) => theme.colors.DARK_BG};
+    color: ${({ theme }) => theme.colors.ACTIVE};
     font-family: ${({ theme }) => theme.fonts.SERIF};
     font-size: 2em;
     font-weight: bold;

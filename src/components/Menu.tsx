@@ -20,6 +20,8 @@ const MenuToggle = styled.div`
   user-select: none;
 `;
 
+const MenuCheckboxLabel = styled.label``;
+
 const MenuCheckbox = styled.input`
   display: block;
   width: 40px;
@@ -49,7 +51,7 @@ const MenuCheckbox = styled.input`
 `; 
 
 const MenuTrigger = styled.span`
-    background: ${({ theme }) => theme.colors.DARK_BG};
+    background: ${({ theme }) => theme.colors.ACTIVE};
     border-radius: 3px;
     display: block;
     width: 33px;
@@ -70,7 +72,7 @@ const MenuTrigger = styled.span`
 `;
 
 const MenuList = styled.ul`
-  background: ${({ theme }) => theme.colors.DARK_BG};
+  background: ${({ theme }) => theme.colors.ACTIVE};
   border-radius: 0 0 0 5em;
   list-style: none;
   position: absolute;
@@ -111,7 +113,8 @@ const MenuLink = styled(CustomLink)`
 export const Menu: React.FC = () => 
   <MenuContainer role="navigation">
     <MenuToggle>
-      <MenuCheckbox type="checkbox" />
+      <MenuCheckbox id="menu" name="menu" type="checkbox" />
+      <MenuCheckboxLabel htmlFor="menu" />
         <MenuTrigger />
         <MenuTrigger />
         <MenuTrigger />
