@@ -9,6 +9,34 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/ll19.md"
+        label: "Litmus Live Resources"
+        name: "resources"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "resources-page",
+            }
+          - {
+              label: SEO Title,
+              name: seoTitle,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: SEO Description,
+              name: seoDescription,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Code Samples,
+              name: codeSamples,
+              widget: markdown,
+              required: false,
+            }
       - file: "src/pages/index.md"
         label: "Home Page"
         name: "home"
