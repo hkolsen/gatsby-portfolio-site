@@ -3,15 +3,21 @@ import { styled } from '~/styled';
 import { useHomeData } from '~/data/useHomeData';
 import { MarkdownWrapper } from '../MarkdownWrapper';
 
-const AboutSection = styled.section`
+const AboutWrapper = styled.div`
     background: ${({ theme }) => theme.colors.WHITE};
+    width: 100%;
+`;
+
+const AboutSection = styled.section`
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1290px;
     padding: 2em 1em;
     ${({ theme }) => theme.media.medium`
         flex-direction: column;
-    `};
+  `};
 `;
 
 const Header = styled.h1`
@@ -102,14 +108,16 @@ const CurrentlyExploring = styled(MarkdownWrapper)`
 export const About: React.FC = () => {
     const { frontmatter } = useHomeData();
     return (
-    <AboutSection id="#about">
-        <Intro>
-           <Header>{frontmatter.aboutHeader}</Header>
-            <AboutMe content={frontmatter.aboutContent} />
-        </Intro>
-        <Current>
-            <CurrentlyExploring content={frontmatter.currentlyExploring} />
-        </Current>
-    </AboutSection>
+    <AboutWrapper id="about">
+        <AboutSection>
+            <Intro>
+            <Header>{frontmatter.aboutHeader}</Header>
+                <AboutMe content={frontmatter.aboutContent} />
+            </Intro>
+            <Current>
+                <CurrentlyExploring content={frontmatter.currentlyExploring} />
+            </Current>
+        </AboutSection>
+    </AboutWrapper>
   );
 };

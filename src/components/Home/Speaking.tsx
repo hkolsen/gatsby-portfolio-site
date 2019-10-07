@@ -5,8 +5,14 @@ import { TextLink, CTALink } from '../CustomLink';
 import { useHomeData } from '~/data/useHomeData';
 import { FormattedMessage } from 'react-intl';
 
-const SpeakingSection = styled.section`
+const SpeakingWrapper = styled.div`
   background: ${({ theme }) => theme.colors.LIGHT_BG};
+  width: 100%;
+`;
+
+const SpeakingSection = styled.section`
+  margin: 0 auto;
+  max-width: 1290px;
   padding: 3em 1em;
 `;
 
@@ -191,7 +197,8 @@ const MaterialsLink = styled(CTALink)`
 export const Speaking: React.FC = () => {
   const { frontmatter } = useHomeData();
   return (
-    <SpeakingSection id="speaking">
+    <SpeakingWrapper id="speaking">
+    <SpeakingSection>
         <FeaturedTalk>
           <SpeakingHeader>
           <FormattedMessage
@@ -265,5 +272,6 @@ export const Speaking: React.FC = () => {
         ))}
         </SpeakingList>
     </SpeakingSection>
+    </SpeakingWrapper>
   );
 };

@@ -3,7 +3,7 @@ import { styled } from '~/styled';
 import { useHomeData } from '~/data/useHomeData';
 import { MarkdownWrapper } from '../MarkdownWrapper';
 
-const HeroSection = styled.section`
+const HeroWrapper = styled.div`
     background-image: 
     url(../../img/hero-top.svg), 
     url(../../img/hero-btm.svg);
@@ -14,9 +14,10 @@ const HeroSection = styled.section`
     50vw auto, 
     75vw auto;
     background-repeat: no-repeat, no-repeat; 
-    padding: 10em;
-    position: relative;
     border-bottom: 0.5em solid ${({ theme }) => theme.colors.HIGHLIGHT};
+    padding: 10em 0;
+    position: relative;
+    width: 100%;
     ${({ theme }) => theme.media.large`
         padding: 10em 2em;
     `};
@@ -26,6 +27,11 @@ const HeroSection = styled.section`
         100vw auto;
         padding: 10em 2em;
     `};
+`;
+
+const HeroSection = styled.section`
+    margin: 0 auto;
+    max-width: 1290px;
 `;
 
 const Header = styled.h1`
@@ -42,7 +48,7 @@ const Header = styled.h1`
 `;
 
 const Intro = styled(MarkdownWrapper)`
-    max-width: 30em;
+    max-width: 25em;
     p {
         font-size: 1.25em;
         line-height: 1.5;
@@ -57,7 +63,7 @@ const Intro = styled(MarkdownWrapper)`
     ${({ theme }) => theme.media.medium`
         min-height: 10em;
         padding: 0.5em 0; 
-        width: 100%
+        width: 100%;
         br {
             display: none;
         }
@@ -67,9 +73,11 @@ const Intro = styled(MarkdownWrapper)`
 export const Hero: React.FC = () => {
     const { frontmatter } = useHomeData();
     return (
-    <HeroSection>
-        <Header>{frontmatter.header}</Header>
-        <Intro content={frontmatter.subheader} />
-    </HeroSection>
+    <HeroWrapper>
+        <HeroSection>
+            <Header>{frontmatter.header}</Header>
+            <Intro content={frontmatter.subheader} />
+        </HeroSection>
+    </HeroWrapper>
   );
 };

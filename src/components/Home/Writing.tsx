@@ -4,10 +4,15 @@ import { CTALink } from '../CustomLink';
 import { useHomeData } from '~/data/useHomeData';
 import { FormattedMessage } from 'react-intl';
 
-const WritingSection = styled.section`
+const WritingWrapper = styled.div`
   background: ${({ theme }) => theme.colors.HIGHLIGHT};
+  width: 100%;
+`;
+
+const WritingSection = styled.section`
+  margin: 0 auto;
+  max-width: 1290px;
   padding: 2em 1em 2.5em;
-  margin: 0;
 `;
 
 const WritingHeader = styled.h1`
@@ -78,7 +83,8 @@ const BlogCTA = styled.div``;
 export const Writing: React.FC = () => {
   const { frontmatter } = useHomeData();
   return (
-    <WritingSection id="writing">
+    <WritingWrapper id="writing">
+    <WritingSection>
         <WritingHeader>
           <FormattedMessage
             defaultMessage="Selected Writing"
@@ -105,5 +111,6 @@ export const Writing: React.FC = () => {
         ))}
         </WritingList>
     </WritingSection>
+    </WritingWrapper>
   );
 };
