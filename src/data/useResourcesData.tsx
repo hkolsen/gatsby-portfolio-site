@@ -5,6 +5,13 @@ interface ResourcesQueryResponse {
     html: string;
     frontmatter: {
       templateKey: string;
+      resourcesHeader: string;
+      resourcesSubheader: string;
+      resourceList: Array<{
+        id: string;
+        category: string;
+        content: string;
+      }>;
       codeSamples: string;
     };
   };
@@ -18,6 +25,13 @@ export const useResourcesData = () => {
           html
           frontmatter {
             templateKey
+            resourcesHeader
+            resourcesSubheader
+            resourceList {
+              id
+              category
+              content
+            }
             codeSamples
           }
         }

@@ -31,6 +31,20 @@ collections:
               widget: string,
               required: false,
             }
+          - { label: Heading, name: resourcesHeader, widget: string, required: false }
+          - {
+              label: Subheader,
+              name: resourcesSubheader,
+              widget: markdown,
+              required: false,
+            }
+          - label: Resources
+            name: resourceList
+            widget: list
+            fields:
+              - { label: Order, name: id, widget: number, required: false }
+              - { label: Category, name: category, widget: string, required: false }
+              - { label: Links, name: content, widget: markdown, required: false }
           - {
               label: Code Samples,
               name: codeSamples,
