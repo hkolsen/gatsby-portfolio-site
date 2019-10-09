@@ -28,6 +28,7 @@
     "bundle"
   ],
   "dependencies": {
+    "@weknow/gatsby-remark-codepen": "^0.1.0",
     "anchorate": "^1.2.3",
     "gatsby": "^2.0.66",
     "gatsby-background-image": "^0.8.3",

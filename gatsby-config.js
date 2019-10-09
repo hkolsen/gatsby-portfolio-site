@@ -23,6 +23,13 @@ module.exports = {
               maxWidth: 2048,
             },
           },
+          {
+            resolve:"@weknow/gatsby-remark-codepen",
+            options: {
+              theme: "dark",
+              height: 400
+            }
+          },
         ],
       },
     },
