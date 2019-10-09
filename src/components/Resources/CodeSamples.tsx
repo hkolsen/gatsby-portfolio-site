@@ -14,51 +14,55 @@ const CodeSamplesSection = styled.section`
     padding: 2em 1em;
 `;
 
-const Header = styled.h1`
-    color: ${({ theme }) => theme.colors.BASE};
-    font-family: ${({ theme }) => theme.fonts.SERIF};
-    font-size: 2.5em;
-    line-height: 1.5;
-    margin: 0 0 0.25em;
-    padding: 0;
-    ${({ theme }) => theme.media.medium`
-        font-size: 2em;
-        line-height: 1;
-    `};
-`;
-
 const Intro = styled.article`
     ${({ theme }) => theme.media.medium`
         margin: 0 0 1.5em;
     `};
 `;
 
-const CodeSamplesContent = styled(MarkdownWrapper)`
+const CodeSamplesIntro = styled(MarkdownWrapper)`
     max-width: 30em;
+    h2 {
+        color: ${({ theme }) => theme.colors.HIGHLIGHT};
+        font-family: ${({ theme }) => theme.fonts.SERIF};
+        font-size: 3em;
+        font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
+        margin: 0 0 1em;
+        padding: 0;
+        text-decoration: underline;
+        text-decoration-color: ${({ theme }) => theme.colors.ACTIVE};
+        ${({ theme }) => theme.media.medium`
+            font-size: 2.5em;
+        `};
+    }
     p {
         font-size: 1em;
         line-height: 1.5;
         margin: 0;
         padding: 0;
     }
-    ${({ theme }) => theme.media.medium`
-        min-height: 10em;
-        padding: 0.5em 0; 
-        width: 100%
-        br {
-            display: none;
-        }
-    `};
+`;
+
+const CodeSamplesList = styled(MarkdownWrapper)`
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+    }
 `;
 
 export const CodeSamples: React.FC = () => {
-    const { html } = useResourcesData();
+    const { html, frontmatter } = useResourcesData();
     return (
     <CodeSamplesWrapper>
         <CodeSamplesSection>
             <Intro>
-            <Header>Code Samples</Header>
-                <CodeSamplesContent content={html} />
+                <CodeSamplesIntro content={frontmatter.codeSamplesIntro} />
+                <CodeSamplesList content={html} />
             </Intro>
         </CodeSamplesSection>
     </CodeSamplesWrapper>

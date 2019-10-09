@@ -46,8 +46,8 @@ collections:
               - { label: Category, name: category, widget: string, required: false }
               - { label: Links, name: content, widget: markdown, required: false }
           - {
-              label: Code Samples,
-              name: codeSamples,
+              label: Code Samples Intro,
+              name: codeSamplesIntro,
               widget: markdown,
               required: false,
             }

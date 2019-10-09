@@ -9,8 +9,8 @@ import { Resources } from '~/components/Resources/Resources';
 const ResourcesPage: React.FC = () => 
     <TemplateWrapper>
       <Hero />
-      <Resources />
       <CodeSamples />
+      <Resources />
       <Footer />
     </TemplateWrapper>
 

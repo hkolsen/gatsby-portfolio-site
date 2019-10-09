@@ -12,7 +12,7 @@ interface ResourcesQueryResponse {
         category: string;
         content: string;
       }>;
-      codeSamples: string;
+      codeSamplesIntro: string;
     };
   };
 }
@@ -32,7 +32,7 @@ export const useResourcesData = () => {
               category
               content
             }
-            codeSamples
+            codeSamplesIntro
           }
         }
       }
