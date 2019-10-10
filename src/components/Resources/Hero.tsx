@@ -84,7 +84,7 @@ export const Hero: React.FC = () => {
         <HeroSection>
             <Header>{frontmatter.resourcesHeader}</Header>
             <Intro content={frontmatter.resourcesSubheader} />
-            <SlidesLink linkURL="#" linkType="external">View slides</SlidesLink>
+            <SlidesLink linkURL="https://noti.st/heidiolsen/qrHED6/effective-storytelling-with-data-visualization" linkType="external">View slides</SlidesLink>
         </HeroSection>
     </HeroWrapper>
   );
