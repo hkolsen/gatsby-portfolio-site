@@ -41,7 +41,7 @@ export const useHomeData = () => {
     const { markdownRemark } = useStaticQuery<HomeQueryResponse>(
       graphql`
       query homeQuery {
-        markdownRemark {
+        markdownRemark(frontmatter: {templateKey: { eq: "index-page" }}) {
           frontmatter {
             templateKey
             header
