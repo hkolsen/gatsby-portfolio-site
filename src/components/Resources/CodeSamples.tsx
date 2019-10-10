@@ -23,14 +23,14 @@ const Intro = styled.article`
 const CodeSamplesIntro = styled(MarkdownWrapper)`
     max-width: 30em;
     h2 {
-        color: ${({ theme }) => theme.colors.HIGHLIGHT};
+        color: ${({ theme }) => theme.colors.BASE};
         font-family: ${({ theme }) => theme.fonts.SERIF};
         font-size: 3em;
         font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
-        margin: 0 0 1em;
+        margin: 0 0 0.25em;
         padding: 0;
         text-decoration: underline;
-        text-decoration-color: ${({ theme }) => theme.colors.ACTIVE};
+        text-decoration-color: ${({ theme }) => theme.colors.HIGHLIGHT};
         ${({ theme }) => theme.media.medium`
             font-size: 2.5em;
         `};
