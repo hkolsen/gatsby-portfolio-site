@@ -4,7 +4,7 @@ import { useResourcesData } from '~/data/useResourcesData';
 import { MarkdownWrapper } from '../MarkdownWrapper';
 
 const CodeSamplesWrapper = styled.div`
-    background: ${({ theme }) => theme.colors.WHITE};
+    background: ${({ theme }) => theme.colors.LIGHT_BG};
     width: 100%;
 `;
 
@@ -23,14 +23,16 @@ const Intro = styled.article`
 const CodeSamplesIntro = styled(MarkdownWrapper)`
     max-width: 30em;
     h2 {
+        background: ${({ theme }) => theme.colors.ACCENT};
+        border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+        box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -12px 12px;
         color: ${({ theme }) => theme.colors.BASE};
-        font-family: ${({ theme }) => theme.fonts.SERIF};
+        display: inline-block;
+        font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
         font-size: 3em;
         font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
-        margin: 0 0 0.25em;
-        padding: 0;
-        text-decoration: underline;
-        text-decoration-color: ${({ theme }) => theme.colors.HIGHLIGHT};
+        margin: 0 0 0.5em;
+        padding: 0.25em 0.5em;
         ${({ theme }) => theme.media.medium`
             font-size: 2.5em;
         `};

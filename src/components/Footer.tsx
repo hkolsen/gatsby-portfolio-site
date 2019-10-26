@@ -5,7 +5,7 @@ import { CustomLink, TextLink } from './CustomLink';
 import { FormattedMessage } from 'react-intl';
 
 const FooterSection = styled.section`
-    background: ${({ theme }) => theme.colors.ACTIVE};
+    background: ${({ theme }) => theme.colors.BASE};
     color: ${({ theme }) => theme.colors.WHITE};
     padding: 3em 1em;
 `;
@@ -41,7 +41,8 @@ const SocialLink = styled(CustomLink)`
     }
     &:hover {
         svg {
-            fill: ${({ theme }) => theme.colors.ACCENT};
+            fill: ${({ theme }) => theme.colors.ACTIVE};
+            transform: scale(1.1);
         }
     }
 `;
@@ -55,50 +56,49 @@ const FooterText = styled.div`
     text-align: center;
 `;
 
-const FooterLink = styled(TextLink)`
-    color: ${({ theme }) => theme.colors.WHITE};
-`;
-
 export const Footer: React.FC = () => {
     const { colors } = useTheme();
     return (
     <FooterSection>
         <FooterHeader>
-            <FormattedMessage
-              defaultMessage="Find me online"
-              description="Header for the social links"
-              id="Footer.SocialLinks"
-              />
+        <FormattedMessage
+            defaultMessage="Find me online"
+            description="Header for the social links"
+            id="Footer.SocialLinks"
+            />
         </FooterHeader>
         <SocialIconList>
             <SocialIconContainer>
                 <SocialLink linkType="external" linkURL="https://twitter.com/SwissWebMiss">
-                    <SocialIcons color={colors.WHITE} socialName="Twitter" />
+                    <SocialIcons color={colors.ACCENT} socialName="Twitter" />
                 </SocialLink>
             </SocialIconContainer>
             <SocialIconContainer>
                 <SocialLink linkType="external" linkURL="https://github.com/hkolsen">
-                    <SocialIcons color={colors.WHITE} socialName="Github" />
+                    <SocialIcons color={colors.ACCENT} socialName="Github" />
                 </SocialLink>
             </SocialIconContainer>
             <SocialIconContainer>
                 <SocialLink linkType="external" linkURL="https://codepen.io/SwissWebMiss">
-                    <SocialIcons color={colors.WHITE} socialName="CodePen" />
+                    <SocialIcons color={colors.ACCENT} socialName="CodePen" />
                 </SocialLink>
             </SocialIconContainer>
             <SocialIconContainer>
                 <SocialLink linkType="external" linkURL="https://www.linkedin.com/in/heidiolsen/">
-                    <SocialIcons color={colors.WHITE} socialName="LinkedIn" /></SocialLink>
+                    <SocialIcons color={colors.ACCENT} socialName="LinkedIn" /></SocialLink>
             </SocialIconContainer>
             <SocialIconContainer>
                 <SocialLink linkType="external" linkURL="mailto:swisswebmistress@gmail.com">
-                    <SocialIcons color={colors.WHITE} socialName="Email" />
+                    <SocialIcons color={colors.ACCENT} socialName="Email" />
                 </SocialLink>
             </SocialIconContainer>
         </SocialIconList> 
         <FooterText>
-        <span>&copy; 2019 Heidi Olsen</span>
-        <span>Credits: <FooterLink linkType="external" linkURL="https://www.freepik.com/free-photos-vectors/business">Header SVG backgrounds curated from freepik.com</FooterLink></span>
+        <FormattedMessage
+              defaultMessage="&copy; 2019 Heidi Olsen"
+              description="Copyright for the site"
+              id="Footer.Copyright"
+              />
         </FooterText>      
     </FooterSection>
     )

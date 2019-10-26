@@ -22,7 +22,7 @@ const AboutSection = styled.section`
 
 const Header = styled.h1`
     color: ${({ theme }) => theme.colors.BASE};
-    font-family: ${({ theme }) => theme.fonts.SERIF};
+    font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
     font-size: 2.5em;
     line-height: 1.5;
     margin: 0 0 0.25em;
@@ -68,7 +68,7 @@ const AboutMe = styled(MarkdownWrapper)`
 const CurrentlyExploring = styled(MarkdownWrapper)`
     max-width: 30em;
     h2 {
-        font-family: ${({ theme }) => theme.fonts.SERIF};
+        font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
         font-size: 1.5em;
     }
     ul {

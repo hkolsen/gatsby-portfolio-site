@@ -15,7 +15,7 @@ const HeroWrapper = styled.div`
     50vw auto, 
     75vw auto;
     background-repeat: no-repeat, no-repeat; 
-    border-bottom: 0.5em solid ${({ theme }) => theme.colors.HIGHLIGHT};
+    border-bottom: 0.5em solid ${({ theme }) => theme.colors.ACTIVE};
     padding: 10em 0;
     position: relative;
     width: 100%;
@@ -37,7 +37,7 @@ const HeroSection = styled.section`
 
 const Header = styled.h1`
     color: ${({ theme }) => theme.colors.ACTIVE};
-    font-family: ${({ theme }) => theme.fonts.SERIF};
+    font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
     font-size: 3.5em;
     line-height: 1.5;
     margin: 0;

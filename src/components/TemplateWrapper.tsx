@@ -16,17 +16,17 @@ interface TemplateWrapper {
 const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v15/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWoe5j5hNKe1_w.woff2) format('woff2');
- }
-  @font-face {
-    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v15/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWoe5j5hNKe1_w.woff2) format('woff2');
+}
+ @font-face {
+    font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v11/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
   }
   body {
     box-sizing: border-box;
@@ -87,7 +87,7 @@ const HeaderName = styled(TextLink)`
   width: 15em;
   span {
     color: ${({ theme }) => theme.colors.ACTIVE};
-    font-family: ${({ theme }) => theme.fonts.SERIF};
+    font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
     font-size: 2em;
     font-weight: bold;
     transition: ${({ theme }) => theme.easing.GLOBAL};

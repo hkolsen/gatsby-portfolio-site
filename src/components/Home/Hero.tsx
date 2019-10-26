@@ -36,7 +36,7 @@ const HeroSection = styled.section`
 
 const Header = styled.h1`
     color: ${({ theme }) => theme.colors.ACTIVE};
-    font-family: ${({ theme }) => theme.fonts.SERIF};
+    font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
     font-size: 3.5em;
     line-height: 1.5;
     margin: 0;

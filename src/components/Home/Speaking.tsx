@@ -30,7 +30,7 @@ const FeaturedTalk = styled.article`
 
 const SpeakingHeader = styled.h1`
   color: ${({ theme }) => theme.colors.ACTIVE};
-  font-family: ${({ theme }) => theme.fonts.SERIF};
+  font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
   font-size: 3em;
   margin: 0 0 1em;
   min-width: 10em;
@@ -131,7 +131,7 @@ const ConfLink = styled(TextLink)``;
 
 const ConfTitle = styled.h3`
   color: ${({ theme }) => theme.colors.BASE};
-  font-family: ${({ theme }) => theme.fonts.SERIF};
+  font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
   font-size: 1.5em;
   line-height: 1.25;
   margin: 0.25em 0;

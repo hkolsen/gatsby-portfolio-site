@@ -17,7 +17,7 @@ const WritingSection = styled.section`
 
 const WritingHeader = styled.h1`
   color: ${({ theme }) => theme.colors.WHITE};
-  font-family: ${({ theme }) => theme.fonts.SERIF};
+  font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
   font-size: 3em;
   margin: 0 0 0.5em;
   padding: 0;
@@ -61,7 +61,7 @@ const BlogContent = styled.div`
 
 const BlogTitle = styled.h3`
     color: ${({ theme }) => theme.colors.BASE};
-    font-family: ${({ theme }) => theme.fonts.SERIF};
+    font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
     font-size: 1.5em;
     line-height: 1.25;
     margin: 0.25em 0 1em;
