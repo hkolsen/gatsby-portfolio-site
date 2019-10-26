@@ -24,11 +24,11 @@ const MenuCheckboxLabel = styled.label``;
 
 const MenuCheckbox = styled.input`
   display: block;
-  width: 40px;
-  height: 32px;
+  width: 60px;
+  height: 65px;
   position: absolute;
   top: -7px;
-  right: -5px;
+  right: -2px;
   cursor: pointer;
   opacity: 0; 
   z-index: 2; 
@@ -36,7 +36,7 @@ const MenuCheckbox = styled.input`
   &:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: ${({ theme }) => theme.colors.WHITE};
+    background: ${({ theme }) => theme.colors.BASE};
   }
   &:checked ~ span:nth-last-child(3) {
     opacity: 0;
@@ -51,7 +51,7 @@ const MenuCheckbox = styled.input`
 `; 
 
 const MenuTrigger = styled.span`
-    background: ${({ theme }) => theme.colors.ACTIVE};
+    background: ${({ theme }) => theme.colors.BASE};
     border-radius: 3px;
     display: block;
     width: 33px;
@@ -101,8 +101,9 @@ const MenuItem = styled.li`
 `;
 
 const MenuLink = styled(CustomLink)`
-  color: ${({ theme }) => theme.colors.WHITE};
+  color: ${({ theme }) => theme.colors.BASE};
   font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
+  font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
   font-size: 1em;
   text-decoration: none;
   &:hover {

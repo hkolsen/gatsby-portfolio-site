@@ -17,6 +17,7 @@ const AboutSection = styled.section`
     padding: 2em 1em;
     ${({ theme }) => theme.media.medium`
         flex-direction: column;
+        max-width: 90%;
   `};
 `;
 
@@ -40,10 +41,10 @@ const Intro = styled.article`
 `;
 
 const Current = styled.article`
-    border: 0.75em solid transparent;
-	background: linear-gradient(white, white) padding-box,
-	            repeating-linear-gradient(-45deg, #8061e7 0, #8061e7 12.5%, transparent 0, transparent 25%, 
-                    #e8e1fb 0, #e8e1fb 37.5%, transparent 0, transparent 50%) 0 / 6em 6em;
+    background: ${({ theme }) => theme.colors.WHITE};
+    border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+    box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -12px 12px;
+    margin: 0 0 0 2em;
     padding: 1em 2em;
 `;
 

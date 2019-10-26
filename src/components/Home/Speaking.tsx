@@ -14,6 +14,9 @@ const SpeakingSection = styled.section`
   margin: 0 auto;
   max-width: 1290px;
   padding: 3em 1em;
+  ${({ theme }) => theme.media.small`
+    max-width: 90%
+  `};
 `;
 
 const FeaturedTalk = styled.article`
@@ -29,17 +32,20 @@ const FeaturedTalk = styled.article`
 `;
 
 const SpeakingHeader = styled.h1`
-  color: ${({ theme }) => theme.colors.ACTIVE};
+  background: ${({ theme }) => theme.colors.ACCENT};
+  border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -12px 12px;
+  color: ${({ theme }) => theme.colors.BASE};
+  display: inline-block;
   font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
   font-size: 3em;
-  margin: 0 0 1em;
+  font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
+  margin: 0 1em 1em 0;
   min-width: 10em;
-  padding: 0;
-  text-decoration: underline;
-  text-decoration-color: ${({ theme }) => theme.colors.ACCENT};
+  padding: 0.25em 0.5em;
   ${({ theme }) => theme.media.medium`
-    font-size: 2.5em;
-    min-width: auto;
+      font-size: 2.5em;
+      min-width: auto;
   `};
 `;
 
@@ -71,10 +77,10 @@ const SpeakerBoxx = styled.li`
   position: relative;
   transition: ${({ theme }) => theme.easing.GLOBAL};
   :focus-within {
-    box-shadow: 0 5px ${({ theme }) => theme.colors.ACCENT} inset;
+    box-shadow: 0 5px ${({ theme }) => theme.colors.HIGHLIGHT} inset;
   }
   :hover {
-    box-shadow: 0 5px ${({ theme }) => theme.colors.ACCENT} inset;
+    box-shadow: 0 5px ${({ theme }) => theme.colors.HIGHLIGHT} inset;
   }
   &:after {
     content: '';
@@ -115,11 +121,11 @@ const SpeakerBoxxMid = styled.div`
 const SpeakerBoxxBottom = styled.div``;
 
 const TalkCat = styled.span`
-  background: ${({ theme }) => theme.colors.HIGHLIGHT};
-  color: ${({ theme }) => theme.colors.WHITE};
-  display: inline;
+  background: ${({ theme }) => theme.colors.ACCENT};
+  color: ${({ theme }) => theme.colors.BASE};
+  display: inline-block;
   font-size: 0.8em;
-  font-weight: normal;
+  font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
   line-height: 1;
   padding: 0.5em 0.75em;
   text-transform: uppercase;

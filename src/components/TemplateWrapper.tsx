@@ -6,7 +6,7 @@ import { PortfolioSiteThemeProvider } from '~/styled/theme';
 import '../utils/augmentEnvironment';
 import { Menu } from './Menu';
 import { TextLink } from './CustomLink';
-import { HeaderLogo } from '../img/svg/HeaderLogo';
+import { HeaderLogoUpdated } from '../img/svg/HeaderLogoUpdated';
 import Favicon from '../img/favicon.ico';
 import AppleTouch from '../img/apple-touch-icon.png';
 
@@ -76,15 +76,15 @@ const HeaderContainer = styled.header`
   z-index: 5;
   width: 100%;
   ${({ theme }) => theme.media.medium`
-    margin: 3.5em 0 0;
+    margin: 1em 0 0;
   `};
 `;
 
 const HeaderName = styled(TextLink)`
   text-align: center; 
   text-decoration: none;
-  margin: 1em auto;
-  width: 15em;
+  margin: 0 auto;
+  width: 5em;
   span {
     color: ${({ theme }) => theme.colors.ACTIVE};
     font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
@@ -138,7 +138,7 @@ const TemplateWrapper: React.FC = ({ children }) =>
       </SkipLink>
       <HeaderContainer>
       <HeaderName linkURL="/" linkType="internal">
-        <HeaderLogo />
+        <HeaderLogoUpdated />
       </HeaderName>
       </HeaderContainer>
     <FixedContainer>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled, useTheme } from '~/styled';
 import { SocialIcons } from '../img/svg/SocialIcons';
-import { CustomLink, TextLink } from './CustomLink';
+import { CustomLink } from './CustomLink';
 import { FormattedMessage } from 'react-intl';
 
 const FooterSection = styled.section`

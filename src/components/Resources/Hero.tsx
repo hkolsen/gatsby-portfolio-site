@@ -5,7 +5,8 @@ import { MarkdownWrapper } from '../MarkdownWrapper';
 import { CTALink } from '../CustomLink';
 
 const HeroWrapper = styled.div`
-    background-image: 
+    background: ${({ theme }) => theme.colors.WHITE};
+    /* background-image: 
     url(../../img/hero-top.svg), 
     url(../../img/hero-btm.svg);
     background-position: 
@@ -14,29 +15,23 @@ const HeroWrapper = styled.div`
     background-size: 
     50vw auto, 
     75vw auto;
-    background-repeat: no-repeat, no-repeat; 
+    background-repeat: no-repeat, no-repeat;  */
     border-bottom: 0.5em solid ${({ theme }) => theme.colors.ACTIVE};
     padding: 10em 0;
     position: relative;
     width: 100%;
-    ${({ theme }) => theme.media.large`
-        padding: 10em 2em;
-    `};
-    ${({ theme }) => theme.media.medium`
-        background-size: 
-        80vw auto, 
-        100vw auto;
-        padding: 10em 2em;
-    `};
 `;
 
 const HeroSection = styled.section`
     margin: 0 auto;
     max-width: 1290px;
+    ${({ theme }) => theme.media.small`
+        max-width: 90%;
+    `};
 `;
 
 const Header = styled.h1`
-    color: ${({ theme }) => theme.colors.ACTIVE};
+    color: ${({ theme }) => theme.colors.BASE};
     font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
     font-size: 3.5em;
     line-height: 1.5;
@@ -58,8 +53,8 @@ const Intro = styled(MarkdownWrapper)`
         margin: 0;
         padding: 0;
         span {
-            background: ${({ theme }) => theme.colors.HIGHLIGHT};
-            color: ${({ theme }) => theme.colors.WHITE};
+            background: ${({ theme }) => theme.colors.ACCENT};
+            color: ${({ theme }) => theme.colors.BASE};
             padding: 0 0.25em;
         }
     }

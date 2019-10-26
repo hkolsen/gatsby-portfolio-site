@@ -46,6 +46,9 @@ const CodeSamplesIntro = styled(MarkdownWrapper)`
 `;
 
 const CodeSamplesList = styled(MarkdownWrapper)`
+    h3 {
+        font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
+    }
     ul {
         list-style: none;
         margin: 0;

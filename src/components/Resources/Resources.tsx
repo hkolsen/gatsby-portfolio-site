@@ -56,13 +56,13 @@ const ResourceItem = styled.li`
 
 const ResourceCategory = styled.h2`
   font-size: 0.8em;
-  font-weight: normal;
+  font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
   line-height: 1;
   span {
     background: ${({ theme }) => theme.colors.ACTIVE};
-    color: ${({ theme }) => theme.colors.WHITE};
+    color: ${({ theme }) => theme.colors.BASE};
     display: inline;
-    padding: 0.25em 0.75em;
+    padding: 0.5em 0.75em;
     text-transform: uppercase;
   }
 `;
