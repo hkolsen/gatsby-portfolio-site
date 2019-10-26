@@ -37,6 +37,9 @@ const CodeSamplesIntro = styled(MarkdownWrapper)`
             font-size: 2.5em;
         `};
     }
+    a {
+        text-decoration-color: ${({ theme }) => theme.colors.ACTIVE};
+    }
     p {
         font-size: 1em;
         line-height: 1.5;

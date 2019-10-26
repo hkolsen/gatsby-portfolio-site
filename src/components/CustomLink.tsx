@@ -25,6 +25,7 @@ export const CustomLink: React.FC<CustomLinkProps> = ({
 export const StyledLink = styled(CustomLink)`
   color: ${({ theme }) => theme.colors.BASE};
   transition: ${({ theme }) => theme.easing.GLOBAL};
+  text-decoration-color: ${({ theme }) => theme.colors.ACTIVE};
   &:hover {
     text-decoration: none;
   }

@@ -56,6 +56,9 @@ const AboutMe = styled(MarkdownWrapper)`
         margin: 0;
         padding: 0;
     }
+    a {
+        text-decoration-color: ${({ theme }) => theme.colors.ACTIVE};
+    }
     ${({ theme }) => theme.media.medium`
         min-height: 10em;
         padding: 0.5em 0; 
