@@ -25,6 +25,7 @@ export const CustomLink: React.FC<CustomLinkProps> = ({
 export const StyledLink = styled(CustomLink)`
   color: ${({ theme }) => theme.colors.BASE};
   transition: ${({ theme }) => theme.easing.GLOBAL};
+  text-decoration-color: ${({ theme }) => theme.colors.ACTIVE};
   &:hover {
     text-decoration: none;
   }
@@ -37,7 +38,7 @@ export const TextLink: React.FC<CustomLinkProps> = (props: any) => (
 export const StyledCTALink = styled(CustomLink)`
   background: ${({ theme }) => theme.colors.ACTIVE};
   border: 2px solid ${({ theme }) => theme.colors.ACTIVE};
-  color: ${({ theme }) => theme.colors.WHITE};
+  color: ${({ theme }) => theme.colors.BASE};
   display: inline-block;
   font-size: 1em;
   font-weight: bold;
@@ -58,13 +59,13 @@ export const StyledCTALink = styled(CustomLink)`
   }
   :focus-within {
     background-color: ${({ theme }) => theme.colors.WHITE};
-    border: 2px dashed ${({ theme }) => theme.colors.ACTIVE};
-    color: ${({ theme }) => theme.colors.ACTIVE};
+    border: 2px dashed ${({ theme }) => theme.colors.BASE};
+    color: ${({ theme }) => theme.colors.BASE};
   }
   :hover {
     background-color: ${({ theme }) => theme.colors.WHITE};
-    border: 2px dashed ${({ theme }) => theme.colors.ACTIVE};
-    color: ${({ theme }) => theme.colors.ACTIVE};
+    border: 2px dashed ${({ theme }) => theme.colors.BASE};
+    color: ${({ theme }) => theme.colors.BASE};
   }
 `;
 

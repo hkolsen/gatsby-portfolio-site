@@ -17,12 +17,13 @@ const AboutSection = styled.section`
     padding: 2em 1em;
     ${({ theme }) => theme.media.medium`
         flex-direction: column;
+        max-width: 90%;
   `};
 `;
 
 const Header = styled.h1`
     color: ${({ theme }) => theme.colors.BASE};
-    font-family: ${({ theme }) => theme.fonts.SERIF};
+    font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
     font-size: 2.5em;
     line-height: 1.5;
     margin: 0 0 0.25em;
@@ -40,10 +41,10 @@ const Intro = styled.article`
 `;
 
 const Current = styled.article`
-    border: 0.75em solid transparent;
-	background: linear-gradient(white, white) padding-box,
-	            repeating-linear-gradient(-45deg, #8061e7 0, #8061e7 12.5%, transparent 0, transparent 25%, 
-                    #e8e1fb 0, #e8e1fb 37.5%, transparent 0, transparent 50%) 0 / 6em 6em;
+    background: ${({ theme }) => theme.colors.WHITE};
+    border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+    box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
+    margin: 0 0 0 2em;
     padding: 1em 2em;
 `;
 
@@ -54,6 +55,9 @@ const AboutMe = styled(MarkdownWrapper)`
         line-height: 1.5;
         margin: 0;
         padding: 0;
+    }
+    a {
+        text-decoration-color: ${({ theme }) => theme.colors.ACTIVE};
     }
     ${({ theme }) => theme.media.medium`
         min-height: 10em;
@@ -68,7 +72,7 @@ const AboutMe = styled(MarkdownWrapper)`
 const CurrentlyExploring = styled(MarkdownWrapper)`
     max-width: 30em;
     h2 {
-        font-family: ${({ theme }) => theme.fonts.SERIF};
+        font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
         font-size: 1.5em;
     }
     ul {

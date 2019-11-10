@@ -6,7 +6,7 @@ import { PortfolioSiteThemeProvider } from '~/styled/theme';
 import '../utils/augmentEnvironment';
 import { Menu } from './Menu';
 import { TextLink } from './CustomLink';
-import { HeaderLogo } from '../img/svg/HeaderLogo';
+import { Logo } from '../img/svg/Logo';
 import Favicon from '../img/favicon.ico';
 import AppleTouch from '../img/apple-touch-icon.png';
 
@@ -16,17 +16,17 @@ interface TemplateWrapper {
 const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v15/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWoe5j5hNKe1_w.woff2) format('woff2');
- }
-  @font-face {
-    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v15/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWoe5j5hNKe1_w.woff2) format('woff2');
+}
+ @font-face {
+    font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v11/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
   }
   body {
     box-sizing: border-box;
@@ -76,18 +76,18 @@ const HeaderContainer = styled.header`
   z-index: 5;
   width: 100%;
   ${({ theme }) => theme.media.medium`
-    margin: 3.5em 0 0;
+    margin: 1em 0 0;
   `};
 `;
 
 const HeaderName = styled(TextLink)`
   text-align: center; 
   text-decoration: none;
-  margin: 1em auto;
+  margin: 0.5em auto;
   width: 15em;
   span {
     color: ${({ theme }) => theme.colors.ACTIVE};
-    font-family: ${({ theme }) => theme.fonts.SERIF};
+    font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
     font-size: 2em;
     font-weight: bold;
     transition: ${({ theme }) => theme.easing.GLOBAL};
@@ -97,6 +97,9 @@ const HeaderName = styled(TextLink)`
       color: ${({ theme }) => theme.colors.HIGHLIGHT};
     }
   }
+  ${({ theme }) => theme.media.small`
+    margin: 0 0 0 1em;
+  `};
 `;
 
 const FixedContainer = styled.div`
@@ -138,7 +141,7 @@ const TemplateWrapper: React.FC = ({ children }) =>
       </SkipLink>
       <HeaderContainer>
       <HeaderName linkURL="/" linkType="internal">
-        <HeaderLogo />
+        <Logo />
       </HeaderName>
       </HeaderContainer>
     <FixedContainer>

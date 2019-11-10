@@ -5,7 +5,7 @@ import { useHomeData } from '~/data/useHomeData';
 import { FormattedMessage } from 'react-intl';
 
 const WritingWrapper = styled.div`
-  background: ${({ theme }) => theme.colors.HIGHLIGHT};
+  background: ${({ theme }) => theme.colors.LIGHT_BG};
   width: 100%;
 `;
 
@@ -13,26 +13,34 @@ const WritingSection = styled.section`
   margin: 0 auto;
   max-width: 1290px;
   padding: 2em 1em 2.5em;
+  ${({ theme }) => theme.media.small`
+    max-width: 90%
+  `};
 `;
 
 const WritingHeader = styled.h1`
-  color: ${({ theme }) => theme.colors.WHITE};
-  font-family: ${({ theme }) => theme.fonts.SERIF};
+  background: ${({ theme }) => theme.colors.ACCENT};
+  border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
+  color: ${({ theme }) => theme.colors.BASE};
+  display: inline-block;
+  font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
   font-size: 3em;
-  margin: 0 0 0.5em;
-  padding: 0;
-  text-decoration: underline;
-  text-decoration-color: ${({ theme }) => theme.colors.ACTIVE};
+  font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
+  margin: 0 1em 1em 0;
+  min-width: 10em;
+  padding: 0.25em 0.5em;
   ${({ theme }) => theme.media.medium`
-    font-size: 2.5em;
+      font-size: 2.5em;
+      min-width: auto;
   `};
 `;
 
 const WritingList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -43,7 +51,8 @@ const WritingList = styled.ul`
 
 const WritingItem = styled.li`
     background: ${({ theme }) => theme.colors.WHITE};
-    border-left: 0.5em solid ${({ theme }) => theme.colors.ACTIVE};
+    border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+    box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
     display: flex;
     flex-direction: row;
     ${({ theme }) => theme.media.small`
@@ -56,12 +65,12 @@ const BlogContent = styled.div`
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1em 0 1em 1em;
+    padding: 1em;
 `;
 
 const BlogTitle = styled.h3`
     color: ${({ theme }) => theme.colors.BASE};
-    font-family: ${({ theme }) => theme.fonts.SERIF};
+    font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
     font-size: 1.5em;
     line-height: 1.25;
     margin: 0.25em 0 1em;

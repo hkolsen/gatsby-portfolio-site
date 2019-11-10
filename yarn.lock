@@ -12159,6 +12159,11 @@ react-style-proptype@^3.0.0:
   dependencies:
     prop-types "^15.5.4"
 
+react-svg-radar-chart@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-svg-radar-chart/-/react-svg-radar-chart-1.2.0.tgz#ed6b5e97896723eda28b9e34180b0c8d6ad13c72"
+  integrity sha512-C1t9rSIohx6vNBJ1GrZZ+XXq+I9Yshojdb8VTqwx5qmiwWY2PNL8fg1hS3naGUTZxw16kQLcvAVlUo07QaD+AQ==
+
 react-testing-library@^6.1.2:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-6.1.2.tgz#f6bba6eeecedac736eb00b22b4c70bae04535a4f"

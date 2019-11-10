@@ -2,42 +2,33 @@ import React from 'react';
 import { styled } from '~/styled';
 import { useResourcesData } from '~/data/useResourcesData';
 import { MarkdownWrapper } from '../MarkdownWrapper';
-import { CTALink } from '../CustomLink';
+import { CTALink, CustomLink } from '../CustomLink';
+import Img from 'gatsby-image';
 
 const HeroWrapper = styled.div`
-    background-image: 
-    url(../../img/hero-top.svg), 
-    url(../../img/hero-btm.svg);
-    background-position: 
-    top left, 
-    bottom right; 
-    background-size: 
-    50vw auto, 
-    75vw auto;
-    background-repeat: no-repeat, no-repeat; 
-    border-bottom: 0.5em solid ${({ theme }) => theme.colors.HIGHLIGHT};
-    padding: 10em 0;
+    background: ${({ theme }) => theme.colors.DARK_GRAY};
+    border-bottom: 0.5em solid ${({ theme }) => theme.colors.ACTIVE};
+    padding: 10em 0 3em;
     position: relative;
     width: 100%;
-    ${({ theme }) => theme.media.large`
-        padding: 10em 2em;
-    `};
-    ${({ theme }) => theme.media.medium`
-        background-size: 
-        80vw auto, 
-        100vw auto;
-        padding: 10em 2em;
-    `};
 `;
 
 const HeroSection = styled.section`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 0 auto;
     max-width: 1290px;
+    ${({ theme }) => theme.media.small`
+        max-width: 90%;
+    `};
 `;
 
+const HeroContent = styled.article``;
+
 const Header = styled.h1`
-    color: ${({ theme }) => theme.colors.ACTIVE};
-    font-family: ${({ theme }) => theme.fonts.SERIF};
+    color: ${({ theme }) => theme.colors.WHITE};
+    font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
     font-size: 3.5em;
     line-height: 1.5;
     margin: 0;
@@ -49,7 +40,7 @@ const Header = styled.h1`
 `;
 
 const Intro = styled(MarkdownWrapper)`
-    color: ${({ theme }) => theme.colors.BASE};
+    color: ${({ theme }) => theme.colors.WHITE};
     max-width: 29em;
     padding: 0 0 1em;
     p {
@@ -58,8 +49,8 @@ const Intro = styled(MarkdownWrapper)`
         margin: 0;
         padding: 0;
         span {
-            background: ${({ theme }) => theme.colors.HIGHLIGHT};
-            color: ${({ theme }) => theme.colors.WHITE};
+            background: ${({ theme }) => theme.colors.ACCENT};
+            color: ${({ theme }) => theme.colors.BASE};
             padding: 0 0.25em;
         }
     }
@@ -77,14 +68,28 @@ const SlidesLink = styled(CTALink)`
     font-size: 1.25em;
 `;
 
+const HeroImgLink = styled(CustomLink)`
+    max-width: 40em;
+    width: 100%;
+`;
+const HeroSlidesImg = styled(Img)`
+    border: 2px solid ${({ theme }) => theme.colors.BASE};
+    box-shadow: ${({ theme }) => theme.colors.BASE} -8px 8px;
+`;
+
 export const Hero: React.FC = () => {
     const { frontmatter } = useResourcesData();
     return (
     <HeroWrapper>
         <HeroSection>
+        <HeroContent>
             <Header>{frontmatter.resourcesHeader}</Header>
             <Intro content={frontmatter.resourcesSubheader} />
             <SlidesLink linkURL="https://noti.st/heidiolsen/qrHED6/effective-storytelling-with-data-visualization" linkType="external">View slides</SlidesLink>
+        </HeroContent>
+        <HeroImgLink linkURL="https://noti.st/heidiolsen/qrHED6/effective-storytelling-with-data-visualization" linkType="external">
+            <HeroSlidesImg fluid={frontmatter.resourcesHeroImg.childImageSharp.fluid} alt={frontmatter.resourcesHeroImgAlt} />
+        </HeroImgLink>
         </HeroSection>
     </HeroWrapper>
   );

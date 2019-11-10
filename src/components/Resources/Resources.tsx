@@ -16,15 +16,18 @@ const ResourcesSection = styled.section`
 `;
 
 const ResourcesHeader = styled.h2`
-  color: ${({ theme }) => theme.colors.ACTIVE};
-  font-family: ${({ theme }) => theme.fonts.SERIF};
+  background: ${({ theme }) => theme.colors.ACCENT};
+  border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
+  color: ${({ theme }) => theme.colors.BASE};
+  display: inline-block;
+  font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
   font-size: 3em;
-  margin: 0 0 1em;
-  padding: 0;
-  text-decoration: underline;
-  text-decoration-color: ${({ theme }) => theme.colors.ACCENT};
+  font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
+  margin: 0 0 0.5em;
+  padding: 0.25em 0.5em;
   ${({ theme }) => theme.media.medium`
-    font-size: 2.5em;
+      font-size: 2.5em;
   `};
 `;
 
@@ -34,13 +37,14 @@ const ResourcesList = styled.ul`
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   list-style: none;
-  margin: 0;
+  margin: 2em 0 1em;
   padding: 0;
 `;
 
 const ResourceItem = styled.li`
   background: ${({ theme }) => theme.colors.WHITE};
-  box-shadow: ${({ theme }) => theme.colors.ACTIVE} -12px 12px;
+  border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
   display: flex;
   flex-direction: column;
   font-size: 1em;
@@ -52,13 +56,13 @@ const ResourceItem = styled.li`
 
 const ResourceCategory = styled.h2`
   font-size: 0.8em;
-  font-weight: normal;
+  font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
   line-height: 1;
   span {
-    background: ${({ theme }) => theme.colors.HIGHLIGHT};
-    color: ${({ theme }) => theme.colors.WHITE};
+    background: ${({ theme }) => theme.colors.ACTIVE};
+    color: ${({ theme }) => theme.colors.BASE};
     display: inline;
-    padding: 0.25em 0.75em;
+    padding: 0.5em 0.75em;
     text-transform: uppercase;
   }
 `;

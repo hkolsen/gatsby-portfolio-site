@@ -2,7 +2,7 @@
 templateKey: index-page
 header: Welcome friend,
 subheader: >-
-  <p>I am a <span>solutions-oriented</span> engineer who is passionate about structuring, iterating, and nurturing systems of <span>community</span> & <span>code</span>.</p>
+  <p>I am a <span class="accent">solutions-oriented</span> engineer who is passionate about structuring, iterating, and nurturing systems of <span class="active">community</span> & <span class="highlight">code</span>.</p>
 aboutHeader: A little about my journey
 aboutContent: >-
   <p>I am currently a Senior Frontend Engineer at <a href="https://bumped.com/" target="_blank" rel="noopener noreferrer">Bumped</a>, helping build a design system to bridge the gap between native and DOM. Previously I was a Lead Software Engineer at eROI (now <a href="https://thesis.agency/Thesis" target="_blank" rel="noopener noreferrer">Thesis</a>). I started my career working with various startups and small businesses as a web developer and co-owner of a creative studio called 3 Hound Design.<p>
@@ -21,9 +21,7 @@ talkList:
     location: Boston, MA & San Francisco, CA
     title: Effective Storytelling with Data Visualization
     description: >-
-      Technology has enabled email marketers to collect a mass amount of data about our subscribers, but having all of this data doesn’t make it easier to communicate - it makes it harder to know what’s relevant. Being able to visualize that data to tell a story, however, can not only provide an informative experience, it can also help drive the actions we want our subscribers to take.
-
-      In this session, we will walk through various datasets to identify stories that can provide value to our subscribers as well as explore the science of how people perceive data to remove irrelevant information to assist in better understanding. We will leverage principles of visual perception to design appropriate data visualizations for our emails, as well review code snippets that will help build these experiences using HTML, CSS, and even animation as a progressive enhancement.
+      Email marketers have more data than ever when it comes to subscribers. That doesn’t mean we’re putting it to work, though. By innovating how we think about data and, more importantly, present that data to subscribers, we can tell effective stories that inspire subscribers to engage with us. In this session, we’ll walk through various datasets and how they can be leveraged through visual design, HTML, and CSS to create more innovative emails for our subscribers.
     category: Upcoming Talk
   - id: 2
     confName: Litmus Live
