@@ -38,6 +38,8 @@ collections:
               widget: markdown,
               required: false,
             }
+          - { label: Hero Image, name: resourcesHeroImg, widget: image, required: false }
+          - { label: Hero Image Alt Text, name: resourcesHeroImgAlt, widget: string, required: false }
           - label: Resources
             name: resourceList
             widget: list

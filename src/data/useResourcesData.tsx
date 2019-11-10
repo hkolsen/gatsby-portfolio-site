@@ -7,6 +7,8 @@ interface ResourcesQueryResponse {
       templateKey: string;
       resourcesHeader: string;
       resourcesSubheader: string;
+      resourcesHeroImg: any;
+      resourcesHeroImgAlt: string;
       resourceList: Array<{
         id: string;
         category: string;
@@ -27,6 +29,14 @@ export const useResourcesData = () => {
             templateKey
             resourcesHeader
             resourcesSubheader
+            resourcesHeroImg {
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            resourcesHeroImgAlt
             resourceList {
               id
               category

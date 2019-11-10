@@ -2,33 +2,29 @@ import React from 'react';
 import { styled } from '~/styled';
 import { useResourcesData } from '~/data/useResourcesData';
 import { MarkdownWrapper } from '../MarkdownWrapper';
-import { CTALink } from '../CustomLink';
+import { CTALink, CustomLink } from '../CustomLink';
+import Img from 'gatsby-image';
 
 const HeroWrapper = styled.div`
     background: ${({ theme }) => theme.colors.WHITE};
-    /* background-image: 
-    url(../../img/hero-top.svg), 
-    url(../../img/hero-btm.svg);
-    background-position: 
-    top left, 
-    bottom right; 
-    background-size: 
-    50vw auto, 
-    75vw auto;
-    background-repeat: no-repeat, no-repeat;  */
     border-bottom: 0.5em solid ${({ theme }) => theme.colors.ACTIVE};
-    padding: 10em 0;
+    padding: 10em 0 3em;
     position: relative;
     width: 100%;
 `;
 
 const HeroSection = styled.section`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 0 auto;
     max-width: 1290px;
     ${({ theme }) => theme.media.small`
         max-width: 90%;
     `};
 `;
+
+const HeroContent = styled.article``;
 
 const Header = styled.h1`
     color: ${({ theme }) => theme.colors.BASE};
@@ -72,14 +68,27 @@ const SlidesLink = styled(CTALink)`
     font-size: 1.25em;
 `;
 
+const HeroImgLink = styled(CustomLink)`
+    max-width: 40em;
+    width: 100%;
+`;
+const HeroSlidesImg = styled(Img)`
+    border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+`;
+
 export const Hero: React.FC = () => {
     const { frontmatter } = useResourcesData();
     return (
     <HeroWrapper>
         <HeroSection>
+        <HeroContent>
             <Header>{frontmatter.resourcesHeader}</Header>
             <Intro content={frontmatter.resourcesSubheader} />
             <SlidesLink linkURL="https://noti.st/heidiolsen/qrHED6/effective-storytelling-with-data-visualization" linkType="external">View slides</SlidesLink>
+        </HeroContent>
+        <HeroImgLink linkURL="https://noti.st/heidiolsen/qrHED6/effective-storytelling-with-data-visualization" linkType="external">
+            <HeroSlidesImg fluid={frontmatter.resourcesHeroImg.childImageSharp.fluid} alt={frontmatter.resourcesHeroImgAlt} />
+        </HeroImgLink>
         </HeroSection>
     </HeroWrapper>
   );
