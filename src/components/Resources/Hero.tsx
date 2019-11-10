@@ -11,6 +11,9 @@ const HeroWrapper = styled.div`
     padding: 10em 0 3em;
     position: relative;
     width: 100%;
+    ${({ theme }) => theme.media.medium`
+        padding: 7em 0 3em;
+    `}
 `;
 
 const HeroSection = styled.section`
@@ -19,7 +22,8 @@ const HeroSection = styled.section`
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1290px;
-    ${({ theme }) => theme.media.small`
+    ${({ theme }) => theme.media.medium`
+        flex-direction: column-reverse;
         max-width: 90%;
     `};
 `;
@@ -71,6 +75,9 @@ const SlidesLink = styled(CTALink)`
 const HeroImgLink = styled(CustomLink)`
     max-width: 40em;
     width: 100%;
+    ${({ theme }) => theme.media.medium`
+        margin: 0 0 2em;
+    `};
 `;
 const HeroSlidesImg = styled(Img)`
     border: 2px solid ${({ theme }) => theme.colors.BASE};

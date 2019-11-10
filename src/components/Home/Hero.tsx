@@ -12,7 +12,7 @@ const HeroWrapper = styled.div`
     position: relative;
     width: 100%;
     ${({ theme }) => theme.media.medium`
-        padding: 8em 0 3em;
+        padding: 7em 0 3em;
     `}
 `;
 
