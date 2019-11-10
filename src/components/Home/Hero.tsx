@@ -11,6 +11,9 @@ const HeroWrapper = styled.div`
     padding: 3em 0;
     position: relative;
     width: 100%;
+    ${({ theme }) => theme.media.medium`
+        padding: 8em 0 3em;
+    `}
 `;
 
 const HeroSection = styled.section`
@@ -20,7 +23,7 @@ const HeroSection = styled.section`
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1290px;
-    ${({ theme }) => theme.media.small`
+    ${({ theme }) => theme.media.medium`
         flex-direction: column;
         max-width: 90%;
     `};
@@ -36,7 +39,7 @@ const ChartContainer = styled.aside`
     .caption {
         fill: ${({ theme }) => theme.colors.WHITE};
         font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
-        font-size: 1em;
+        font-size: 1rem;
         font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
         text-shadow: none;
     }
@@ -45,6 +48,13 @@ const ChartContainer = styled.aside`
         stroke: ${({ theme }) => theme.colors.LIGHT_BG};
         stroke-width: 0.5;
     }
+    ${({ theme }) => theme.media.medium`
+        max-height: 30em;
+        svg {
+            width: 350px;
+            height: 350px;
+        }
+    `};
 `;
 
 const Header = styled.h1`

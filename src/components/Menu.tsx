@@ -51,7 +51,7 @@ const MenuCheckbox = styled.input`
 `; 
 
 const MenuTrigger = styled.span`
-    background: ${({ theme }) => theme.colors.BASE};
+    background: ${({ theme }) => theme.colors.ACTIVE};
     border-radius: 3px;
     display: block;
     width: 33px;

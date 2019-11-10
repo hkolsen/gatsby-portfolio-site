@@ -6,7 +6,7 @@ import { CTALink, CustomLink } from '../CustomLink';
 import Img from 'gatsby-image';
 
 const HeroWrapper = styled.div`
-    background: ${({ theme }) => theme.colors.WHITE};
+    background: ${({ theme }) => theme.colors.DARK_GRAY};
     border-bottom: 0.5em solid ${({ theme }) => theme.colors.ACTIVE};
     padding: 10em 0 3em;
     position: relative;
@@ -27,7 +27,7 @@ const HeroSection = styled.section`
 const HeroContent = styled.article``;
 
 const Header = styled.h1`
-    color: ${({ theme }) => theme.colors.BASE};
+    color: ${({ theme }) => theme.colors.WHITE};
     font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
     font-size: 3.5em;
     line-height: 1.5;
@@ -40,7 +40,7 @@ const Header = styled.h1`
 `;
 
 const Intro = styled(MarkdownWrapper)`
-    color: ${({ theme }) => theme.colors.BASE};
+    color: ${({ theme }) => theme.colors.WHITE};
     max-width: 29em;
     padding: 0 0 1em;
     p {
@@ -73,7 +73,8 @@ const HeroImgLink = styled(CustomLink)`
     width: 100%;
 `;
 const HeroSlidesImg = styled(Img)`
-    border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+    border: 2px solid ${({ theme }) => theme.colors.BASE};
+    box-shadow: ${({ theme }) => theme.colors.BASE} -8px 8px;
 `;
 
 export const Hero: React.FC = () => {
