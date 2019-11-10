@@ -25,7 +25,7 @@ const CodeSamplesIntro = styled(MarkdownWrapper)`
     h2 {
         background: ${({ theme }) => theme.colors.ACCENT};
         border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
-        box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -12px 12px;
+        box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
         color: ${({ theme }) => theme.colors.BASE};
         display: inline-block;
         font-family: ${({ theme }) => theme.fonts.SANS_SERIF};

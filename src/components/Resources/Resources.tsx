@@ -18,7 +18,7 @@ const ResourcesSection = styled.section`
 const ResourcesHeader = styled.h2`
   background: ${({ theme }) => theme.colors.ACCENT};
   border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
-  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -12px 12px;
+  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
   color: ${({ theme }) => theme.colors.BASE};
   display: inline-block;
   font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
@@ -44,7 +44,7 @@ const ResourcesList = styled.ul`
 const ResourceItem = styled.li`
   background: ${({ theme }) => theme.colors.WHITE};
   border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
-  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -12px 12px;
+  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
   display: flex;
   flex-direction: column;
   font-size: 1em;

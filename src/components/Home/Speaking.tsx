@@ -24,17 +24,18 @@ const FeaturedTalk = styled.article`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 0 1em;
+  margin: 0 0 2em;
   padding: 0px;
   ${({ theme }) => theme.media.medium`
     flex-direction: column;
+    margin: 0 0 1em;
   `};
 `;
 
 const SpeakingHeader = styled.h1`
   background: ${({ theme }) => theme.colors.ACCENT};
   border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
-  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -12px 12px;
+  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
   color: ${({ theme }) => theme.colors.BASE};
   display: inline-block;
   font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
@@ -53,9 +54,9 @@ const SpeakingHeaderAccent = styled.span``;
 
 const SpeakingList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 2.25rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -69,6 +70,8 @@ const TalkDescription = styled(MarkdownWrapper)`
 
 const SpeakerBoxx = styled.li`
   background: ${({ theme }) => theme.colors.WHITE};
+  border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
   display: flex;
   flex-direction: column;
   font-size: 1em;
@@ -76,35 +79,29 @@ const SpeakerBoxx = styled.li`
   padding: 1em 1em 2em;
   position: relative;
   transition: ${({ theme }) => theme.easing.GLOBAL};
-  :focus-within {
-    box-shadow: 0 5px ${({ theme }) => theme.colors.HIGHLIGHT} inset;
-  }
-  :hover {
-    box-shadow: 0 5px ${({ theme }) => theme.colors.HIGHLIGHT} inset;
+`;
+
+const SpeakerBoxxArrow = styled.div`
+border-left: 22px solid transparent;
+border-top: 20px solid ${({ theme }) => theme.colors.WHITE};
+bottom: -25px;
+position: absolute;
+right: 50%;
+  &:before {
+    border-left: 24px solid transparent;
+    border-top: 22px solid ${({ theme }) => theme.colors.DARK_GRAY};
+    bottom: -2px;
+    content: "";
+    position: absolute;
+    right: -2px;
   }
   &:after {
-    content: '';
+    border-left: 21px solid transparent;
+    border-top: 24px solid ${({ theme }) => theme.colors.WHITE};
+    bottom: 6px;
+    content: "";
     position: absolute;
-    z-index: 1;
-    bottom: 0;
-    height: 0;
-    width: 50%;
-    border-bottom: 1.5em solid ${({ theme }) => theme.colors.LIGHT_BG};
-    box-sizing: border-box;
     right: 0;
-    border-left: 2em solid transparent;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    height: 0;
-    width: 50%;
-    border-bottom: 1.5em solid ${({ theme }) => theme.colors.LIGHT_BG};
-    box-sizing: border-box;
-    left: 0;
-    border-right: 2em solid transparent;
   }
 `;
 
@@ -149,6 +146,8 @@ const TalkTitle = styled.p`
 
 const FeaturedTalkBoxx = styled.div`
   background: ${({ theme }) => theme.colors.WHITE};
+  border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
   display: flex;
   flex-direction: column;
   font-size: 1em;
@@ -156,36 +155,6 @@ const FeaturedTalkBoxx = styled.div`
   padding: 1em 1em 2em;
   position: relative;
   transition: ${({ theme }) => theme.easing.GLOBAL};
-  :focus-within {
-    box-shadow: 0 5px ${({ theme }) => theme.colors.ACCENT} inset;
-  }
-  :hover {
-    box-shadow: 0 5px ${({ theme }) => theme.colors.ACCENT} inset;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    height: 0;
-    width: 50%;
-    border-bottom: 1.5em solid ${({ theme }) => theme.colors.LIGHT_BG};
-    box-sizing: border-box;
-    right: 0;
-    border-left: 2em solid transparent;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    height: 0;
-    width: 50%;
-    border-bottom: 1.5em solid ${({ theme }) => theme.colors.LIGHT_BG};
-    box-sizing: border-box;
-    left: 0;
-    border-right: 2em solid transparent;
-  }
   ${TalkTitle} {
     margin: 0;
   }
@@ -274,6 +243,7 @@ export const Speaking: React.FC = () => {
               linkType="external"
               >Watch Video</MaterialsLink>}
               </SpeakerBoxxBottom>
+              <SpeakerBoxxArrow />
           </SpeakerBoxx>
         ))}
         </SpeakingList>

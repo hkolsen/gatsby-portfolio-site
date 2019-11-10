@@ -43,7 +43,7 @@ const Intro = styled.article`
 const Current = styled.article`
     background: ${({ theme }) => theme.colors.WHITE};
     border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
-    box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -12px 12px;
+    box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
     margin: 0 0 0 2em;
     padding: 1em 2em;
 `;
