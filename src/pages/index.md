@@ -2,7 +2,7 @@
 templateKey: index-page
 header: Welcome friend,
 subheader: >-
-  <p>I am a <span>solutions-oriented</span> engineer who is passionate about structuring, iterating, and nurturing systems of <span>community</span> & <span>code</span>.</p>
+  <p>I am a <span class="accent">solutions-oriented</span> engineer who is passionate about structuring, iterating, and nurturing systems of <span class="active">community</span> & <span class="highlight">code</span>.</p>
 aboutHeader: A little about my journey
 aboutContent: >-
   <p>I am currently a Senior Frontend Engineer at <a href="https://bumped.com/" target="_blank" rel="noopener noreferrer">Bumped</a>, helping build a design system to bridge the gap between native and DOM. Previously I was a Lead Software Engineer at eROI (now <a href="https://thesis.agency/Thesis" target="_blank" rel="noopener noreferrer">Thesis</a>). I started my career working with various startups and small businesses as a web developer and co-owner of a creative studio called 3 Hound Design.<p>
