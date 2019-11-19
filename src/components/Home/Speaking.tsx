@@ -207,10 +207,10 @@ export const Speaking: React.FC = () => {
               linkURL={talk.slides}
               linkType="external"
               >View Slides</MaterialsLink>}
-              {talk.video && <MaterialsLink
-              linkURL={talk.video}
-              linkType="external"
-              >Watch Video</MaterialsLink>}
+              <MaterialsLink
+              linkURL="/ll19"
+              linkType="internal"
+              >Resources</MaterialsLink>
               </SpeakerBoxxBottom>
           </FeaturedTalkBoxx >
         ))}
