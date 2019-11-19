@@ -22,7 +22,8 @@ talkList:
     title: Effective Storytelling with Data Visualization
     description: >-
       Email marketers have more data than ever when it comes to subscribers. That doesn’t mean we’re putting it to work, though. By innovating how we think about data and, more importantly, present that data to subscribers, we can tell effective stories that inspire subscribers to engage with us. In this session, we’ll walk through various datasets and how they can be leveraged through visual design, HTML, and CSS to create more innovative emails for our subscribers.
-    category: Upcoming Talk
+    slides: https://noti.st/heidiolsen/qrHED6/effective-storytelling-with-data-visualization
+    category: Featured Conference
   - id: 2
     confName: Litmus Live
     confURL: https://litmus.com/conference/boston
