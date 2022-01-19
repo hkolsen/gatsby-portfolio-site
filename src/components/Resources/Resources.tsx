@@ -2,7 +2,6 @@ import React from 'react';
 import { styled } from '~/styled';
 import { MarkdownWrapper } from '../MarkdownWrapper';
 import { useResourcesData } from '~/data/useResourcesData';
-import { FormattedMessage } from 'react-intl';
 
 const ResourcesWrapper = styled.div`
   background: ${({ theme }) => theme.colors.LIGHT_BG};
@@ -102,11 +101,7 @@ export const Resources: React.FC = () => {
     <ResourcesWrapper id="Resources">
     <ResourcesSection>
         <ResourcesHeader>
-          <FormattedMessage
-            defaultMessage="Resources"
-            description="Navigation link that brings you to the About section"
-            id="Resources.Header"
-            />
+          Resources
           </ResourcesHeader>
         <ResourcesList>
         {(frontmatter.resourceList || []).map((resource) => (

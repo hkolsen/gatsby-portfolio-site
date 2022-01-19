@@ -11,24 +11,21 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
-            },
-          },
+          'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 2048,
-            },
+              // Optimizing the images displayed in markdown content to be
+              // max-width of the markdown wrapper
+              maxWidth: 700,
+              linkImagesToOriginal: false
+            }
           },
           {
-            resolve:"@weknow/gatsby-remark-codepen",
+            resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              theme: "dark",
-              height: 400
-            }
+              destinationDir: 'static',
+            },
           },
         ],
       },

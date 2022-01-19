@@ -3,7 +3,6 @@ import { styled } from '../styled';
 import { CTALink } from '../components/CustomLink';
 import { Header, Subheader } from '../utils/type';
 import TemplateWrapper from '../components/TemplateWrapper';
-import { FormattedMessage } from 'react-intl';
 
 const PageNotFoundContent = styled.div`
   align-items: center;
@@ -64,33 +63,17 @@ const NotFoundPage: React.FC = () => (
   <TemplateWrapper>
     <PageNotFoundContent>
       <PageNotFoundHeader>
-        <FormattedMessage
-          defaultMessage="404 what just happened"
-          description="Header that explains the page is not found"
-          id="PageNotFound.Header"
-        />
+      404 what just happened
       </PageNotFoundHeader>
       <PageNotFoundSecondaryHeader>
-        <FormattedMessage
-          defaultMessage="It's probably my bad. Sorry about that."
-          description="Secondary Header to let the user know its not their fault."
-          id="PageNotFound.SecondaryHeader"
-        />
+      It's probably my bad. Sorry about that.
       </PageNotFoundSecondaryHeader>
       <PageNotFoundCTAS>
         <PageNotFoundGoHome linkURL="/" linkType="internal">
-          <FormattedMessage
-            defaultMessage="Home"
-            description="Invite the user to navigate to the homepage"
-            id="PageNotFound.GoHome"
-          />
+          Home
         </PageNotFoundGoHome>
         <PageNotFoundGoBack onClick={goBack}>
-          <FormattedMessage
-            defaultMessage="Or, back from whence you came"
-            description="Invite the user to return to the previous page"
-            id="PageNotFound.GoBack"
-          />
+        Or, back from whence you came
         </PageNotFoundGoBack>
       </PageNotFoundCTAS>
     </PageNotFoundContent>

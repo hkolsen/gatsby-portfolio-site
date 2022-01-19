@@ -1,8 +1,8 @@
 import React from 'react';
+import { useHomeData } from '~/data/useHomeData';
 import { styled, useTheme } from '~/styled';
 import { SocialIcons } from '../img/svg/SocialIcons';
 import { CustomLink } from './CustomLink';
-import { FormattedMessage } from 'react-intl';
 
 const FooterSection = styled.section`
     background: ${({ theme }) => theme.colors.BASE};
@@ -57,15 +57,13 @@ const FooterText = styled.div`
 `;
 
 export const Footer: React.FC = () => {
+    const currentYear = new Date().getFullYear();
     const { colors } = useTheme();
+    const { frontmatter } = useHomeData();
     return (
     <FooterSection>
         <FooterHeader>
-        <FormattedMessage
-            defaultMessage="Find me online"
-            description="Header for the social links"
-            id="Footer.SocialLinks"
-            />
+        {frontmatter.footerHeader}
         </FooterHeader>
         <SocialIconList>
             <SocialIconContainer>
@@ -94,11 +92,7 @@ export const Footer: React.FC = () => {
             </SocialIconContainer>
         </SocialIconList> 
         <FooterText>
-        <FormattedMessage
-              defaultMessage="&copy; 2019 Heidi Olsen"
-              description="Copyright for the site"
-              id="Footer.Copyright"
-              />
+        &copy; {currentYear}
         </FooterText>      
     </FooterSection>
     )
