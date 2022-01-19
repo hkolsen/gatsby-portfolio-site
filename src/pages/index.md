@@ -136,8 +136,8 @@ blogList:
     title: Techniques for SVG animation and development
     description: >-
       Learn SVG animation techniques including transforming an element on an x- and y-axis, blinking, hover states, clipping paths and scrolling backgrounds.
-    url: http://eroi.com/techniques-for-svg-animation-and-development/
-    ctaText: Read on eROI
+    url: https://medium.com/@swisswebmiss/techniques-for-svg-animation-and-development-7deccdbdf5f1
+    ctaText: Read on Medium
     blogImg: svg-animations
     tags: CSS Animation, How-To, SVG
   - id: 3
@@ -161,16 +161,16 @@ blogList:
     title: Automation to Innovation - Bringing the human touch to your email program
     description: >-
       A hybrid approach that balances templates with one-off campaigns leads to sustainable, scalable email programs that work for internal brand and agency teams.
-    url: http://eroi.com/automation-to-innovation-bringing-the-human-touch-to-your-email-program/
-    ctaText: Read on eROI
+    url: https://medium.com/@swisswebmiss/automation-to-innovation-bringing-the-human-touch-to-your-email-program-120e408829f7
+    ctaText: Read on Medium
     blogImg: automation-innovation
     tags: Automation, Email, Process
   - id: 6
     title: Data-driven innovation in email
     description: >-
       To support creative innovation in the inbox we rely on data to make smart choices that help us reach our goals to deliver a message to all subscribers.
-    url: http://eroi.com/data-driven-innovation-in-email/
-    ctaText: Read on eROI
+    url: https://medium.com/@swisswebmiss/data-driven-innovation-in-email-1bb08727deb8
+    ctaText: Read on Medium
     blogImg: data-driven
     tags: Data, Email, Interactive Techniques
   - id: 7
@@ -188,4 +188,5 @@ blogList:
     url: https://medium.com/@swisswebmiss/why-you-shouldn-t-always-reinvent-the-wheel-d0ab8d582f0a
     ctaText: Read on Medium
     tags: Process, Research, Wordpress
+footerHeader: Find me online
 ---

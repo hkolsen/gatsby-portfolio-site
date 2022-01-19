@@ -3,7 +3,6 @@ import { styled } from '~/styled';
 import { MarkdownWrapper } from '../MarkdownWrapper';
 import { TextLink, CTALink } from '../CustomLink';
 import { useHomeData } from '~/data/useHomeData';
-import { FormattedMessage } from 'react-intl';
 
 const SpeakingWrapper = styled.div`
   background: ${({ theme }) => theme.colors.LIGHT_BG};
@@ -176,14 +175,7 @@ export const Speaking: React.FC = () => {
     <SpeakingSection>
         <FeaturedTalk>
           <SpeakingHeader>
-          <FormattedMessage
-            defaultMessage="Speaking {and} Sharing"
-            description="Navigation link that brings you to the About section"
-            id="Writing.Header"
-            values={{
-              and: <SpeakingHeaderAccent>&</SpeakingHeaderAccent>
-            }}
-            />
+          Speaking <SpeakingHeaderAccent>&</SpeakingHeaderAccent> Sharing
           </SpeakingHeader>
         {(frontmatter.talkList || []).map((talk) => (
             talk.featured && 

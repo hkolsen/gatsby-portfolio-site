@@ -2,7 +2,6 @@ import React from 'react';
 import { styled } from '~/styled';
 import { CTALink } from '../CustomLink';
 import { useHomeData } from '~/data/useHomeData';
-import { FormattedMessage } from 'react-intl';
 
 const WritingWrapper = styled.div`
   background: ${({ theme }) => theme.colors.LIGHT_BG};
@@ -95,11 +94,7 @@ export const Writing: React.FC = () => {
     <WritingWrapper id="writing">
     <WritingSection>
         <WritingHeader>
-          <FormattedMessage
-            defaultMessage="Selected Writing"
-            description="Navigation link that brings you to the About section"
-            id="Writing.Header"
-            />
+          Selected Writing
         </WritingHeader>
         <WritingList>
         {(frontmatter.blogList || []).map((blog) => (

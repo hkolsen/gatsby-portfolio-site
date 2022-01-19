@@ -33,6 +33,7 @@ interface HomeQueryResponse {
         tags: string;
         guestBlog: boolean;
       }>;
+      footerHeader: string;
     };
   };
 }
@@ -73,6 +74,7 @@ export const useHomeData = () => {
               tags
               guestBlog
             }
+            footerHeader
           }
         }
       }

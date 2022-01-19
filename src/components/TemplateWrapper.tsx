@@ -1,5 +1,4 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import Helmet from 'react-helmet';
 import { createGlobalStyle, styled } from '~/styled';
 import { PortfolioSiteThemeProvider } from '~/styled/theme';
@@ -133,11 +132,7 @@ const TemplateWrapper: React.FC = ({ children }) =>
     </Helmet>
     <GlobalStyles />
     <SkipLink href="#content">
-        <FormattedMessage
-          defaultMessage="Skip to content"
-          description="Link that allows screen readers to skip to main content"
-          id="TemplateWrapper.SkipLink"
-        />
+        Skip to content
       </SkipLink>
       <HeaderContainer>
       <HeaderName linkURL="/" linkType="internal">

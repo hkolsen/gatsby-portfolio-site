@@ -1,9 +1,7 @@
 import React from 'react';
-import { styled, useTheme } from '~/styled';
+import { styled } from '~/styled';
 import { useHomeData } from '~/data/useHomeData';
 import { MarkdownWrapper } from '../MarkdownWrapper';
-import RadarChart from 'react-svg-radar-chart';
-import 'react-svg-radar-chart/build/css/index.css'
 
 const HeroWrapper = styled.div`
     background: ${({ theme }) => theme.colors.DARK_GRAY};
@@ -30,32 +28,6 @@ const HeroSection = styled.section`
 `;
 
 const HeroContent = styled.article``;
-
-const ChartContainer = styled.aside`
-    max-height: 40em;
-    svg {
-        overflow: inherit;
-    }
-    .caption {
-        fill: ${({ theme }) => theme.colors.WHITE};
-        font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
-        font-size: 1rem;
-        font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
-        text-shadow: none;
-    }
-    .scale {
-        fill: transparent;
-        stroke: ${({ theme }) => theme.colors.LIGHT_BG};
-        stroke-width: 0.5;
-    }
-    ${({ theme }) => theme.media.medium`
-        max-height: 30em;
-        svg {
-            width: 350px;
-            height: 350px;
-        }
-    `};
-`;
 
 const Header = styled.h1`
     color: ${({ theme }) => theme.colors.WHITE};
@@ -104,7 +76,6 @@ const Intro = styled(MarkdownWrapper)`
 
 export const Hero: React.FC = () => {
     const { frontmatter } = useHomeData();
-    const { colors } = useTheme();
     return (
     <HeroWrapper>
         <HeroSection>
@@ -112,50 +83,6 @@ export const Hero: React.FC = () => {
                 <Header>{frontmatter.header}</Header>
                 <Intro content={frontmatter.subheader} />
             </HeroContent>
-            <ChartContainer>
-                <RadarChart
-                captions={{
-                solutions: 'Problem-Solving',
-                design: 'Design Dabbling',
-                fun: 'Fun Professional',
-                contribution: 'Community Contributing',
-                systems: 'Refactoring Systems'
-                }}
-                data={[
-                {
-                    data: {
-                    solutions: 1,
-                    design: .7,
-                    fun: 1,
-                    contribution: 0.7,
-                    systems: 0.9
-                    },
-                    meta: { color: colors.ACCENT }
-                },
-                {
-                    data: {
-                    solutions: 0.5,
-                    design: .4,
-                    fun: 1,
-                    contribution: 1,
-                    systems: 0.7
-                    },
-                    meta: { color: colors.ACTIVE }
-                },
-                {
-                    data: {
-                    solutions: 1,
-                    design: .5,
-                    fun: 1,
-                    contribution: 0.9,
-                    systems: 0.8
-                    },
-                    meta: { color: colors.HIGHLIGHT }
-                },
-                ]}
-                size={500}
-            />
-          </ChartContainer>
         </HeroSection>
     </HeroWrapper>
   );

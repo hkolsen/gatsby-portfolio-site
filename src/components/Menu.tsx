@@ -1,7 +1,6 @@
 import React from 'react';
 import { styled } from '~/styled';
 import { CustomLink } from './CustomLink';
-import { FormattedMessage } from 'react-intl';
 
 const MenuContainer = styled.nav`
   display: flex;
@@ -122,29 +121,17 @@ export const Menu: React.FC = () =>
         <MenuList>
           <MenuItem>
             <MenuLink linkType="internal" linkURL="/#about">
-            <FormattedMessage
-              defaultMessage="About"
-              description="Navigation link that brings you to the About section"
-              id="Menu.About"
-              />
+            About
             </MenuLink>
           </MenuItem>
           <MenuItem>
           <MenuLink linkType="internal" linkURL="/#speaking">
-            <FormattedMessage
-              defaultMessage="Speaking"
-              description="Navigation link that brings you the Speaking section"
-              id="Menu.Speaking"
-              />
+            Speaking
           </MenuLink>
           </MenuItem>
           <MenuItem>
           <MenuLink linkType="internal" linkURL="/#writing">
-            <FormattedMessage
-              defaultMessage="Writing"
-              description="Navigation link that brings you the Writing section"
-              id="Menu.Writing"
-              />
+            Writing
           </MenuLink>
           </MenuItem>
         </MenuList>
