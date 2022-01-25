@@ -6,6 +6,10 @@ interface HomeQueryResponse {
       templateKey: string;
       header: string;
       subheader: string;
+      heroImg: {
+        publicURL: string;
+      };
+      heroImgAltText: string;
       aboutHeader: string;
       aboutContent: string;
       currentlyExploring: string;
@@ -47,6 +51,10 @@ export const useHomeData = () => {
             templateKey
             header
             subheader
+            heroImg {
+              publicURL
+            }
+            heroImgAltText
             aboutHeader
             aboutContent
             currentlyExploring

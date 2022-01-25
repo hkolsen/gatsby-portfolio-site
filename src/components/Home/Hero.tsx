@@ -22,12 +22,17 @@ const HeroSection = styled.section`
     margin: 0 auto;
     max-width: 1290px;
     ${({ theme }) => theme.media.medium`
-        flex-direction: column;
+        flex-direction: column-reverse;
         max-width: 90%;
     `};
 `;
 
-const HeroContent = styled.article``;
+const HeroContent = styled.article`
+    padding: 0 0 0 1em;
+    ${({ theme }) => theme.media.medium`
+        padding: 0;
+    `};
+`;
 
 const Header = styled.h1`
     color: ${({ theme }) => theme.colors.WHITE};
@@ -74,6 +79,14 @@ const Intro = styled(MarkdownWrapper)`
     `};
 `;
 
+const HeroImg = styled.img`
+    max-width: 30em;
+    width: 100%;
+    ${({ theme }) => theme.media.medium`
+        margin: 0 0 2em;
+    `};
+`;
+
 export const Hero: React.FC = () => {
     const { frontmatter } = useHomeData();
     return (
@@ -83,6 +96,7 @@ export const Hero: React.FC = () => {
                 <Header>{frontmatter.header}</Header>
                 <Intro content={frontmatter.subheader} />
             </HeroContent>
+            <HeroImg src={frontmatter.heroImg?.publicURL} alt={frontmatter.heroImgAltText} />
         </HeroSection>
     </HeroWrapper>
   );
