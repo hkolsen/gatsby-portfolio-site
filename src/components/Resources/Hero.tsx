@@ -92,9 +92,9 @@ export const Hero: React.FC = () => {
         <HeroContent>
             <Header>{frontmatter.resourcesHeader}</Header>
             <Intro content={frontmatter.resourcesSubheader} />
-            <SlidesLink linkURL="https://noti.st/heidiolsen/qrHED6/effective-storytelling-with-data-visualization" linkType="external">View slides</SlidesLink>
+            <SlidesLink linkURL={frontmatter.resourcesHeroImgURL} linkType="external">View slides</SlidesLink>
         </HeroContent>
-        <HeroImgLink linkURL="https://noti.st/heidiolsen/qrHED6/effective-storytelling-with-data-visualization" linkType="external">
+        <HeroImgLink linkURL={frontmatter.resourcesHeroImgURL} linkType="external">
             <HeroSlidesImg fluid={frontmatter.resourcesHeroImg.childImageSharp.fluid} alt={frontmatter.resourcesHeroImgAlt} />
         </HeroImgLink>
         </HeroSection>
