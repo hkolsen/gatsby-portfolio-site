@@ -1,10 +1,10 @@
 ---
 templateKey: speaking-page
-header: Welcome friend,
+header: Speaking & Sharing
 subheader: >-
-  <p>I am a <span class="accent">solutions-oriented</span> engineer who is passionate about structuring, iterating, and nurturing systems of <span class="active">community</span> & <span class="highlight">code</span>.</p>
-heroImg: ../img/svg/Hero_Avatar.svg
-heroImgAltText: An illustration of Heidi inspired by the 90s cartoon Daria
+  <p>Speaking at conferences started as a personal challenge and then became a great excuse to <span class="accent">deep dive into a subject</span> and meet other engineers from around the world.</p>
+heroImg: ../img/speaking-hero.png
+heroImgAltText: A still of a conference talk from WebCamp Zagreb 2018
 talkList:
   - id: 1
     featured: true

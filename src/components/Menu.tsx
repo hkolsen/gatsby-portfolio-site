@@ -125,7 +125,7 @@ export const Menu: React.FC = () =>
             </MenuLink>
           </MenuItem>
           <MenuItem>
-          <MenuLink linkType="internal" linkURL="/#speaking">
+          <MenuLink linkType="internal" linkURL="/speaking">
             Speaking
           </MenuLink>
           </MenuItem>

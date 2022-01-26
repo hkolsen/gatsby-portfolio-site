@@ -6,9 +6,7 @@ interface SpeakingQueryResponse {
       templateKey: string;
       header: string;
       subheader: string;
-      heroImg: {
-        publicURL: string;
-      };
+      heroImg: any;
       heroImgAltText: string;
       talkList: Array<{
         id: string;
@@ -37,7 +35,11 @@ export const useSpeakingData = () => {
             header
             subheader
             heroImg {
-              publicURL
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
             heroImgAltText
             talkList {
