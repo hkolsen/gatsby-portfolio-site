@@ -2,6 +2,8 @@ import React from 'react';
 import { styled } from '~/styled';
 import { useResourcesData } from '~/data/useResourcesData';
 import { MarkdownWrapper } from '../MarkdownWrapper';
+import { CustomLink } from '../CustomLink';
+import Img from 'gatsby-image';
 
 const CodeSamplesWrapper = styled.div`
     background: ${({ theme }) => theme.colors.LIGHT_BG};
@@ -48,30 +50,59 @@ const CodeSamplesIntro = styled(MarkdownWrapper)`
     }
 `;
 
-const CodeSamplesList = styled(MarkdownWrapper)`
-    h3 {
-        font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
-    }
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-        grid-column-gap: 1rem;
-        grid-row-gap: 1rem;
-    }
+const CodeSamplesList = styled.ul`
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    margin: 1em 0 0;
+`;
+
+const CodeSampleItem = styled.li`
+ background: ${({ theme }) => theme.colors.WHITE};
+ border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
+  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  line-height: 1.5;
+  padding: 1em;
+`;
+
+const CodeSampleImg = styled(Img)`
+    max-height: 10em;
+    width: 100%;
+`;
+
+const Title = styled.h2`
+    color: ${({ theme }) => theme.colors.BASE};
+    font-size: 1.5em;
+  font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
+  line-height: 1;
+  text-decoration: underline;
 `;
 
 export const CodeSamples: React.FC = () => {
-    const { html, frontmatter } = useResourcesData();
+    const { frontmatter } = useResourcesData();
     return (
     <CodeSamplesWrapper>
         <CodeSamplesSection>
             <Intro>
                 <CodeSamplesIntro content={frontmatter.codeSamplesIntro} />
-                <CodeSamplesList content={html} />
             </Intro>
+            <CodeSamplesList>
+                {(frontmatter.codeSamplesList || []).map((codeSample) => (
+                <CodeSampleItem key={codeSample.id}>
+                <CustomLink linkType="external" linkURL={codeSample.linkURL} key={codeSample.id}>
+                    <CodeSampleImg fluid={codeSample.img.childImageSharp.fluid} alt={codeSample.title} />
+                    <Title>{codeSample.title}</Title>
+                </CustomLink>
+                </CodeSampleItem>
+            ))}
+            </CodeSamplesList>
         </CodeSamplesSection>
     </CodeSamplesWrapper>
   );
