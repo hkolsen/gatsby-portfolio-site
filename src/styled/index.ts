@@ -26,7 +26,6 @@ const {
 } = interop(styledComponents);
 
 export { css, ThemeProvider, styled, withTheme, createGlobalStyle };
-export type PortfolioSiteTheme = PortfolioSiteTheme;
 
 export function useTheme(): PortfolioSiteTheme {
   const theme = useContext(ThemeContext);

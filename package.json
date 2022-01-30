@@ -78,6 +78,7 @@
         "@types/prop-types": "^15.7.4",
         "@types/qs": "^6.9.7",
         "@types/react": "^17.0.38",
+        "@types/react-dom": "^16.9.8",
         "@types/react-helmet": "^6.1.5",
         "@types/react-icon-base": "^2.1.4",
         "@types/react-is": "^17.0.3",
