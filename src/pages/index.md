@@ -7,7 +7,12 @@ heroImg: ../img/svg/Hero_Avatar.svg
 heroImgAltText: An illustration of Heidi inspired by the 90s cartoon Daria
 aboutHeader: A little about my journey
 aboutContent: >-
-  <p>I am currently a Lead Software Engineer at <a href="https://bumped.com/" target="_blank" rel="noopener noreferrer">Bumped</a>, building finanical apps that provide folks access to the ownership economy. Previously I was a Lead Software Engineer at eROI (now <a href="https://thesis.agency/Thesis" target="_blank" rel="noopener noreferrer">Thesis</a>). I started my career working with various startups and small businesses as a web developer and co-owner of a creative studio called 3 Hound Design.<p>
+  <p>I am currently a Lead Software Engineer at <a href="https://bumped.com/" target="_blank" rel="noopener noreferrer">Bumped</a>, building finanical apps that provide folks access to the ownership economy. Previously I was a Lead Software Engineer at eROI (now <a href="https://thesis.agency/Thesis" target="_blank" rel="noopener noreferrer">Thesis</a>). I started my career working with various startups and small businesses as a web developer and co-owner of a creative studio called 3 Hound Design.
+  <ul>
+    <li><a href="/speaking">I also enjoy speaking at conferences</a></li>
+    <li><a href="/writing">As well as writing helpful code tutorials</a></li> 
+  </ul>
+  <p>
 currentlyExploring: >-
   <h2>Currently exploring:</h2>
   <ul>

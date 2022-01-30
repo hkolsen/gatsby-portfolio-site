@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '~/styled';
-import { MarkdownWrapper } from '../MarkdownWrapper';
+import { MarkdownWrapper } from '../../MarkdownWrapper';
 import { useResourcesData } from '~/data/useResourcesData';
 import { SCREEN_MAX_WIDTH } from '~/utils/constants';
 

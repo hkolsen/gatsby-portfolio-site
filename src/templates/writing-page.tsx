@@ -1,18 +1,18 @@
 import React from 'react';
 import TemplateWrapper from '~/components/TemplateWrapper';
 import { Hero } from '~/components/SecondaryPages/Hero';
-import { Speaking } from '~/components/SecondaryPages/Speaking/Speaking';
 import { Footer } from '~/components/Footer';
-import { useSpeakingData } from '~/data/useSpeakingData';
+import { useWritingData } from '~/data/useWritingData';
+import { Writing } from '~/components/SecondaryPages/Writing/Writing';
 
-const SpeakingPage: React.FC = () => {
-  const { frontmatter } = useSpeakingData();
+const WritingPage: React.FC = () => {
+  const { frontmatter } = useWritingData();
   return (
     <TemplateWrapper>
       <Hero data={frontmatter } />
-      <Speaking />
+      <Writing />
       <Footer />
     </TemplateWrapper>
   )};
 
-export default SpeakingPage;
+export default WritingPage;
