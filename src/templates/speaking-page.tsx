@@ -1,7 +1,7 @@
 import React from 'react';
 import TemplateWrapper from '~/components/TemplateWrapper';
 import { Hero } from '~/components/SecondaryPages/Hero';
-import { Speaking } from '~/components/Home/Speaking';
+import { Speaking } from '~/components/Speaking/Speaking';
 import { Footer } from '~/components/Footer';
 import { useSpeakingData } from '~/data/useSpeakingData';
 

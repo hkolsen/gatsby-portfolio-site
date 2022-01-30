@@ -2,30 +2,23 @@
 templateKey: speaking-page
 header: Speaking & Sharing
 subheader: >-
-  <p>Speaking at conferences started as a personal challenge and then became a great excuse to <span class="accent">deep dive into a subject</span> and meet other engineers from around the world.</p>
+  <p>Speaking at conferences started as a <span class="active">personal challenge</span> and then became a great excuse to <span class="accent">deep dive into a subject</span> and <span class="highlight">meet other engineers</span> from around the world.</p>
 heroImg: ../img/speaking-hero.png
 heroImgAltText: A still of a conference talk from WebCamp Zagreb 2018
 talkList:
   - id: 1
     featured: true
+    slideImg: ../img/slides/effective-storytelling-with-data-viz.png
     confName: Litmus Live
     confURL: https://litmus.com/conference/boston
     date: 2019 OCT & 2019 NOV
     location: Boston, MA & San Francisco, CA
     title: Effective Storytelling with Data Visualization
-    description: >-
-      Email marketers have more data than ever when it comes to subscribers. That doesn’t mean we’re putting it to work, though. By innovating how we think about data and, more importantly, present that data to subscribers, we can tell effective stories that inspire subscribers to engage with us. In this session, we’ll walk through various datasets and how they can be leveraged through visual design, HTML, and CSS to create more innovative emails for our subscribers.
     slides: https://noti.st/heidiolsen/qrHED6/effective-storytelling-with-data-visualization
     category: Featured Conference
   - id: 2
-    confName: Litmus Live
-    confURL: https://litmus.com/conference/boston
-    date: 2018 NOV
-    location: San Francisco, CA
-    title: Demystifying APIs for Better Email Programs
-    slides: https://noti.st/heidiolsen/ApVE84/demystifying-apis-for-better-email-programs
-    category: Conference
-  - id: 3
+    featured: true
+    slideImg: ../img/slides/headless-architecture.png
     confName: Webcamp Zagreb
     confURL: https://2018.webcampzg.org/
     date: 2018 OCT
@@ -33,6 +26,16 @@ talkList:
     title: Headless Architecture and the Future of Websites
     slides: https://noti.st/heidiolsen/57VlI6/headless-architecture-and-the-future-of-websites
     video: https://www.youtube.com/watch?v=wDajRPxCPDc
+    category: Conference
+  - id: 3
+    featured: true
+    slideImg: ../img/slides/demystifying-apis.png
+    confName: Litmus Live
+    confURL: https://litmus.com/conference/boston
+    date: 2018 NOV
+    location: San Francisco, CA
+    title: Demystifying APIs for Better Email Programs
+    slides: https://noti.st/heidiolsen/ApVE84/demystifying-apis-for-better-email-programs
     category: Conference
   - id: 4
     confName: Litmus
@@ -82,6 +85,8 @@ talkList:
     slides: https://slides.com/heidi_olsen/front-end-pdx#/
     category: Meetup
   - id: 10
+    featured: true
+    slideImg: ../img/slides/shady-web.png
     confName: CSSConf Budapest
     confURL: http://2017.cssconfbp.rocks/
     date: 2017 OCT

@@ -2,7 +2,7 @@ import React from 'react';
 import { useHomeData } from '~/data/useHomeData';
 import { styled, useTheme } from '~/styled';
 import { SocialIcons } from '../img/svg/SocialIcons';
-import { CustomLink } from './CustomLink';
+import { CustomLink, TextLink } from './CustomLink';
 
 const FooterSection = styled.section`
     background: ${({ theme }) => theme.colors.BASE};
@@ -56,6 +56,10 @@ const FooterText = styled.div`
     text-align: center;
 `;
 
+const FooterLink = styled(TextLink)`
+color: ${({ theme }) => theme.colors.WHITE};
+`;
+
 export const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
     const { colors } = useTheme();
@@ -86,13 +90,13 @@ export const Footer: React.FC = () => {
                     <SocialIcons color={colors.ACCENT} socialName="LinkedIn" /></SocialLink>
             </SocialIconContainer>
             <SocialIconContainer>
-                <SocialLink linkType="external" linkURL="mailto:swisswebmistress@gmail.com">
+                <SocialLink linkType="external" linkURL="mailto:hey@heidiolsen.com">
                     <SocialIcons color={colors.ACCENT} socialName="Email" />
                 </SocialLink>
             </SocialIconContainer>
         </SocialIconList> 
         <FooterText>
-        &copy; {currentYear}
+        &copy; {currentYear} Heidi Olsen. Illustration credit to <FooterLink linkType="external" linkURL="https://www.northwestnina.com/">Northwest Nina</FooterLink>
         </FooterText>      
     </FooterSection>
     )

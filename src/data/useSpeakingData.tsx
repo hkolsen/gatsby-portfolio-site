@@ -11,6 +11,7 @@ interface SpeakingQueryResponse {
       talkList: Array<{
         id: string;
         featured: boolean;
+        slideImg: any;
         confName: string;
         confURL: string;
         date: string;
@@ -45,6 +46,13 @@ export const useSpeakingData = () => {
             talkList {
               id
               featured
+              slideImg {
+                childImageSharp {
+                  fluid(maxWidth: 1000) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               confName
               confURL
               date

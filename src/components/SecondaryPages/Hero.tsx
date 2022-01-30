@@ -51,9 +51,17 @@ const Intro = styled(MarkdownWrapper)`
         margin: 0;
         padding: 0;
         span {
-            background: ${({ theme }) => theme.colors.ACCENT};
             color: ${({ theme }) => theme.colors.BASE};
             padding: 0 0.25em;
+        }
+        .accent {
+            background:${({ theme }) => theme.colors.ACCENT}; 
+        }
+        .active {
+            background:${({ theme }) => theme.colors.ACTIVE}; 
+        }
+        .highlight {
+            background:${({ theme }) => theme.colors.HIGHLIGHT}; 
         }
     }
     ${({ theme }) => theme.media.medium`
@@ -93,7 +101,7 @@ export const Hero: React.FC<HeroProps> = ({ data } ) => (
             <Header>{data.header}</Header>
             <Intro content={data.subheader} />
         </HeroContent>
-            <HeroImg fluid={data.heroImg.childImageSharp} alt={data.heroImgAltText} />
+            <HeroImg fluid={data.heroImg.childImageSharp.fluid} alt={data.heroImgAltText} />
         </HeroSection>
     </HeroWrapper>
   );
