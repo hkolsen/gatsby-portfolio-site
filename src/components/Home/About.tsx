@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from '~/styled';
 import { useHomeData } from '~/data/useHomeData';
 import { MarkdownWrapper } from '../MarkdownWrapper';
+import { SCREEN_MAX_WIDTH } from '~/utils/constants';
 
 const AboutWrapper = styled.div`
     background: ${({ theme }) => theme.colors.WHITE};
@@ -13,7 +14,7 @@ const AboutSection = styled.section`
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 1290px;
+    max-width: ${SCREEN_MAX_WIDTH};
     padding: 2em 1em;
     ${({ theme }) => theme.media.medium`
         flex-direction: column;

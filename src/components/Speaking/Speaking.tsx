@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from '~/styled';
 import { OtherTalks } from './OtherTalks';
 import { FeaturedTalks } from './FeaturedTalks';
+import { SCREEN_MAX_WIDTH } from '~/utils/constants';
 
 const SpeakingWrapper = styled.div`
   background: ${({ theme }) => theme.colors.LIGHT_BG};
@@ -10,7 +11,7 @@ const SpeakingWrapper = styled.div`
 
 const SpeakingSection = styled.section`
   margin: 0 auto;
-  max-width: 1290px;
+  max-width: ${SCREEN_MAX_WIDTH};
   padding: 3em 1em;
   ${({ theme }) => theme.media.small`
     max-width: 90%

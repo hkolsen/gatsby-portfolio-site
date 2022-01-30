@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from '~/styled';
 import { CTALink } from '../CustomLink';
 import { useHomeData } from '~/data/useHomeData';
+import { SCREEN_MAX_WIDTH } from '~/utils/constants';
 
 const WritingWrapper = styled.div`
   background: ${({ theme }) => theme.colors.LIGHT_BG};
@@ -10,7 +11,7 @@ const WritingWrapper = styled.div`
 
 const WritingSection = styled.section`
   margin: 0 auto;
-  max-width: 1290px;
+  max-width: ${SCREEN_MAX_WIDTH};
   padding: 2em 1em 2.5em;
   ${({ theme }) => theme.media.small`
     max-width: 90%
