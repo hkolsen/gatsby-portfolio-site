@@ -1,0 +1,1 @@
+export const SCREEN_MAX_WIDTH = '1400px';

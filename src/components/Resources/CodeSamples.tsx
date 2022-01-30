@@ -4,6 +4,7 @@ import { useResourcesData } from '~/data/useResourcesData';
 import { MarkdownWrapper } from '../MarkdownWrapper';
 import { CustomLink } from '../CustomLink';
 import Img from 'gatsby-image';
+import { SCREEN_MAX_WIDTH } from '~/utils/constants';
 
 const CodeSamplesWrapper = styled.div`
     background: ${({ theme }) => theme.colors.LIGHT_BG};
@@ -12,7 +13,7 @@ const CodeSamplesWrapper = styled.div`
 
 const CodeSamplesSection = styled.section`
     margin: 0 auto;
-    max-width: 1290px;
+    max-width: ${SCREEN_MAX_WIDTH};
     padding: 2em 1em;
 `;
 

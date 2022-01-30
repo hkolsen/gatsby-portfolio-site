@@ -18,6 +18,11 @@
         "test": "jest --passWithNoTests",
         "type-check": "tsc --noEmit"
     },
+    "prettier": "prettier.js",
+    "eslintConfig": {
+        "extends": "eslint.js",
+        "rules": {}
+    },
     "eslintIgnore": [
         "node_modules",
         "output",
@@ -30,7 +35,6 @@
     ],
     "dependencies": {
         "gatsby": "^4.5.4",
-        "gatsby-background-image": "^1.6.0",
         "gatsby-image": "^3.11.0",
         "gatsby-plugin-image": "^2.5.2",
         "gatsby-plugin-module-resolver": "^1.0.3",

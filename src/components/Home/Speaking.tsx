@@ -3,6 +3,7 @@ import { styled } from '~/styled';
 import { MarkdownWrapper } from '../MarkdownWrapper';
 import { TextLink, CTALink } from '../CustomLink';
 import { useHomeData } from '~/data/useHomeData';
+import { SCREEN_MAX_WIDTH } from '~/utils/constants';
 
 const SpeakingWrapper = styled.div`
   background: ${({ theme }) => theme.colors.LIGHT_BG};
@@ -11,7 +12,7 @@ const SpeakingWrapper = styled.div`
 
 const SpeakingSection = styled.section`
   margin: 0 auto;
-  max-width: 1290px;
+  max-width: ${SCREEN_MAX_WIDTH};
   padding: 3em 1em;
   ${({ theme }) => theme.media.small`
     max-width: 90%

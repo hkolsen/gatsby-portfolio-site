@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from '~/styled';
 import { MarkdownWrapper } from '../MarkdownWrapper';
 import { useResourcesData } from '~/data/useResourcesData';
+import { SCREEN_MAX_WIDTH } from '~/utils/constants';
 
 const ResourcesWrapper = styled.div`
   background: ${({ theme }) => theme.colors.LIGHT_BG};
@@ -10,7 +11,7 @@ const ResourcesWrapper = styled.div`
 
 const ResourcesSection = styled.section`
   margin: 0 auto;
-  max-width: 1290px;
+  max-width: ${SCREEN_MAX_WIDTH};
   padding: 3em 1em;
 `;
 

@@ -10,4 +10,3 @@ declare module '*.png' {
   type url = string;
   export = url;
 }
-declare module 'gatsby-background-image';

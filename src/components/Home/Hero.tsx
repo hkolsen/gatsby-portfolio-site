@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from '~/styled';
 import { useHomeData } from '~/data/useHomeData';
 import { MarkdownWrapper } from '../MarkdownWrapper';
+import { SCREEN_MAX_WIDTH } from '~/utils/constants';
 
 const HeroWrapper = styled.div`
     background: ${({ theme }) => theme.colors.DARK_GRAY};
@@ -20,7 +21,7 @@ const HeroSection = styled.section`
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 1290px;
+    max-width: ${SCREEN_MAX_WIDTH};
     ${({ theme }) => theme.media.medium`
         flex-direction: column-reverse;
         max-width: 90%;
