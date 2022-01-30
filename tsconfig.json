@@ -1,6 +1,4 @@
 {
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "build", "output"],
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
@@ -10,22 +8,47 @@
     "esModuleInterop": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
-    "declaration": true,
-    "declarationMap": true,
-    "target": "esnext",
-    "module": "esnext",
+    "noImplicitOverride": true,
     "strict": true,
     "jsx": "react",
     "sourceMap": true,
     "inlineSources": true,
     "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
+    "declaration": false,
+    "declarationMap": false,
+    "module": "esnext",
+    "target": "es2015",
     "noEmit": true,
-    "lib": ["dom", "esnext"],
-    "types": ["jest", "react", "react-icon-base", "node"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "types": [
+      "jest",
+      "react",
+      "react-icon-base",
+      "node"
+    ],
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
-    }
-  }
+      "~/*": [
+        "./src/*",
+      ]
+    },
+    "allowJs": true,
+    "noUncheckedIndexedAccess": true
+  },
+  "include": [
+    "lib-ts4-0.d.ts",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "output"
+  ]
 }
