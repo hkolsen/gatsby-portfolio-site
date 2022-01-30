@@ -1,9 +1,9 @@
 import React from 'react';
 import TemplateWrapper from '~/components/TemplateWrapper';
-import { Hero } from '~/components/Resources/Hero';
+import { Hero } from '~/components/SecondaryPages/Resources/Hero';
 import { Footer } from '~/components/Footer';
-import { CodeSamples } from '~/components/Resources/CodeSamples';
-import { Resources } from '~/components/Resources/Resources';
+import { CodeSamples } from '~/components/SecondaryPages/Resources/CodeSamples';
+import { Resources } from '~/components/SecondaryPages/Resources/Resources';
 
 
 const ResourcesPage: React.FC = () => 

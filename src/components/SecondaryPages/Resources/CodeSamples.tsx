@@ -1,8 +1,8 @@
 import React from 'react';
 import { styled } from '~/styled';
 import { useResourcesData } from '~/data/useResourcesData';
-import { MarkdownWrapper } from '../MarkdownWrapper';
-import { CustomLink } from '../CustomLink';
+import { MarkdownWrapper } from '../../MarkdownWrapper';
+import { CustomLink } from '../../CustomLink';
 import Img from 'gatsby-image';
 import { SCREEN_MAX_WIDTH } from '~/utils/constants';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '~/styled';
-import { CTALink } from '../CustomLink';
+import { CTALink } from '../../CustomLink';
 import { useHomeData } from '~/data/useHomeData';
 import { SCREEN_MAX_WIDTH } from '~/utils/constants';
 
@@ -15,24 +15,6 @@ const WritingSection = styled.section`
   padding: 2em 1em 2.5em;
   ${({ theme }) => theme.media.small`
     max-width: 90%
-  `};
-`;
-
-const WritingHeader = styled.h1`
-  background: ${({ theme }) => theme.colors.ACCENT};
-  border: 2px solid ${({ theme }) => theme.colors.DARK_GRAY};
-  box-shadow: ${({ theme }) => theme.colors.DARK_GRAY} -8px 8px;
-  color: ${({ theme }) => theme.colors.BASE};
-  display: inline-block;
-  font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
-  font-size: 3em;
-  font-weight: ${({ theme }) => theme.weights.SEMI_BOLD};
-  margin: 0 1em 1em 0;
-  min-width: 10em;
-  padding: 0.25em 0.5em;
-  ${({ theme }) => theme.media.medium`
-      font-size: 2.5em;
-      min-width: auto;
   `};
 `;
 
@@ -94,9 +76,6 @@ export const Writing: React.FC = () => {
   return (
     <WritingWrapper id="writing">
     <WritingSection>
-        <WritingHeader>
-          Selected Writing
-        </WritingHeader>
         <WritingList>
         {(frontmatter.blogList || []).map((blog) => (
             <WritingItem key={blog.id}>

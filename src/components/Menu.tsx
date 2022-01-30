@@ -130,7 +130,7 @@ export const Menu: React.FC = () =>
           </MenuLink>
           </MenuItem>
           <MenuItem>
-          <MenuLink linkType="internal" linkURL="/#writing">
+          <MenuLink linkType="internal" linkURL="/writing">
             Writing
           </MenuLink>
           </MenuItem>

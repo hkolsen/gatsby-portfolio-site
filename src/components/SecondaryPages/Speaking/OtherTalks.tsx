@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled, useTheme } from '~/styled';
-import { TextLink } from '../CustomLink';
+import { TextLink } from '../../CustomLink';
 import { useSpeakingData } from '~/data/useSpeakingData';
 import { CalendarIcon } from '~/img/svg/CalendarIcon';
 import { LocationIcon } from '~/img/svg/LocationIcon';
