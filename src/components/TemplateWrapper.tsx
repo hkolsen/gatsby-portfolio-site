@@ -8,6 +8,7 @@ import { TextLink } from './CustomLink';
 import { Logo } from '../img/svg/Logo';
 import Favicon from '../img/favicon.ico';
 import AppleTouch from '../img/apple-touch-icon.png';
+import { Footer } from './Footer';
 
 interface TemplateWrapper {
   children: React.ReactNode;
@@ -28,22 +29,16 @@ const GlobalStyles = createGlobalStyle`
     src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v11/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
   }
   body {
+    background: #1a1c24;
     box-sizing: border-box;
     color: inherit;  
-    font-family: 'Open Sans Regular', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
     height: 100vh;
     line-height: 1.75;
     margin:0;
     padding:0; 
   }
-`;
-
-const TemplateWrapperContainer = styled.div`
-  background: ${({ theme }) => theme.colors.WHITE};
-  color: ${({ theme }) => theme.colors.BASE};
-  font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
-  width: 100%;
 `;
 
 const SkipLink = styled.a`
@@ -54,17 +49,11 @@ const SkipLink = styled.a`
   top: 0.75em;
   left: 10em;
   padding: 0.25em;
+  transform: translateY(-150%);
   transition: ${({ theme }) => theme.easing.GLOBAL};
-  &:not(:focus) {
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+  z-index: 10;
+  &:focus {
+    transform: translateY(0%);
   }
 `;
 
@@ -84,6 +73,7 @@ const HeaderName = styled(TextLink)`
   text-decoration: none;
   margin: 0.5em auto;
   width: 15em;
+  z-index: 4;
   span {
     color: ${({ theme }) => theme.colors.ACTIVE};
     font-family: ${({ theme }) => theme.fonts.SANS_SERIF};
@@ -101,19 +91,11 @@ const HeaderName = styled(TextLink)`
   `};
 `;
 
-const FixedContainer = styled.div`
-  padding: 0;
-  position: fixed;
-  transition: ${({ theme }) => theme.easing.GLOBAL};
-  width: 100%;
-  z-index: 10;
-`;
-
 const MainContainer = styled.main``;
 
 const TemplateWrapper: React.FC = ({ children }) => 
   <PortfolioSiteThemeProvider>
-  <TemplateWrapperContainer>
+    <>
     <Helmet>
       <html lang="en" />
       <meta charSet="utf-8" />
@@ -138,12 +120,11 @@ const TemplateWrapper: React.FC = ({ children }) =>
       <HeaderName linkURL="/" linkType="internal">
         <Logo />
       </HeaderName>
-      </HeaderContainer>
-    <FixedContainer>
       <Menu />
-    </FixedContainer>
+    </HeaderContainer>
     <MainContainer id="content">{children}</MainContainer>
-  </TemplateWrapperContainer>
+    <Footer />
+    </>
   </PortfolioSiteThemeProvider>
 
 

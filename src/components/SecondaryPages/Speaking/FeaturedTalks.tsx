@@ -150,6 +150,7 @@ export const FeaturedTalks: React.FC = () => {
           <LinkContainer>
           {talk.slides && <CTALink linkURL={talk.slides} linkType="external">View Slides</CTALink>}
           {talk.video && <CTALink linkURL={talk.video} linkType="external" >Watch Video</CTALink>}
+          {talk.resources && <CTALink linkURL={talk.resources} linkType="internal" >See Resources</CTALink>}
           </LinkContainer>
           <SpeakerBoxxArrow />
       </SpeakerBoxx>

@@ -12,11 +12,14 @@ const MenuContainer = styled.nav`
 const MenuToggle = styled.div`
   display: block;
   position: relative;
-  top: 1.5em;
+  top: 0;
   right: 1.5em;
-  z-index: 1; 
+  z-index: 15; 
   -webkit-user-select: none;
   user-select: none;
+  ${({ theme }) => theme.media.small`
+    right: 2.5em;
+  `};
 `;
 
 const MenuCheckboxLabel = styled.label``;
@@ -97,6 +100,11 @@ const MenuList = styled.ul`
 const MenuItem = styled.li`
   padding: 10px 0;
   font-size: 22px;
+  ${({ theme }) => theme.media.small`
+    &:first-of-type {
+      margin: 3em 0 0;
+    }
+  `};
 `;
 
 const MenuLink = styled(CustomLink)`
@@ -120,7 +128,7 @@ export const Menu: React.FC = () =>
         <MenuTrigger />
         <MenuList>
           <MenuItem>
-            <MenuLink linkType="internal" linkURL="/#about">
+            <MenuLink linkType="internal" linkURL="/about">
             About
             </MenuLink>
           </MenuItem>

@@ -15,6 +15,7 @@ talkList:
     location: Boston, MA & San Francisco, CA
     title: Effective Storytelling with Data Visualization
     slides: https://noti.st/heidiolsen/qrHED6/effective-storytelling-with-data-visualization
+    resources: /ll19
     category: Featured Conference
   - id: 2
     featured: true
