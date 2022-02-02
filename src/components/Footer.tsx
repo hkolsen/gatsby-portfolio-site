@@ -48,9 +48,6 @@ const SocialLink = styled(CustomLink)`
 `;
 
 const FooterText = styled.div`
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     font-size: 0.75em;
     margin: 0 auto;
     text-align: center;
@@ -90,13 +87,13 @@ export const Footer: React.FC = () => {
                     <SocialIcons color={colors.ACCENT} socialName="LinkedIn" /></SocialLink>
             </SocialIconContainer>
             <SocialIconContainer>
-                <SocialLink linkType="external" linkURL="mailto:hey@heidiolsen.com">
+                <SocialLink linkType="external" linkURL="mailto:swisswebmistress@gmail.com">
                     <SocialIcons color={colors.ACCENT} socialName="Email" />
                 </SocialLink>
             </SocialIconContainer>
         </SocialIconList> 
         <FooterText>
-        &copy; {currentYear} Heidi Olsen. Illustration credit to <FooterLink linkType="external" linkURL="https://www.northwestnina.com/">Northwest Nina</FooterLink>
+        &copy; {currentYear} Heidi Olsen. Illustration credit to <FooterLink linkType="external" linkURL="https://www.northwestnina.com/">Northwest Nina</FooterLink> and headshot credit to <FooterLink linkType="external" linkURL="instagram.com/katiemarika">Katie Fujihara</FooterLink>.
         </FooterText>      
     </FooterSection>
     )

@@ -21,6 +21,7 @@ interface SpeakingQueryResponse {
         slides: string;
         video: string;
         category: string;
+        resources: string;
       }>;
     };
   };
@@ -62,6 +63,7 @@ export const useSpeakingData = () => {
               slides
               video
               category
+              resources
             }
           }
         }

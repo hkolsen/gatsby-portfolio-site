@@ -1,14 +1,12 @@
 import React from 'react';
 import TemplateWrapper from '~/components/TemplateWrapper';
 import { Hero } from '~/components/Home/Hero';
-import { About } from '~/components/Home/About';
-import { Footer } from '~/components/Footer';
+import { Teasers } from '~/components/Home/Teasers';
 
 const IndexPage: React.FC = () => 
     <TemplateWrapper>
       <Hero />
-      <About />
-      <Footer />
+      <Teasers />
     </TemplateWrapper>
 
 export default IndexPage;

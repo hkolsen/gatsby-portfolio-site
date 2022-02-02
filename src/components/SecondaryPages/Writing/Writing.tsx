@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '~/styled';
 import { CTALink } from '../../CustomLink';
-import { useHomeData } from '~/data/useHomeData';
+import { useWritingData } from '~/data/useWritingData';
 import { SCREEN_MAX_WIDTH } from '~/utils/constants';
 
 const WritingWrapper = styled.div`
@@ -72,7 +72,7 @@ const BlogTagList = styled.span`
 const BlogCTA = styled.div``;
 
 export const Writing: React.FC = () => {
-  const { frontmatter } = useHomeData();
+  const { frontmatter } = useWritingData();
   return (
     <WritingWrapper id="writing">
     <WritingSection>
