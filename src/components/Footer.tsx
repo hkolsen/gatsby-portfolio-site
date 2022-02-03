@@ -87,7 +87,7 @@ export const Footer: React.FC = () => {
                     <SocialIcons color={colors.ACCENT} socialName="LinkedIn" /></SocialLink>
             </SocialIconContainer>
             <SocialIconContainer>
-                <SocialLink linkType="external" linkURL="mailto:swisswebmistress@gmail.com">
+                <SocialLink linkType="external" linkURL="mailto:hey@heidiolsen.com">
                     <SocialIcons color={colors.ACCENT} socialName="Email" />
                 </SocialLink>
             </SocialIconContainer>
